@@ -1,212 +1,18 @@
-:root {
-  --bg: #fafafa;
-  --text: #222;
-  --subtext: #555;
-  --accent: #1f6f43;
-}
-
-body.dark {
-  --bg: #121212;
-  --text: #eaeaea;
-  --subtext: #aaa;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: Georgia, serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.8;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+  font-family: "Georgia", serif;
+  background: #ffffff;
+  color: #2c2c2c;
+  line-height: 1.7;
 }
 
 /* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 24px;
-  border-bottom: 1px solid #ddd;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: var(--accent);
-}
-
-/* NAV */
-nav a {
-  margin-left: 16px;
-  font-size: 15px;
-  color: var(--subtext);
-}
-
-/* MAIN */
-.container {
-  max-width: 760px;
-  margin: 40px auto;
-  padding: 0 16px;
-  text-align: center;
-}
-
-/* DARK MODE BUTTON */
-.toggle {
-  cursor: pointer;
-  font-size: 14px;
-  color: var(--subtext);
-}
-/* DROPDOWN MENU */
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropbtn {
-  cursor: pointer;
-  font-size: 15px;
-  color: var(--subtext);
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 28px;
-  left: 0;
-  background: var(--bg);
-  border: 1px solid #ddd;
-  min-width: 180px;
-  z-index: 1000;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px 14px;
-  font-size: 14px;
-  color: var(--text);
-}
-
-.dropdown-content a:hover {
-  background: #f2f2f2;
-}
-
-/* Hover PC */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Dark mode */
-body.dark .dropdown-content {
-  border-color: #333;
-}
-
-body.dark .dropdown-content a:hover {
-  background: #222;
-}
-.story-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 32px;
-}
-
-.story-list li {
-  padding: 14px 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.story-list a {
-  font-size: 17px;
-}
-
-body.dark .story-list li {
-  border-color: #333;
-}
-.reading {
-  max-width: 720px;
-  margin: 48px auto;
-  padding: 0 16px;
-}
-
-.reading h1 {
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.reading article {
-  font-size: 18px;
-  line-height: 1.9;
-}
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 28px;
-  left: 0;
-  background: white;
-  border: 1px solid #ddd;
-  min-width: 160px;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 10px;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-body.dark {
-  background: #121212;
-  color: #eaeaea;
-}
-.slider {
-  display: flex;
-  overflow-x: auto;
-  gap: 16px;
-}
-
-.slide {
-  min-width: 160px;
-}
-
-.slide img {
-  width: 100%;
-  border-radius: 8px;
-}
-.story-mini {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 8px;
-  align-items: center;
-}
-
-.story-mini img {
-  width: 40px;
-  height: 60px;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .slider {
-    overflow-x: scroll;
-  }
-}
 .header {
   display: flex;
   justify-content: space-between;
@@ -215,15 +21,68 @@ body.dark {
   border-bottom: 1px solid #eee;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  font-size: 20px;
-  color: #1f6f43; /* xanh lá đậm */
+.logo-img {
+  height: 44px;
 }
 
-.logo img {
-  height: 36px;
+/* MENU */
+.header-menu {
+  position: relative;
+  font-size: 16px;
+}
+
+.dropdown {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 28px;
+  background: #fff;
+  border: 1px solid #ddd;
+  list-style: none;
+  min-width: 180px;
+}
+
+.dropdown-menu li {
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #f3f3f3;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* HERO */
+.hero {
+  max-width: 720px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 28px;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 360px;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
