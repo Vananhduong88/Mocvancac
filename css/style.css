@@ -37,6 +37,20 @@ a{text-decoration:none;color:inherit}
     transform:translateX(calc(-300px * 6));
   }
 }
+@media (max-width:768px){
+  .story-card{
+    width:220px;
+  }
+
+  .slide-track{
+    width:calc(220px * 12);
+  }
+
+  @keyframes scroll{
+    from{transform:translateX(0)}
+    to{transform:translateX(calc(-220px * 6))}
+  }
+}
 
 .story-card{
   width:300px;
