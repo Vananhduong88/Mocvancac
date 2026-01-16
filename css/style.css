@@ -1,123 +1,169 @@
-/* ===== RESET ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  background: #f6f6f6;
+  background: #f5f5f5;
   color: #222;
 }
 
 /* ===== HEADER ===== */
-header {
+.header {
   background: #fff;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #ddd;
 }
 
-.header-inner {
+.nav-container {
   max-width: 1200px;
   margin: auto;
-  padding: 10px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 16px;
 }
 
-/* ===== LOGO ===== */
 .logo img {
-  height: 46px;
-  width: auto;
+  height: 48px;
 }
 
-/* ===== MENU ===== */
-nav {
+.nav {
   display: flex;
+  gap: 24px;
   align-items: center;
 }
 
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  list-style: none;
-}
-
-/* ===== MENU ITEM ===== */
-.menu-item {
-  position: relative;
-}
-
-.menu-item > a,
-.menu-title {
-  font-size: 15px;
-  font-weight: 500;
-  color: #222;
+.nav a {
   text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.dropdown {
+  position: relative;
   cursor: pointer;
-  padding: 8px 6px;
-  display: inline-block;
 }
 
-.menu-item > a:hover,
-.menu-title:hover {
-  color: #2a7a3f;
-}
-
-/* ===== SUBMENU ===== */
-.submenu {
+.dropdown-menu {
   position: absolute;
-  top: 120%;
+  top: 100%;
   left: 0;
   background: #fff;
-  min-width: 200px;
   border: 1px solid #ddd;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  display: none;
-  z-index: 9999;
-}
-
-.submenu li {
   list-style: none;
+  display: none;
+  min-width: 160px;
+  z-index: 100;
 }
 
-.submenu li a {
+.dropdown-menu li a {
   display: block;
-  padding: 10px 14px;
-  font-size: 14px;
-  color: #333;
-  text-decoration: none;
-  white-space: nowrap;
+  padding: 10px;
+  color: #222;
 }
 
-.submenu li a:hover {
-  background: #f3f3f3;
-  color: #2a7a3f;
+.dropdown-menu li a:hover {
+  background: #eee;
 }
 
-/* ===== SHOW SUBMENU ===== */
-.menu-item.show .submenu {
+.dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* ===== DARK MODE BUTTON ===== */
-.dark-toggle {
+#darkToggle {
+  border: none;
+  background: none;
+  font-size: 20px;
   cursor: pointer;
-  font-size: 18px;
-  margin-left: 20px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .menu {
-    gap: 18px;
-  }
+/* ===== MAIN ===== */
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
 
-  .submenu {
-    position: static;
-    box-shadow: none;
-    border: none;
-  }
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 15px;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 420px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ===== HOT ===== */
+.hot {
+  margin-bottom: 40px;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  gap: 16px;
+}
+
+.slide {
+  min-width: 220px;
+  height: 260px;
+  background: #ddd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* ===== UPDATE ===== */
+.update-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  height: 160px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark .header,
+body.dark .dropdown-menu,
+body.dark .card {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark a {
+  color: #eee;
 }
