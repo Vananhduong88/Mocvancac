@@ -86,3 +86,22 @@
   padding: 8px 12px;
   font-size: 14px;
 }
+.section {
+  padding: 32px 24px;
+}
+
+.story-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+}
+
+.story-card {
+  min-width: 160px;
+  padding: 12px;
+  border: 1px solid #eee;
+}
+.update-list {
+  padding-left: 16px;
+  color: #444;
+}
