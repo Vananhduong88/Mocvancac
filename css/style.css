@@ -254,7 +254,7 @@ section h2 {
 .story-card {
     transition: 0.5s;
 }
-.story-hot img {
+.story-card img {
   width: 100%;
   height: 600px;
   object-fit: contain;     /* QUAN TRỌNG */
