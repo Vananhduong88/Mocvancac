@@ -29,6 +29,7 @@ body {
 .logo {
   height: 48px;   /* 🔥 FIX LOGO QUÁ TO */
   width: auto;
+  display: block;
 }
 
 /* MENU */
