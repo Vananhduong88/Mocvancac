@@ -1,80 +1,109 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Mộc Văn Các</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Mộc Vân Các</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
-  <div class="nav-container">
-    <div class="logo">
-      <img src="assets/images/logo.png" alt="Mộc Văn Các">
-    </div>
+    <div class="container nav">
+        <div class="logo">
+            <img src="https://via.placeholder.com/140x50?text=Moc+Van+Cac" alt="Logo">
+        </div>
 
-    <nav class="nav">
-      <div class="menu dropdown">
-        <span>Danh mục ▾</span>
-        <ul class="dropdown-menu">
-          <li><a href="#">Hiện đại</a></li>
-          <li><a href="#">Cổ trang</a></li>
-          <li><a href="#">Chữa lành</a></li>
-          <li><a href="#">Gia đình</a></li>
-          <li><a href="#">Hài hước</a></li>
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="#">Danh mục ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Ngôn tình</a></li>
+                    <li><a href="#">Huyền huyễn</a></li>
+                    <li><a href="#">Xuyên không</a></li>
+                    <li><a href="#">Trọng sinh</a></li>
+                    <li><a href="#">Cổ đại</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Truyện Hot</a></li>
+            <li><a href="#">Mới cập nhật</a></li>
+            <li><a href="#">Nổi bật</a></li>
         </ul>
-      </div>
 
-      <a href="#">Xem nhiều</a>
-      <a href="#">Mới cập nhật</a>
-      <a href="#">Đang xem</a>
-    </nav>
-
-    <button id="darkToggle">🌙</button>
-  </div>
+        <button id="darkToggle">🌙</button>
+    </div>
 </header>
 
-<main class="container">
-
-  <section class="hero">
+<section class="hero">
     <h1>Đọc chậm, để chữ nghĩa chạm vào cảm xúc</h1>
-    <p class="desc">Nơi lưu giữ những câu chuyện mộc mạc và chân thành.</p>
+    <p class="desc">Nơi lưu giữ những câu chuyện mộc mạc và chân thành</p>
+</section>
 
-    <div class="search-box">
-      <input type="text" placeholder="🔍 Tìm truyện theo tên...">
-    </div>
-  </section>
-
-  <section class="hot">
-    <h2>🔥 Truyện HOT</h2>
+<!-- TRUYỆN HOT -->
+<section class="section">
+    <h2>🔥 Truyện Hot</h2>
     <div class="slider" id="hotSlider">
-      <div class="slide">HOT 1</div>
-      <div class="slide">HOT 2</div>
-      <div class="slide">HOT 3</div>
-      <div class="slide">HOT 4</div>
-      <div class="slide">HOT 5</div>
+        <div class="slide-track">
+            <!-- 8 truyện -->
+            <div class="slide"><img src="https://picsum.photos/240/340?1"><span>Truyện 1</span></div>
+            <div class="slide"><img src="https://picsum.photos/240/340?2"><span>Truyện 2</span></div>
+            <div class="slide"><img src="https://picsum.photos/240/340?3"><span>Truyện 3</span></div>
+            <div class="slide"><img src="https://picsum.photos/240/340?4"><span>Truyện 4</span></div>
+            <div class="slide"><img src="https://picsum.photos/240/340?5"><span>Truyện 5</span></div>
+            <div class="slide"><img src="https://picsum.photos/240/340?6"><span>Truyện 6</span></div>
+            <div class="slide"><img src="https://picsum.photos/240/340?7"><span>Truyện 7</span></div>
+            <div class="slide"><img src="https://picsum.photos/240/340?8"><span>Truyện 8</span></div>
+        </div>
     </div>
-  </section>
+</section>
 
-  <section class="update">
-    <h2>🆕 Mới cập nhật</h2>
-    <div class="update-grid">
-      <div class="card">Truyện A</div>
-      <div class="card">Truyện B</div>
-      <div class="card">Truyện C</div>
-      <div class="card">Truyện D</div>
-      <div class="card">Truyện E</div>
-      <div class="card">Truyện F</div>
-      <div class="card">Truyện G</div>
-      <div class="card">Truyện H</div>
-      <div class="card">Truyện I</div>
-      <div class="card">Truyện J</div>
+<!-- TRUYỆN NỔI BẬT -->
+<section class="section">
+    <h2>⭐ Truyện Nổi Bật</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://picsum.photos/200/280?9">
+            <h3>Truyện A</h3>
+            <p>👁 12,540</p>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/200/280?10">
+            <h3>Truyện B</h3>
+            <p>👁 8,210</p>
+        </div>
     </div>
-  </section>
+</section>
 
-</main>
+<!-- MỚI CẬP NHẬT -->
+<section class="section">
+    <h2>🆕 Mới Cập Nhật</h2>
+    <div class="grid">
+        <!-- 12 truyện -->
+        <script>
+            for(let i=1;i<=12;i++){
+                document.write(`
+                <div class="card">
+                    <img src="https://picsum.photos/200/280?${20+i}">
+                    <h3>Truyện ${i}</h3>
+                    <p>👁 ${Math.floor(Math.random()*20000+1000)}</p>
+                </div>`)
+            }
+        </script>
+    </div>
+</section>
 
-<script src="js/script.js"></script>
+<!-- QUẢNG CÁO -->
+<section class="ads">
+    <p>📢 Khu vực quảng cáo</p>
+</section>
+
+<footer class="footer">
+    <div class="social">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png">
+    </div>
+    <p>📧 contact@mocvancac.vn | ☎ 0123 456 789</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
