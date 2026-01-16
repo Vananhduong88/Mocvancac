@@ -2,11 +2,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 body {
-  background: #f4f5f7;
+  background: #f5f6f7;
   color: #222;
 }
 
@@ -29,46 +29,38 @@ body {
   justify-content: space-between;
 }
 
-/* LOGO – TO HƠN */
+/* LOGO FIX */
 .logo img {
-  height: 60px;
+  height: 48px; /* 🔥 LOGO KHÓA SIZE */
 }
 
 /* MENU */
 .menu {
   list-style: none;
   display: flex;
-  gap: 22px;
+  gap: 20px;
 }
 
 .menu li {
   cursor: pointer;
   position: relative;
-  font-weight: 500;
 }
 
 /* DROPDOWN */
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 28px;
   left: 0;
   background: #fff;
   border: 1px solid #ddd;
   list-style: none;
-  min-width: 160px;
-  z-index: 100;
+  min-width: 140px;
+  z-index: 10;
 }
 
-.dropdown-menu li a {
-  display: block;
-  padding: 10px 14px;
-  text-decoration: none;
-  color: #333;
-}
-
-.dropdown-menu li a:hover {
-  background: #f0f0f0;
+.dropdown-menu li {
+  padding: 8px 12px;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -78,89 +70,52 @@ body {
 /* HERO */
 .hero {
   text-align: center;
-  margin: 32px 0;
+  margin: 30px 0;
 }
 
 .hero h1 {
   font-size: 26px;
-  margin-bottom: 6px;
 }
 
 .hero p {
-  font-size: 14px;
   font-style: italic;
   color: #666;
-  max-width: 600px;
-  margin: auto;
+  margin: 8px 0 16px;
 }
 
-/* SEARCH */
 .search {
-  margin-top: 16px;
-  padding: 10px 14px;
+  padding: 10px;
   width: 100%;
-  max-width: 360px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-/* SECTION */
-section {
-  margin-top: 36px;
-}
-
-section h2 {
-  margin-bottom: 14px;
-}
-
-/* SLIDER HOT */
-.slider {
-  display: flex;
-  gap: 16px;
-  overflow: hidden;
-}
-
-.slide-track {
-  display: flex;
-  gap: 16px;
-  animation: slide 18s linear infinite;
-}
-
-@keyframes slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  max-width: 320px;
 }
 
 /* GRID */
 .grid {
   display: grid;
   gap: 16px;
+  margin-top: 12px;
 }
 
-/* HOT */
-.hot-card {
-  width: 260px;
-  height: 160px;
-  background: #e6e6e6;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+.hot-grid {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
-/* NEW */
 .new-grid {
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
-.new-card {
-  height: 100px;
-  background: #ededed;
-  border-radius: 6px;
+/* CARD */
+.card {
+  background: #eaeaea;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 6px;
+}
+
+.card.small {
+  height: 90px;
 }
 
 /* DARK MODE */
@@ -173,27 +128,18 @@ section h2 {
   background: #1e1e1e;
 }
 
-.dark .dropdown-menu {
-  background: #1e1e1e;
-  border-color: #333;
-}
-
-.dark a {
-  color: #eee;
+.dark .card {
+  background: #2a2a2a;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .logo img {
-    height: 42px;
-  }
-
   .menu {
+    gap: 10px;
     font-size: 14px;
-    gap: 12px;
   }
 
-  .hot-card {
-    width: 220px;
+  .logo img {
+    height: 36px;
   }
 }
