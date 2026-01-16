@@ -213,15 +213,6 @@ section h2 {
     transition: transform 0.6s ease;
 }
 
-/* CARD */
-.story-card {
-    width: 200px;
-    flex: 0 0 auto;          /* KHÔNG CO */
-    background: #fff;
-    border-radius: 6px;
-    overflow: hidden;
-}
-
 /* ẢNH DỌC */
 .story-thumb {
     width: 100%;
