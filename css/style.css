@@ -222,3 +222,21 @@ section h2 {
     font-size: 14px;
     padding: 8px;
 }
+.hot-item {
+    position: relative;
+}
+
+.hot-item::before {
+    content: "";
+    display: block;
+    padding-top: 133%;
+}
+
+.hot-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
