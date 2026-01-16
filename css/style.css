@@ -31,47 +31,21 @@ body {
 
 /* LOGO – TO HƠN */
 .logo img {
-  height: 65px;
+  height: 60px;
 }
 
 /* MENU */
 .menu {
-  position: relative;
-  display: inline-block;
-}
-
-.menu-btn {
-  cursor: pointer;
-}
-
-.menu-list {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  border: 1px solid #ddd;
   list-style: none;
-  padding: 10px 0;
-  min-width: 160px;
-  display: none;
-  z-index: 999;
+  display: flex;
+  gap: 22px;
 }
 
-.menu:hover .menu-list {
-  display: block;
+.menu li {
+  cursor: pointer;
+  position: relative;
+  font-weight: 500;
 }
-
-.menu-list li a {
-  display: block;
-  padding: 8px 15px;
-  text-decoration: none;
-  color: #333;
-}
-
-.menu-list li a:hover {
-  background: #f2f2f2;
-}
-
 
 /* DROPDOWN */
 .dropdown-menu {
@@ -222,12 +196,4 @@ section h2 {
   .hot-card {
     width: 220px;
   }
-}
-.site-description {
-  text-align: center;
-  font-size: 14px;
-  font-style: italic;
-  color: #666;
-  margin-bottom: 20px;
-  font-family: "Georgia", "Times New Roman", serif;
 }
