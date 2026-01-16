@@ -88,7 +88,7 @@ body {
 }
 /* LOGO IMAGE */
 .logo-img {
-  height: 40px;        /* chiều cao logo */
+  height: 60px;        /* chiều cao logo */
   width: auto;         /* giữ tỉ lệ ảnh */
   display: block;
 }
