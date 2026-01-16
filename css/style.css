@@ -222,3 +222,13 @@ body.dark input {
     color: #fff;
     border: 1px solid #444;
 }
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 16px;
+    }
+}
