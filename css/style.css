@@ -197,3 +197,28 @@ section h2 {
     width: 220px;
   }
 }
+/* TRUYỆN HOT */
+.hot-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.hot-item {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hot-item img {
+    width: 100%;
+    aspect-ratio: 3 / 4;   /* ẢNH DỌC */
+    object-fit: cover;    /* Cắt cho đẹp */
+    display: block;
+}
+
+.hot-item h3 {
+    font-size: 14px;
+    padding: 8px;
+}
