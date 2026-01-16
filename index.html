@@ -1,94 +1,43 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Mộc Văn Các</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mộc Văn Các là không gian đọc truyện chữ tối giản, dễ đọc, nơi người yêu văn chương tìm thấy sự tĩnh lặng trong từng con chữ.">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <title>Mộc Văn Các – Đọc truyện chữ nhẹ nhàng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mộc Văn Các – không gian đọc truyện chữ tối giản, dịu mắt và sâu lắng." />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <header class="site-header">
-  <div class="logo-wrap">
-    <img src="assets/logo/logo.png" alt="Mộc Văn Các" class="logo-img">
-    <span class="logo-text">Mộc Văn Các</span>
-  </div>
-</header>
-<header>
-  <header class="header">
-  <div class="logo">
-    <img src="assets/logo/logo.png" alt="Mộc Văn Các">
-    <span>Mộc Văn Các</span>
-  </div>
 
-  <nav class="menu">
-    <div class="dropdown">
-      <span>Danh mục ▾</span>
-      <div class="dropdown-menu">
-        <a href="#">Hiện đại</a>
-        <a href="#">Cổ trang</a>
-        <a href="#">Nữ cường</a>
-        <a href="#">Hài hước</a>
-        <a href="#">Chữa lành</a>
-        <a href="#">Gia đình</a>
-      </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <img src="assets/logo/logo.png" alt="Mộc Văn Các" class="logo-img">
     </div>
 
-    <button id="darkToggle">🌙</button>
-  </nav>
-</header>
+    <nav class="header-menu">
+      <div class="dropdown">
+        <span>Danh mục ▾</span>
+        <ul class="dropdown-menu">
+          <li>Truyện hiện đại</li>
+          <li>Truyện cổ trang</li>
+          <li>Truyện nữ cường</li>
+          <li>Truyện hài hước</li>
+          <li>Truyện chữa lành</li>
+          <li>Truyện gia đình</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-  <main class="container">
+  <!-- HERO -->
+  <main class="hero">
     <h1>Đọc chậm, để chữ nghĩa chạm vào cảm xúc</h1>
     <p>Nơi lưu giữ những câu chuyện mộc mạc và chân thành.</p>
-    <input id="search"
-       type="text"
-       placeholder="Tìm truyện..."
-       onkeyup="searchStory()">
+
+    <input type="text" class="search-box" placeholder="Tìm truyện theo tên..." />
   </main>
 
-  <script src="js/theme.js"></script>
 </body>
 </html>
-<ul id="storyList">
-  <li>Tên truyện gió</li>
-  <li>Một ngày yên tĩnh</li>
-  <li>Nắng qua hiên</li>
-</ul>
-<script>
-function searchStory() {
-  let input = document.getElementById("search").value.toLowerCase();
-  let items = document.querySelectorAll("#storyList li");
-
-  items.forEach(item => {
-    item.style.display = item.innerText.toLowerCase().includes(input)
-      ? ""
-      : "none";
-  });
-}
-</script>
-<section class="hot">
-  <h2>🔥 Truyện HOT</h2>
-  <div class="slider">
-    <div class="slide">
-      <img src="assets/truyen/1.jpg">
-      <p>Tên truyện 1</p>
-    </div>
-    <div class="slide">
-      <img src="assets/truyen/2.jpg">
-      <p>Tên truyện 2</p>
-    </div>
-  </div>
-</section>
-<section class="new">
-  <h3>🆕 Mới cập nhật</h3>
-
-  <div class="story-mini">
-    <img src="assets/truyen/3.jpg">
-    <span>Tên truyện</span>
-  </div>
-</section>
-<button id="darkToggle">🌙</button>
-<script src="js/main.js"></script>
-
