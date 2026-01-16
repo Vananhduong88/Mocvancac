@@ -60,3 +60,55 @@ nav a {
   font-size: 14px;
   color: var(--subtext);
 }
+/* DROPDOWN MENU */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--subtext);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background: var(--bg);
+  border: 1px solid #ddd;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.dropdown-content a:hover {
+  background: #f2f2f2;
+}
+
+/* Hover PC */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dark mode */
+body.dark .dropdown-content {
+  border-color: #333;
+}
+
+body.dark .dropdown-content a:hover {
+  background: #222;
+}
