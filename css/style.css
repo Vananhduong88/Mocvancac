@@ -1,116 +1,86 @@
-/* ===== HEADER ===== */
-.site-header {
-  height: 72px;
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --card: #f6f6f6;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #eee;
+  --card: #1e1e1e;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* HEADER */
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
-  border-bottom: 1px solid #eee;
-  background: #fff;
+  padding: 10px 20px;
+  background: var(--card);
 }
 
-/* Logo + tên */
-.header-left {
+.logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
-.logo-img {
-  height: 56px;   /* LOGO ĐẸP – KHÔNG QUÁ BÉ */
-  width: auto;
+.logo img {
+  height: 60px;
 }
 
-.site-name {
-  font-size: 20px;
-  font-weight: 600;
-  color: #1b5e20; /* xanh lá đậm */
-  font-family: serif;
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
 }
 
-/* Menu */
-.header-nav {
-  font-size: 15px;
-  color: #444;
-}
-/* ===== DROPDOWN ===== */
-.dropdown {
-  position: relative;
+#darkToggle {
+  font-size: 18px;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 120%;
-  left: 0;
-  background: #fff;
-  border: 1px solid #ddd;
-  list-style: none;
-  padding: 8px 0;
-  min-width: 180px;
+/* HERO */
+.hero {
+  padding: 30px;
+  text-align: center;
+}
+
+.hero input {
+  padding: 10px;
+  width: 250px;
+  margin-top: 15px;
+}
+
+/* SLIDER */
+.slider {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.slide {
   display: none;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 20px;
+  background: var(--card);
+  border-radius: 8px;
 }
 
-.dropdown-menu li {
-  padding: 8px 16px;
-  white-space: nowrap;
-}
-
-.dropdown-menu li:hover {
-  background: #f5f5f5;
-}
-
-.dropdown:hover .dropdown-menu {
+.slide.active {
   display: block;
 }
-/* ===== HERO ===== */
-.hero {
-  text-align: center;
-  padding: 60px 16px;
-}
 
-.hero h1 {
-  font-size: 32px;
-  font-family: serif;
-  margin-bottom: 12px;
-}
-
-.hero p {
-  color: #666;
-  margin-bottom: 24px;
-}
-
-.search-box {
-  width: 260px;
-  padding: 8px 12px;
-  font-size: 14px;
-}
-.section {
-  padding: 32px 24px;
-}
-
-.story-row {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-}
-
-.story-card {
-  min-width: 160px;
-  padding: 12px;
-  border: 1px solid #eee;
-}
-.update-list {
-  padding-left: 16px;
-  color: #444;
-}
-body.dark {
-  background: #121212;
-  color: #eaeaea;
-}
-
-body.dark .site-header {
-  background: #1e1e1e;
-  border-color: #333;
+/* LIST */
+.list ul li {
+  padding: 8px 0;
 }
