@@ -1,46 +1,70 @@
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Segoe UI,sans-serif;background:#fafafa;color:#222}
-.container{max-width:1200px;margin:auto;padding:20px}
-
-.header{background:#fff;border-bottom:1px solid #ddd}
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{height:42px}
-
-.menu{display:flex;gap:24px;list-style:none}
-.menu li{position:relative;cursor:pointer}
-.menu a{text-decoration:none;color:#222}
-
-.dropdown{
-  position:absolute;top:130%;left:0;
-  background:#fff;border:1px solid #ccc;
-  display:none;min-width:150px;z-index:100
-}
-.has-dropdown:hover .dropdown{display:block}
-.dropdown li a{display:block;padding:8px 12px}
-
-.hero{text-align:center;padding:40px 20px}
-.desc{font-style:italic;color:#666}
-
-.slider{overflow:hidden}
-.slides{display:flex;gap:16px;animation:slide 30s linear infinite}
-.hot-item{width:180px}
-.hot-item img{width:100%;height:240px;object-fit:cover;border-radius:6px}
-
-@keyframes slide{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
-  gap:16px
+/* BODY */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f7f7f7;
+  color: #222;
 }
-.card img{width:100%;height:220px;object-fit:cover;border-radius:6px}
-.card p{margin:6px 0}
 
-.footer{text-align:center;padding:20px;background:#fff;border-top:1px solid #ddd}
-.footer img{width:20px;margin:0 6px}
+/* HEADER */
+.site-header {
+  height: 100px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
 
-.dark{background:#121212;color:#eee}
-.dark .header,.dark .footer{background:#1e1e1e}
+/* LOGO */
+.logo {
+  height: 70px;
+  width: auto;
+}
+
+/* WRAPPER (CHÌA KHÓA CHỐNG WORD) */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #fff;
+}
+
+/* DESCRIPTION */
+.description {
+  text-align: center;
+  font-style: italic;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+h1 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+/* SEARCH */
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.search-box input {
+  width: 260px;
+  padding: 6px 10px;
+}
+
+/* HOT */
+.hot-title {
+  font-size: 18px;
+  margin: 20px 0 10px;
+}
