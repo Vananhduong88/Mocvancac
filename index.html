@@ -8,95 +8,70 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
-  <div class="container header-flex">
-    
-    <!-- LOGO -->
-    <a href="/" class="logo">
+  <div class="nav-container">
+    <div class="logo">
       <img src="assets/images/logo.png" alt="Mộc Văn Các">
-    </a>
+    </div>
 
-    <!-- MENU -->
     <nav class="nav">
-      <ul class="menu">
-        <li class="menu-item">
-          <span class="menu-title">Danh mục ▾</span>
-          <ul class="submenu">
-            <li><a href="#">Hiện đại</a></li>
-            <li><a href="#">Cổ trang</a></li>
-            <li><a href="#">Chữa lành</a></li>
-            <li><a href="#">Gia đình</a></li>
-            <li><a href="#">Hài hước</a></li>
-          </ul>
-        </li>
+      <div class="menu dropdown">
+        <span>Danh mục ▾</span>
+        <ul class="dropdown-menu">
+          <li><a href="#">Hiện đại</a></li>
+          <li><a href="#">Cổ trang</a></li>
+          <li><a href="#">Chữa lành</a></li>
+          <li><a href="#">Gia đình</a></li>
+          <li><a href="#">Hài hước</a></li>
+        </ul>
+      </div>
 
-        <li class="menu-item"><a href="#">Xem nhiều</a></li>
-        <li class="menu-item"><a href="#">Mới cập nhật</a></li>
-        <li class="menu-item"><a href="#">Đang xem</a></li>
-      </ul>
-
-      <div class="dark-toggle">🌙</div>
+      <a href="#">Xem nhiều</a>
+      <a href="#">Mới cập nhật</a>
+      <a href="#">Đang xem</a>
     </nav>
+
+    <button id="darkToggle">🌙</button>
   </div>
 </header>
 
-<!-- MAIN -->
 <main class="container">
 
-  <!-- HERO -->
   <section class="hero">
     <h1>Đọc chậm, để chữ nghĩa chạm vào cảm xúc</h1>
-    <p>Nơi lưu giữ những câu chuyện mộc mạc và chân thành.</p>
+    <p class="desc">Nơi lưu giữ những câu chuyện mộc mạc và chân thành.</p>
 
-    <input class="search" type="text" placeholder="🔍 Tìm truyện theo tên...">
+    <div class="search-box">
+      <input type="text" placeholder="🔍 Tìm truyện theo tên...">
+    </div>
   </section>
 
-  <!-- TRUYỆN HOT -->
-  <section>
+  <section class="hot">
     <h2>🔥 Truyện HOT</h2>
-   <div class="slider">
-    <div class="slide-track">
-      <div class="hot-card">HOT 1</div>
-      <div class="hot-card">HOT 2</div>
-      <div class="hot-card">HOT 3</div>
-      <div class="hot-card">HOT 4</div>
-      <div class="hot-card">HOT 5</div>
-      <div class="hot-card">HOT 6</div>
-      <div class="hot-card">HOT 7</div>
-      <div class="hot-card">HOT 8</div>
-
-      <!-- Lặp lại để chạy mượt -->
-      <div class="hot-card">HOT 1</div>
-      <div class="hot-card">HOT 2</div>
-      <div class="hot-card">HOT 3</div>
-      <div class="hot-card">HOT 4</div>
-      <div class="hot-card">HOT 5</div>
-      <div class="hot-card">HOT 6</div>
-      <div class="hot-card">HOT 7</div>
-      <div class="hot-card">HOT 8</div>
+    <div class="slider" id="hotSlider">
+      <div class="slide">HOT 1</div>
+      <div class="slide">HOT 2</div>
+      <div class="slide">HOT 3</div>
+      <div class="slide">HOT 4</div>
+      <div class="slide">HOT 5</div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- MỚI CẬP NHẬT -->
-  <section>
+  <section class="update">
     <h2>🆕 Mới cập nhật</h2>
-  <div class="grid new-grid">
-    <div class="new-card">Truyện A</div>
-    <div class="new-card">Truyện B</div>
-    <div class="new-card">Truyện C</div>
-    <div class="new-card">Truyện D</div>
-    <div class="new-card">Truyện E</div>
-    <div class="new-card">Truyện F</div>
-    <div class="new-card">Truyện G</div>
-    <div class="new-card">Truyện H</div>
-    <div class="new-card">Truyện I</div>
-    <div class="new-card">Truyện J</div>
-    <div class="new-card">Truyện K</div>
-    <div class="new-card">Truyện L</div>
-  </div>
-</section>
+    <div class="update-grid">
+      <div class="card">Truyện A</div>
+      <div class="card">Truyện B</div>
+      <div class="card">Truyện C</div>
+      <div class="card">Truyện D</div>
+      <div class="card">Truyện E</div>
+      <div class="card">Truyện F</div>
+      <div class="card">Truyện G</div>
+      <div class="card">Truyện H</div>
+      <div class="card">Truyện I</div>
+      <div class="card">Truyện J</div>
+    </div>
+  </section>
 
 </main>
 
