@@ -1,97 +1,82 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Mộc Văn Các</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="container header-inner">
-    <img src="assets/images/logo.png" class="logo" alt="Mộc Văn Các">
+    <img src="assets/images/logo.png" class="logo">
 
-    <nav class="nav">
-      <ul class="menu">
-        <li class="has-dropdown">
-          <a href="#">Danh mục ▾</a>
-          <ul class="dropdown">
-            <li><a href="#">Ngôn tình</a></li>
-            <li><a href="#">Huyền huyễn</a></li>
-            <li><a href="#">Xuyên không</a></li>
-            <li><a href="#">Trọng sinh</a></li>
-            <li><a href="#">Cổ đại</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Xem nhiều</a></li>
-        <li><a href="#">Mới cập nhật</a></li>
-        <li><a href="#">Đang xem</a></li>
-      </ul>
-    </nav>
+    <ul class="menu">
+      <li class="has-dropdown">
+        Danh mục ▾
+        <ul class="dropdown">
+          <li><a href="#">Ngôn tình</a></li>
+          <li><a href="#">Huyền huyễn</a></li>
+          <li><a href="#">Xuyên không</a></li>
+          <li><a href="#">Trọng sinh</a></li>
+          <li><a href="#">Cổ đại</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Xem nhiều</a></li>
+      <li><a href="#">Mới cập nhật</a></li>
+      <li><a href="#">Đang xem</a></li>
+    </ul>
 
     <button id="darkToggle">🌙</button>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <h1>Đọc chậm, để chữ nghĩa chạm vào cảm xúc</h1>
   <p class="desc">Nơi lưu giữ những câu chuyện mộc mạc và chân thành.</p>
 </section>
 
-<!-- HOT SLIDER -->
-<section class="section">
+<section class="container">
   <h2>🔥 Truyện HOT</h2>
-
-  <div class="slider" id="hotSlider">
+  <div class="slider">
     <div class="slides">
-      <div class="slide"><img src="assets/images/hot1.jpg"><span>HOT 1</span></div>
-      <div class="slide"><img src="assets/images/hot2.jpg"><span>HOT 2</span></div>
-      <div class="slide"><img src="assets/images/hot3.jpg"><span>HOT 3</span></div>
-      <div class="slide"><img src="assets/images/hot4.jpg"><span>HOT 4</span></div>
-      <div class="slide"><img src="assets/images/hot5.jpg"><span>HOT 5</span></div>
-      <div class="slide"><img src="assets/images/hot6.jpg"><span>HOT 6</span></div>
-      <div class="slide"><img src="assets/images/hot7.jpg"><span>HOT 7</span></div>
-      <div class="slide"><img src="assets/images/hot8.jpg"><span>HOT 8</span></div>
+      <div class="hot-item"><img src="assets/images/hot1.jpg"><span>HOT 1</span></div>
+      <div class="hot-item"><img src="assets/images/hot2.jpg"><span>HOT 2</span></div>
+      <div class="hot-item"><img src="assets/images/hot3.jpg"><span>HOT 3</span></div>
+      <div class="hot-item"><img src="assets/images/hot4.jpg"><span>HOT 4</span></div>
+      <div class="hot-item"><img src="assets/images/hot5.jpg"><span>HOT 5</span></div>
+      <div class="hot-item"><img src="assets/images/hot6.jpg"><span>HOT 6</span></div>
+      <div class="hot-item"><img src="assets/images/hot7.jpg"><span>HOT 7</span></div>
+      <div class="hot-item"><img src="assets/images/hot8.jpg"><span>HOT 8</span></div>
     </div>
   </div>
 </section>
 
-<!-- NEW UPDATE -->
-<section class="section">
+<section class="container">
   <h2>🆕 Mới cập nhật</h2>
-
   <div class="grid">
     <!-- 12 truyện -->
-    <div class="card"><img src="assets/images/new1.jpg"><h3>Truyện A</h3><span>👁 1,234</span></div>
-    <div class="card"><img src="assets/images/new2.jpg"><h3>Truyện B</h3><span>👁 2,145</span></div>
-    <div class="card"><img src="assets/images/new3.jpg"><h3>Truyện C</h3><span>👁 932</span></div>
-    <div class="card"><img src="assets/images/new4.jpg"><h3>Truyện D</h3><span>👁 3,120</span></div>
-    <div class="card"><img src="assets/images/new5.jpg"><h3>Truyện E</h3><span>👁 876</span></div>
-    <div class="card"><img src="assets/images/new6.jpg"><h3>Truyện F</h3><span>👁 4,512</span></div>
-    <div class="card"><img src="assets/images/new7.jpg"><h3>Truyện G</h3><span>👁 1,904</span></div>
-    <div class="card"><img src="assets/images/new8.jpg"><h3>Truyện H</h3><span>👁 789</span></div>
-    <div class="card"><img src="assets/images/new9.jpg"><h3>Truyện I</h3><span>👁 2,330</span></div>
-    <div class="card"><img src="assets/images/new10.jpg"><h3>Truyện J</h3><span>👁 980</span></div>
-    <div class="card"><img src="assets/images/new11.jpg"><h3>Truyện K</h3><span>👁 1,650</span></div>
-    <div class="card"><img src="assets/images/new12.jpg"><h3>Truyện L</h3><span>👁 720</span></div>
+    <div class="card"><img src="assets/images/story1.jpg"><p>Truyện A</p><small>👁 1,234</small></div>
+    <div class="card"><img src="assets/images/story2.jpg"><p>Truyện B</p><small>👁 2,145</small></div>
+    <div class="card"><img src="assets/images/story3.jpg"><p>Truyện C</p><small>👁 932</small></div>
+    <div class="card"><img src="assets/images/story4.jpg"><p>Truyện D</p><small>👁 3,120</small></div>
+    <div class="card"><img src="assets/images/story5.jpg"><p>Truyện E</p><small>👁 876</small></div>
+    <div class="card"><img src="assets/images/story6.jpg"><p>Truyện F</p><small>👁 4,512</small></div>
+    <div class="card"><img src="assets/images/story7.jpg"><p>Truyện G</p><small>👁 1,904</small></div>
+    <div class="card"><img src="assets/images/story8.jpg"><p>Truyện H</p><small>👁 789</small></div>
+    <div class="card"><img src="assets/images/story9.jpg"><p>Truyện I</p><small>👁 2,330</small></div>
+    <div class="card"><img src="assets/images/story10.jpg"><p>Truyện J</p><small>👁 980</small></div>
+    <div class="card"><img src="assets/images/story11.jpg"><p>Truyện K</p><small>👁 1,650</small></div>
+    <div class="card"><img src="assets/images/story12.jpg"><p>Truyện L</p><small>👁 720</small></div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
-  <div class="social">
-    <a href="https://facebook.com" target="_blank">
-      <img src="assets/images/facebook.png">
-    </a>
-    <a href="https://tiktok.com" target="_blank">
-      <img src="assets/images/tiktok.png">
-    </a>
+  <div>
+    <a href="https://facebook.com" target="_blank"><img src="assets/images/facebook.png"></a>
+    <a href="https://tiktok.com" target="_blank"><img src="assets/images/tiktok.png"></a>
   </div>
-
   <p>📧 contact@mocvancac.vn | ☎ 0123 456 789</p>
 </footer>
 
