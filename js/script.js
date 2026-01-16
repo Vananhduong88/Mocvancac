@@ -15,3 +15,9 @@ track.addEventListener("mouseenter", () => {
 track.addEventListener("mouseleave", () => {
     track.style.animationPlayState = "running";
 });
+<script>
+document.querySelector('.dropdown > a').addEventListener('click', function(e){
+  e.preventDefault();
+  this.parentElement.classList.toggle('open');
+});
+</script>
