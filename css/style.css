@@ -84,3 +84,47 @@ body.dark{background:#121212;color:#ddd}
 body.dark .header,
 body.dark .footer,
 body.dark .mobile-menu{background:#1e1e1e}
+/* ===== DESKTOP DROPDOWN ===== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #fff;
+  padding: 16px;
+  min-width: 360px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.15);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+/* Hover desktop mới hiện */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột */
+    gap: 8px 24px;
+  }
+
+  .dropdown-menu li {
+    white-space: nowrap;
+  }
+}
+
+/* Mobile: ẩn dropdown desktop */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    display: none !important;
+  }
+}
+
