@@ -21,3 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
 });
 </script>
+setInterval(() => {
+    slider.scrollLeft += 1;
+}, 70);
