@@ -8,46 +8,88 @@
 <body>
 
 <header class="header">
+  <!-- LOGO -->
   <div class="logo">
-    <img src="Logo.png" alt="Mộc Văn Các">
-    <span>Mộc Văn Các</span>
+    <img src="logo.png" alt="Mộc Văn Các">
   </div>
 
-  <nav>
-    <a href="#">Hiện đại</a>
-    <a href="#">Cổ trang</a>
-    <a href="#">Nữ cường</a>
-    <a href="#">Chữa lành</a>
+  <!-- MENU -->
+  <nav class="nav">
+    <div class="dropdown">
+      <span>Danh mục ▾</span>
+      <ul class="dropdown-menu">
+        <li>Hiện đại</li>
+        <li>Cổ trang</li>
+        <li>Chữa lành</li>
+        <li>Gia đình</li>
+        <li>Hài hước</li>
+      </ul>
+    </div>
+    <span>📈 Xem nhiều</span>
+    <span>🆕 Mới cập nhật</span>
+    <span>📖 Đang xem</span>
   </nav>
 
+  <!-- DARK MODE -->
   <button id="darkToggle">🌙</button>
 </header>
 
-<section class="hero">
+<!-- DESCRIPTION -->
+<section class="intro">
   <h1>Đọc chậm, để chữ nghĩa chạm vào cảm xúc</h1>
   <p>Nơi lưu giữ những câu chuyện mộc mạc và chân thành.</p>
+</section>
 
+<!-- SEARCH -->
+<section class="search-box">
   <input type="text" id="search" placeholder="🔍 Tìm truyện theo tên...">
 </section>
 
-<!-- SLIDER HOT -->
-<section class="hot">
+<!-- HOT SLIDER -->
+<section class="section">
   <h2>🔥 Truyện HOT</h2>
   <div class="slider">
-    <div class="slide active">Tên truyện 1</div>
-    <div class="slide">Tên truyện 2</div>
-    <div class="slide">Tên truyện 3</div>
+    <div class="slide active">
+      <img src="hot1.jpg">
+      <span>Tên truyện HOT 1</span>
+    </div>
+    <div class="slide">
+      <img src="hot2.jpg">
+      <span>Tên truyện HOT 2</span>
+    </div>
+    <div class="slide">
+      <img src="hot3.jpg">
+      <span>Tên truyện HOT 3</span>
+    </div>
+    <div class="slide">
+      <img src="hot4.jpg">
+      <span>Tên truyện HOT 4</span>
+    </div>
+    <div class="slide">
+      <img src="hot5.jpg">
+      <span>Tên truyện HOT 5</span>
+    </div>
   </div>
 </section>
 
-<!-- DANH SÁCH -->
-<section class="list">
-  <h2>📘 Mới cập nhật</h2>
-  <ul id="storyList">
-    <li>Tên truyện A</li>
-    <li>Tên truyện B</li>
-    <li>Tên truyện C</li>
-  </ul>
+<!-- NEW UPDATE -->
+<section class="section">
+  <h2>🆕 Mới cập nhật</h2>
+  <div class="grid" id="storyList">
+    <div class="story">
+      <img src="new1.jpg">
+      <span>Tên truyện A</span>
+    </div>
+    <div class="story">
+      <img src="new2.jpg">
+      <span>Tên truyện B</span>
+    </div>
+    <div class="story">
+      <img src="new3.jpg">
+      <span>Tên truyện C</span>
+    </div>
+    <!-- thêm đủ 10 truyện -->
+  </div>
 </section>
 
 <script src="script.js"></script>
