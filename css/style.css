@@ -256,52 +256,53 @@ body.dark input {
     column-gap: 24px;
   }
 }
+
 /* ===== MOBILE MENU FULL SCREEN ===== */
-@media (max-width: 768px) {
-  .dropdown-menu {
-    display: none;
-  }
-
-  .mobile-menu {
-    position: fixed;
-    inset: 0;
-    background: #fff;
-    z-index: 9999;
-    padding: 20px;
-    display: none;
-    overflow-y: auto;
-  }
-
-  .mobile-menu.show {
-    display: block;
-  }
-
-  .mobile-menu ul {
-    list-style: none;
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .close-menu {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    font-size: 22px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 9999;
+  display: none;
+  padding: 60px 20px;
 }
 
-/* Xóa icon X thừa trong dropdown desktop */
-@media (min-width: 769px) {
-  .dropdown-menu::before,
-  .dropdown-menu::after,
-  .dropdown-menu button,
-  .dropdown-menu .close,
-  .dropdown-menu .close-btn {
+.mobile-menu.show {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  column-count: 2;
+  column-gap: 20px;
+}
+
+.mobile-menu li {
+  break-inside: avoid;
+  padding: 8px 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.close-menu {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Desktop: ẩn menu mobile */
+@media (min-width: 768px) {
+  .mobile-menu {
     display: none !important;
   }
 }
