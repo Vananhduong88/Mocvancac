@@ -4,11 +4,11 @@ document.getElementById("darkToggle").onclick = () => {
 };
 
 // SLIDER
-const track = document.getElementById("sliderTrack");
+const slides = document.querySelector(".slides");
 let index = 0;
 
 setInterval(() => {
   index++;
-  if(index > 4) index = 0;
-  track.style.transform = `translateX(${-index * 280}px)`;
+  if (index > 4) index = 0;
+  slides.style.transform = `translateX(-${index * 235}px)`;
 }, 3000);
