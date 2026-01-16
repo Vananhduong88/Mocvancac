@@ -5,18 +5,18 @@ document.getElementById("darkToggle").onclick = () => {
 
 // 🔍 SEARCH
 const search = document.getElementById("search");
-const stories = document.querySelectorAll("#storyList li");
+const stories = document.querySelectorAll(".story");
 
 search.addEventListener("input", () => {
   const value = search.value.toLowerCase();
   stories.forEach(story => {
-    story.style.display = story.textContent.toLowerCase().includes(value)
-      ? "list-item"
+    story.style.display = story.innerText.toLowerCase().includes(value)
+      ? "block"
       : "none";
   });
 });
 
-// 🔥 SLIDER HOT
+// 🔥 SLIDER
 let index = 0;
 const slides = document.querySelectorAll(".slide");
 
