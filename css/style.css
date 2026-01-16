@@ -294,3 +294,20 @@ body.dark .mobile-menu{background:#1e1e1e}
     grid-template-columns: 1fr;
   }
 }
+.recommend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.recommend-item h4 a {
+  color: #222;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.recommend-item h4 a:hover {
+  color: #ff4d4f;
+  text-decoration: underline;
+}
