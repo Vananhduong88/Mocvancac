@@ -25,15 +25,24 @@ a{text-decoration:none;color:inherit}
 .slider{overflow:hidden}
 .slide-track{
   display:flex;
-  gap:14px;
-  width:max-content;
-  animation:scroll 50s linear infinite
+  width:calc(300px * 12); /* 6 truyện x 2 lần */
+  animation:scroll 50s linear infinite;
 }
+
 @keyframes scroll{
-  from{transform:translateX(0)}
-  to{transform:translateX(-50%)}
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(calc(-300px * 6));
+  }
 }
-.story-card{width:300px;text-align:center;flex-shrink:0}
+
+.story-card{
+  width:300px;
+  text-align:center;
+  flex-shrink:0
+}
 .story-card img{
   width:300px;height:533px;
   object-fit:cover;border-radius:10px
