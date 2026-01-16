@@ -1,169 +1,143 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+:root {
+    --bg: #f5f5f5;
+    --text: #222;
+    --card: #fff;
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #eee;
+    --card: #1f1f1f;
 }
 
 body {
-  background: #f5f5f5;
-  color: #222;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
 }
 
-/* ===== HEADER ===== */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
 .header {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 16px;
-}
-
-.logo img {
-  height: 48px;
+    background: var(--card);
+    border-bottom: 1px solid #ddd;
 }
 
 .nav {
-  display: flex;
-  gap: 24px;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.nav a {
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
-.dropdown {
-  position: relative;
-  cursor: pointer;
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 10px;
 }
 
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  border: 1px solid #ddd;
-  list-style: none;
-  display: none;
-  min-width: 160px;
-  z-index: 100;
-}
-
-.dropdown-menu li a {
-  display: block;
-  padding: 10px;
-  color: #222;
-}
-
-.dropdown-menu li a:hover {
-  background: #eee;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--card);
+    display: none;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.15);
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+    display: block;
 }
 
-#darkToggle {
-  border: none;
-  background: none;
-  font-size: 20px;
-  cursor: pointer;
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
 }
 
-/* ===== MAIN ===== */
-.container {
-  max-width: 1100px;
-  margin: 30px auto;
-  padding: 0 16px;
-}
-
-/* ===== HERO ===== */
 .hero {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.hero h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 .desc {
-  font-size: 15px;
-  font-style: italic;
-  color: #666;
-  margin-bottom: 20px;
+    font-style: italic;
+    opacity: .8;
 }
 
-.search-box input {
-  width: 100%;
-  max-width: 420px;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-/* ===== HOT ===== */
-.hot {
-  margin-bottom: 40px;
+.section {
+    padding: 30px;
 }
 
 .slider {
-  display: flex;
-  overflow: hidden;
-  gap: 16px;
+    overflow: hidden;
+}
+
+.slide-track {
+    display: flex;
+    animation: slide 25s linear infinite;
 }
 
 .slide {
-  min-width: 220px;
-  height: 260px;
-  background: #ddd;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+    margin-right: 20px;
+    text-align: center;
 }
 
-/* ===== UPDATE ===== */
-.update-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 16px;
+.slide img {
+    width: 240px;
+    height: 340px;
+    border-radius: 8px;
+}
+
+@keyframes slide {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-50%);}
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
+    gap: 20px;
 }
 
 .card {
-  height: 160px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background: var(--card);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
 }
 
-/* ===== DARK MODE ===== */
-body.dark {
-  background: #121212;
-  color: #eee;
+.card img {
+    width: 100%;
+    border-radius: 6px;
 }
 
-body.dark .header,
-body.dark .dropdown-menu,
-body.dark .card {
-  background: #1e1e1e;
-  color: #eee;
+.ads {
+    background: #ddd;
+    text-align: center;
+    padding: 20px;
 }
 
-body.dark a {
-  color: #eee;
+.footer {
+    background: var(--card);
+    text-align: center;
+    padding: 20px;
+}
+
+.social img {
+    width: 32px;
+    margin: 0 10px;
 }
