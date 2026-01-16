@@ -1,3 +1,24 @@
+/* ===== RESET CHUẨN ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +29,16 @@
 body {
   background: #fafafa;
   color: #222;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 body.dark {
@@ -22,46 +53,41 @@ body.dark {
 
 .header {
   background: #fff;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  height: 64px;
 }
 
 .logo {
-  height: 55px;
+  .logo {
+  height: 48px;        /* chuẩn giống truyendexuat */
+  width: auto;
 }
 
 .menu {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 24px;
+  align-items: center;
 }
 
-.menu li {
+.menu > li {
   position: relative;
-}
-
-.menu a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: 500;
 }
 
 .dropdown {
   position: absolute;
-  top: 150%;
+  top: 140%;
   left: 0;
   background: #fff;
-  display: none;
-  list-style: none;
   border: 1px solid #ddd;
   min-width: 160px;
-  z-index: 99;
+  display: none;
+  z-index: 100;
 }
 
 .has-dropdown:hover .dropdown {
@@ -69,9 +95,15 @@ body.dark {
 }
 
 .dropdown li a {
-  display: block;
   padding: 8px 12px;
+  display: block;
+  white-space: nowrap;
 }
+
+.dropdown li a:hover {
+  background: #f3f3f3;
+}
+
 
 .hero {
   text-align: center;
