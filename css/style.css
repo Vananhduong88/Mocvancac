@@ -26,7 +26,7 @@ a{text-decoration:none;color:inherit}
 .slide-track{
   display:flex;
   width:calc(300px * 12); /* 6 truyện x 2 lần */
-  animation:scroll 50s linear infinite;
+  animation:scroll 40s linear infinite;
 }
 
 @keyframes scroll{
@@ -187,7 +187,7 @@ body.dark .mobile-menu{background:#1e1e1e}
   display: flex;
   gap: 14px;
   width: max-content; 
-  animation: scroll 50s linear infinite;
+  animation: scroll 40s linear infinite;
 } 
 @keyframes scroll {
   from { transform: translateX(0); }
