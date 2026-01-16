@@ -125,3 +125,8 @@ h2 {
 .hot-item {
   font-size: 15px;
 }
+.logo {
+  height: 48px !important;
+  width: auto !important;
+  display: block;
+}
