@@ -285,3 +285,8 @@ section h2 {
 .update-card {
     transition: 0.3s;
 }
+.views {
+    font-size: 14px;
+    text-align: center;
+    margin: 8px 0;
+}
