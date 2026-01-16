@@ -1,94 +1,35 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Georgia", serif;
-  background: #ffffff;
-  color: #2c2c2c;
-  line-height: 1.7;
-}
-
-/* HEADER */
-.header {
+/* ===== HEADER ===== */
+.site-header {
+  height: 72px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 14px 24px;
+  justify-content: space-between;
+  padding: 0 24px;
   border-bottom: 1px solid #eee;
-}
-
-.logo-img {
-  height: 44px;
-}
-
-/* MENU */
-.header-menu {
-  position: relative;
-  font-size: 16px;
-}
-
-.dropdown {
-  cursor: pointer;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 28px;
   background: #fff;
-  border: 1px solid #ddd;
-  list-style: none;
-  min-width: 180px;
 }
 
-.dropdown-menu li {
-  padding: 10px 14px;
-  cursor: pointer;
+/* Logo + tên */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.dropdown-menu li:hover {
-  background: #f3f3f3;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* HERO */
-.hero {
-  max-width: 720px;
-  margin: 80px auto;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.hero h1 {
-  font-size: 32px;
-  margin-bottom: 16px;
-}
-
-.hero p {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 28px;
-}
-
-.search-box {
-  width: 100%;
-  max-width: 360px;
-  padding: 10px 14px;
-  font-size: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-/* LOGO IMAGE */
 .logo-img {
-  height: 60px;        /* chiều cao logo */
-  width: auto;         /* giữ tỉ lệ ảnh */
-  display: block;
+  height: 56px;   /* LOGO ĐẸP – KHÔNG QUÁ BÉ */
+  width: auto;
+}
+
+.site-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1b5e20; /* xanh lá đậm */
+  font-family: serif;
+}
+
+/* Menu */
+.header-nav {
+  font-size: 15px;
+  color: #444;
 }
