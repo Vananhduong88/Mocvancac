@@ -273,4 +273,11 @@ section h2 {
   background: #f2f2f2;
   border-radius: 8px;
 }
+.update-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
 
+.update-card {
+    transition: 0.3s;
+}
