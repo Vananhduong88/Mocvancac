@@ -2,68 +2,82 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Mộc Văn Các</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header class="header">
-  <header class="header-left">
-  <img src="assets/images/logo.png" alt="Mộc Văn Các" class="logo">
-</header>
-<head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mộc Văn Các</title>
   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    <div class="menu">
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <img src="assets/images/logo.png" class="logo" alt="Mộc Văn Các">
+
+    <nav class="nav">
       <div class="dropdown">
         <span>Danh mục ▾</span>
-        <ul>
-          <li>Hiện đại</li>
-          <li>Cổ trang</li>
-          <li>Chữa lành</li>
-          <li>Gia đình</li>
-          <li>Hài hước</li>
-        </ul>
+        <div class="dropdown-menu">
+          <a href="#">Hiện đại</a>
+          <a href="#">Cổ trang</a>
+          <a href="#">Chữa lành</a>
+          <a href="#">Gia đình</a>
+          <a href="#">Hài hước</a>
+        </div>
       </div>
 
-      <span>📈 Xem nhiều</span>
-      <span>🆕 Mới cập nhật</span>
-      <span>📖 Đang xem</span>
-    </div>
-  </div>
+      <a href="#">Xem nhiều</a>
+      <a href="#">Mới cập nhật</a>
+      <a href="#">Đang xem</a>
+    </nav>
 
-  <button id="darkToggle">🌙</button>
+    <button id="darkToggle">🌙</button>
+  </div>
 </header>
 
+<!-- MAIN -->
 <main class="container">
 
-  <section class="intro">
-    <h1>Đọc chậm, để chữ nghĩa chạm vào cảm xúc</h1>
-    <p>Nơi lưu giữ những câu chuyện mộc mạc và chân thành.</p>
-  </section>
+  <h1 class="title">Đọc chậm, để chữ nghĩa chạm vào cảm xúc</h1>
+  <p class="description">
+    Nơi lưu giữ những câu chuyện mộc mạc và chân thành.
+  </p>
 
-  <div class="search">
+  <!-- SEARCH -->
+  <div class="search-box">
     <input type="text" placeholder="🔍 Tìm truyện theo tên...">
   </div>
 
+  <!-- HOT SLIDER -->
   <section>
-    <h2>🔥 Truyện HOT</h2>
-    <div class="hot-list">
-      <div class="hot-item">Tên truyện HOT 1</div>
-      <div class="hot-item">Tên truyện HOT 2</div>
-      <div class="hot-item">Tên truyện HOT 3</div>
-      <div class="hot-item">Tên truyện HOT 4</div>
-      <div class="hot-item">Tên truyện HOT 5</div>
+    <h2 class="section-title">🔥 Truyện HOT</h2>
+    <div class="slider" id="hotSlider">
+      <div class="slide">HOT 1</div>
+      <div class="slide">HOT 2</div>
+      <div class="slide">HOT 3</div>
+      <div class="slide">HOT 4</div>
+      <div class="slide">HOT 5</div>
+    </div>
+  </section>
+
+  <!-- NEW UPDATE -->
+  <section>
+    <h2 class="section-title">🆕 Mới cập nhật</h2>
+    <div class="grid">
+      <div class="card small">Truyện A</div>
+      <div class="card small">Truyện B</div>
+      <div class="card small">Truyện C</div>
+      <div class="card small">Truyện D</div>
+      <div class="card small">Truyện E</div>
+      <div class="card small">Truyện F</div>
+      <div class="card small">Truyện G</div>
+      <div class="card small">Truyện H</div>
+      <div class="card small">Truyện I</div>
+      <div class="card small">Truyện J</div>
     </div>
   </section>
 
 </main>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-
