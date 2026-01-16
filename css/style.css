@@ -233,3 +233,24 @@ section h2 {
     height: 100%;
     object-fit: cover;
 }
+.story-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.story-title {
+    font-size: 14px;
+    text-align: center;
+    margin: 8px 0;
+}
+
+/* Hover giống web truyện */
+.story-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.story-card {
+    transition: 0.3s;
+}
