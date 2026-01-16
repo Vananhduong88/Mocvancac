@@ -180,3 +180,30 @@ body.dark .mobile-menu{background:#1e1e1e}
   font-size: 15px;
   margin-top: 6px; 
 }
+/* ================= MỚI CẬP NHẬT ================= */ 
+.new-grid { 
+  margin-top: 16px;
+} 
+.update-list { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 14px; 
+}
+.update-card {
+  width: 120px; 
+  text-align: center;
+} 
+.update-card img {
+  width: 120px;
+  height: 213px;
+  object-fit: cover;
+  border-radius: 6px;
+} 
+.update-card h4 { 
+  font-size: 14px;
+  margin: 4px 0; 
+} 
+.views {
+  font-size: 12px; 
+  color: #777;
+}
