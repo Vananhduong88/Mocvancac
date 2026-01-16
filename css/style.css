@@ -252,5 +252,13 @@ section h2 {
 }
 
 .story-card {
-    transition: 0.3s;
+    transition: 0.5s;
 }
+.story-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;     /* QUAN TRỌNG */
+  background: #f2f2f2;     /* nền trung tính */
+  border-radius: 10px;
+}
+
