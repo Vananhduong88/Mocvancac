@@ -255,8 +255,8 @@ section h2 {
     transition: 0.5s;
 }
 .story-card img {
-  width: auto;
   height: 600px;
+  width: auto;
   object-fit: contain;     /* QUAN TRỌNG */
   background: #f2f2f2;     /* nền trung tính */
   border-radius: 12px;
