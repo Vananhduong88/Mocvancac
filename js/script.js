@@ -21,3 +21,17 @@ document.querySelector('.dropdown > a').addEventListener('click', function(e){
   this.parentElement.classList.toggle('open');
 });
 </script>
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const dropdown = document.querySelector('.dropdown');
+const closeBtn = document.querySelector('.close-menu');
+
+toggle.addEventListener('click', e => {
+  e.preventDefault();
+  dropdown.classList.add('open');
+});
+
+closeBtn.addEventListener('click', () => {
+  dropdown.classList.remove('open');
+});
+</script>
