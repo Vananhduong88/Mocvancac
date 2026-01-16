@@ -160,6 +160,11 @@ body.dark .mobile-menu{background:#1e1e1e}
   outline: none;
   box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
+@media (max-width: 600px) {
+  .search-box .search {
+    max-width: 90%;
+  }
+}
 
 /* ================= TRUYỆN HOT ================= */
 .hot-section {
