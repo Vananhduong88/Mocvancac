@@ -306,3 +306,31 @@ body.dark .mobile-menu{background:#1e1e1e}
   color: #ff4d4f;
   text-decoration: underline;
 }
+/* ===== ZOOM ẢNH KHI HOVER (CHUNG) ===== */
+.story-card,
+.update-card {
+  overflow: hidden; /* không cho ảnh tràn */
+}
+
+/* Ảnh mặc định */
+.story-card img,
+.update-card img {
+  transition: transform 0.35s ease;
+}
+
+/* Hover: zoom nhẹ */
+.story-card:hover img,
+.update-card:hover img {
+  transform: scale(1.06);
+}
+/* TIÊU ĐỀ */
+.story-title,
+.update-card h4 {
+  color: #222;
+  transition: color 0.25s ease;
+}
+
+.story-card:hover .story-title,
+.update-card:hover h4 {
+  color: #ff4d4f;
+}
