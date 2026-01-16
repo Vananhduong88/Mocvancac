@@ -25,7 +25,7 @@ a{text-decoration:none;color:inherit}
 .slider{overflow:hidden}
 .slide-track{
   display:flex;
-  width:calc(300px * 12); /* 6 truyện x 2 lần */
+  width:calc(300px * 16); /* 8 truyện x 2 lần */
   animation:scroll 40s linear infinite;
 }
 
@@ -34,7 +34,7 @@ a{text-decoration:none;color:inherit}
     transform:translateX(0);
   }
   to{
-    transform:translateX(calc(-300px * 6));
+    transform:translateX(calc(-300px * 8));
   }
 }
 @media (max-width:768px){
@@ -43,12 +43,12 @@ a{text-decoration:none;color:inherit}
   }
 
   .slide-track{
-    width:calc(220px * 12);
+    width:calc(220px * 16);
   }
 
   @keyframes scroll{
     from{transform:translateX(0)}
-    to{transform:translateX(calc(-220px * 6))}
+    to{transform:translateX(calc(-220px * 8))}
   }
 }
 
@@ -58,8 +58,10 @@ a{text-decoration:none;color:inherit}
   flex-shrink:0
 }
 .story-card img{
-  width:300px;height:533px;
-  object-fit:cover;border-radius:10px
+  width:300px;
+  height:533px;
+  object-fit:cover;
+  border-radius:10px
 }
 .story-card h3{font-size:14px;margin-top:6px}
 
@@ -77,7 +79,12 @@ a{text-decoration:none;color:inherit}
 .update-card h4{font-size:13px;margin-top:4px}
 
 /* FOOTER */
-.footer{text-align:center;padding:20px;margin-top:40px;background:#fff}
+.footer{
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+  background:#fff
+}
 
 /* MOBILE MENU */
 .mobile-menu{
