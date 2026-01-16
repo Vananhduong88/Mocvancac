@@ -294,11 +294,6 @@ body.dark .mobile-menu{background:#1e1e1e}
     grid-template-columns: 1fr;
   }
 }
-.recommend-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 
 .recommend-item h4 a {
   color: #222;
