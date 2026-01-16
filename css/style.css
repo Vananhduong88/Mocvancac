@@ -266,7 +266,7 @@ section h2 {
   flex-direction: column;
   align-items: center;
 }
- .story-update img {
+ .update-card img {
   width: 100%;
   height: 200px;       /* 1/2 của 300px */
   object-fit: contain;
