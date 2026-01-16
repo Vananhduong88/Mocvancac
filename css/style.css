@@ -260,6 +260,7 @@ section h2 {
   object-fit: contain;     /* QUAN TRỌNG */
   background: #f2f2f2;     /* nền trung tính */
   border-radius: 10px;
+  margin: 0 auto;
 }
 .story-card {
   display: flex;
@@ -270,8 +271,9 @@ section h2 {
   width: 100%;
   height: 200px;       /* 1/2 của 300px */
   object-fit: contain;
-  background: #f2f2f2;
+  background: block;
   border-radius: 8px;
+  margin: 0 auto;
 }
 .update-card:hover {
     transform: translateY(-4px);
