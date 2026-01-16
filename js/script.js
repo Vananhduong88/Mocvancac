@@ -1,5 +1,6 @@
-document.getElementById("darkMode").onclick = () => {
-    document.body.classList.toggle("dark");
+// Dark mode
+document.getElementById("darkToggle").onclick = () => {
+  document.body.classList.toggle("dark");
 };
 
 const slider = document.getElementById("hotSlider");
