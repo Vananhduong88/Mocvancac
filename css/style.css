@@ -130,3 +130,18 @@ body.dark .dropdown-content a:hover {
 body.dark .story-list li {
   border-color: #333;
 }
+.reading {
+  max-width: 720px;
+  margin: 48px auto;
+  padding: 0 16px;
+}
+
+.reading h1 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.reading article {
+  font-size: 18px;
+  line-height: 1.9;
+}
