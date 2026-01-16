@@ -1,7 +1,7 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,12 +11,14 @@ body {
 }
 
 /* HEADER */
-.header {
+.site-header {
+  width: 100%;
+  height: 120px;              /* CHÌA KHÓA */
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
-  border-bottom: 1px solid #ddd;
+  padding-left: 20px;
+  background: #fff;
+  overflow: hidden;           /* NGĂN LOGO TRÀN */
 }
 
 .header-left {
@@ -27,7 +29,7 @@ body {
 
 /* LOGO */
 .logo {
-  height: 48px;   /* 🔥 FIX LOGO QUÁ TO */
+  max-height: 80px;           /* CHÌA KHÓA */
   width: auto;
   display: block;
 }
