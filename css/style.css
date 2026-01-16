@@ -57,33 +57,32 @@ a {
     padding: 6px 4px;
 }
 
-/* DROPDOWN */
+/* ===== FIX DROPDOWN TRIỆT ĐỂ ===== */
+
+/* Mặc định: luôn ẩn */
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    border: 1px solid #ddd;
-    min-width: 180px;
-    display: none;
-    z-index: 100;
+  display: none !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 220px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+  z-index: 999;
 }
 
-.dropdown-menu li a {
-    display: block;
-    padding: 10px 12px;
-}
-/* Desktop hover */
+/* Desktop: hover mới hiện */
 @media (min-width: 769px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
+  .dropdown:hover > .dropdown-menu {
+    display: flex !important;
   }
 }
 
-/* Mobile click */
-.dropdown.open .dropdown-menu {
-  display: block;
+/* Mobile: chỉ hiện khi JS thêm class open */
+.dropdown.open > .dropdown-menu {
+  display: flex !important;
 }
+
 
 /* DARK BUTTON */
 #darkToggle {
