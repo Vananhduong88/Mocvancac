@@ -205,14 +205,6 @@ section h2 {
     gap: 14px;
 }
 
-.hot-track {
-    display: flex;
-    flex-wrap: nowrap;       /* KHÔNG XUỐNG DÒNG */
-    gap: 20px;
-    width: max-content;      /* QUAN TRỌNG */
-    transition: transform 1s ease;
-}
-
 /* ẢNH DỌC */
 .story-thumb {
     width: 100%;
