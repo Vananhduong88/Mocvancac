@@ -73,9 +73,16 @@ a {
     display: block;
     padding: 10px 12px;
 }
-
-.dropdown:hover .dropdown-menu {
+/* Desktop hover */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
     display: block;
+  }
+}
+
+/* Mobile click */
+.dropdown.open .dropdown-menu {
+  display: block;
 }
 
 /* DARK BUTTON */
