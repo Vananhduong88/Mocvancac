@@ -146,6 +146,7 @@ body.dark .mobile-menu{background:#1e1e1e}
   max-width: 360px; 
   padding: 10px; 
   font-size: 15px;
+  margin:0;
 }
 /* ================= TRUYỆN HOT ================= */
 .hot-section {
