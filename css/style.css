@@ -162,7 +162,8 @@ body.dark {
 }
 
 .footer img {
-  width: 24px;
+  width: 22px;
+  height: 22px;
   margin: 0 6px;
 }
 
@@ -170,3 +171,9 @@ body.dark {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+  .slides {
+  display: flex;
+  width: max-content;
+  animation: slide 30s linear infinite;
+}
+
