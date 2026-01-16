@@ -84,3 +84,11 @@ nav a {
 .list ul li {
   padding: 8px 0;
 }
+.reader {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+  font-size: 18px;
+  background: #fdf6e3;
+  padding: 25px;
+}
