@@ -1,107 +1,83 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Mộc Vân Các</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Mộc Vân Các</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
-    <div class="container nav">
-        <div class="logo">
-            <img src="https://via.placeholder.com/140x50?text=Moc+Van+Cac" alt="Logo">
-        </div>
-
-        <ul class="menu">
-            <li class="dropdown">
-                <a href="#">Danh mục ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Ngôn tình</a></li>
-                    <li><a href="#">Huyền huyễn</a></li>
-                    <li><a href="#">Xuyên không</a></li>
-                    <li><a href="#">Trọng sinh</a></li>
-                    <li><a href="#">Cổ đại</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Truyện Hot</a></li>
-            <li><a href="#">Mới cập nhật</a></li>
-            <li><a href="#">Nổi bật</a></li>
-        </ul>
-
-        <button id="darkToggle">🌙</button>
+  <div class="container nav">
+    <div class="logo">
+      <span>Mộc Vân Các</span>
     </div>
+
+    <ul class="menu">
+      <li class="dropdown">
+        <a href="#">Danh mục ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Ngôn tình</a></li>
+          <li><a href="#">Huyền huyễn</a></li>
+          <li><a href="#">Xuyên không</a></li>
+          <li><a href="#">Trọng sinh</a></li>
+          <li><a href="#">Cổ đại</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Truyện Hot</a></li>
+      <li><a href="#">Mới cập nhật</a></li>
+      <li><a href="#">Nổi bật</a></li>
+    </ul>
+
+    <button id="darkToggle">🌙</button>
+  </div>
 </header>
 
 <section class="hero">
-    <h1>Đọc chậm, để chữ nghĩa chạm vào cảm xúc</h1>
-    <p class="desc">Nơi lưu giữ những câu chuyện mộc mạc và chân thành</p>
+  <h1>Đọc chậm, để chữ nghĩa chạm vào cảm xúc</h1>
+  <p class="desc">Nơi lưu giữ những câu chuyện mộc mạc và chân thành</p>
 </section>
 
 <!-- TRUYỆN HOT -->
 <section class="section">
-    <h2>🔥 Truyện Hot</h2>
-    <div class="slider" id="hotSlider">
-        <div class="slide-track">
-            <!-- 8 truyện -->
-            <div class="slide"><img src="https://picsum.photos/240/340?1"><span>Truyện 1</span></div>
-            <div class="slide"><img src="https://picsum.photos/240/340?2"><span>Truyện 2</span></div>
-            <div class="slide"><img src="https://picsum.photos/240/340?3"><span>Truyện 3</span></div>
-            <div class="slide"><img src="https://picsum.photos/240/340?4"><span>Truyện 4</span></div>
-            <div class="slide"><img src="https://picsum.photos/240/340?5"><span>Truyện 5</span></div>
-            <div class="slide"><img src="https://picsum.photos/240/340?6"><span>Truyện 6</span></div>
-            <div class="slide"><img src="https://picsum.photos/240/340?7"><span>Truyện 7</span></div>
-            <div class="slide"><img src="https://picsum.photos/240/340?8"><span>Truyện 8</span></div>
-        </div>
+  <h2>🔥 Truyện Hot</h2>
+  <div class="slider">
+    <div class="slider-track" id="sliderTrack">
+      <div class="hot-card"><img src="https://picsum.photos/260/360?1"><h3>Truyện 1</h3></div>
+      <div class="hot-card"><img src="https://picsum.photos/260/360?2"><h3>Truyện 2</h3></div>
+      <div class="hot-card"><img src="https://picsum.photos/260/360?3"><h3>Truyện 3</h3></div>
+      <div class="hot-card"><img src="https://picsum.photos/260/360?4"><h3>Truyện 4</h3></div>
+      <div class="hot-card"><img src="https://picsum.photos/260/360?5"><h3>Truyện 5</h3></div>
+      <div class="hot-card"><img src="https://picsum.photos/260/360?6"><h3>Truyện 6</h3></div>
+      <div class="hot-card"><img src="https://picsum.photos/260/360?7"><h3>Truyện 7</h3></div>
+      <div class="hot-card"><img src="https://picsum.photos/260/360?8"><h3>Truyện 8</h3></div>
     </div>
-</section>
-
-<!-- TRUYỆN NỔI BẬT -->
-<section class="section">
-    <h2>⭐ Truyện Nổi Bật</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="https://picsum.photos/200/280?9">
-            <h3>Truyện A</h3>
-            <p>👁 12,540</p>
-        </div>
-        <div class="card">
-            <img src="https://picsum.photos/200/280?10">
-            <h3>Truyện B</h3>
-            <p>👁 8,210</p>
-        </div>
-    </div>
+  </div>
 </section>
 
 <!-- MỚI CẬP NHẬT -->
 <section class="section">
-    <h2>🆕 Mới Cập Nhật</h2>
-    <div class="grid">
-        <!-- 12 truyện -->
-        <script>
-            for(let i=1;i<=12;i++){
-                document.write(`
-                <div class="card">
-                    <img src="https://picsum.photos/200/280?${20+i}">
-                    <h3>Truyện ${i}</h3>
-                    <p>👁 ${Math.floor(Math.random()*20000+1000)}</p>
-                </div>`)
-            }
-        </script>
-    </div>
-</section>
-
-<!-- QUẢNG CÁO -->
-<section class="ads">
-    <p>📢 Khu vực quảng cáo</p>
+<h2>🆕 Mới cập nhật</h2>
+<div class="grid">
+<script>
+for(let i=1;i<=12;i++){
+document.write(`
+<div class="card">
+<img src="https://picsum.photos/200/280?${30+i}">
+<h3>Truyện ${i}</h3>
+<p>👁 ${Math.floor(Math.random()*20000+3000)}</p>
+</div>`)
+}
+</script>
+</div>
 </section>
 
 <footer class="footer">
-    <div class="social">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png">
-    </div>
-    <p>📧 contact@mocvancac.vn | ☎ 0123 456 789</p>
+  <div class="social">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png">
+  </div>
+  <p>📧 contact@mocvancac.vn | ☎ 0123 456 789</p>
 </footer>
 
 <script src="script.js"></script>
