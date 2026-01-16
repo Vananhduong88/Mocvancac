@@ -15,31 +15,6 @@ track.addEventListener("mouseenter", () => {
 track.addEventListener("mouseleave", () => {
     track.style.animationPlayState = "running";
 });
-<script>
-document.querySelector('.dropdown > a').addEventListener('click', function(e){
-  e.preventDefault();
-  this.parentElement.classList.toggle('open');
-});
-</script>
-<script>
-const toggle = document.querySelector('.menu-toggle');
-const dropdown = document.querySelector('.dropdown');
-const closeBtn = document.querySelector('.close-menu');
-
-toggle.addEventListener('click', e => {
-  e.preventDefault();
-  dropdown.classList.add('open');
-});
-
-closeBtn.addEventListener('click', () => {
-  dropdown.classList.remove('open');
-});
-</script>
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("menuToggle");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const closeMenu = document.getElementById("closeMenu");
-
   if (toggle) {
     toggle.addEventListener("click", (e) => {
       e.preventDefault();
