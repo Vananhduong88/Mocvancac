@@ -13,3 +13,6 @@
     Mộc Văn Các
   </text>
 </svg>
+.logo img {
+  height: 36px;
+}
