@@ -35,3 +35,21 @@ closeBtn.addEventListener('click', () => {
   dropdown.classList.remove('open');
 });
 </script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  if (toggle) {
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      mobileMenu.classList.add("show");
+    });
+  }
+
+  if (closeMenu) {
+    closeMenu.addEventListener("click", () => {
+      mobileMenu.classList.remove("show");
+    });
+  }
+});
