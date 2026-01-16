@@ -129,6 +129,7 @@ section h2 {
 @keyframes slide {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+  animation: scroll 50s linear infinite;
 }
 
 /* GRID */
@@ -203,6 +204,7 @@ section h2 {
     max-width: 100%;
     overflow: hidden;        /* KHÓA TRÀN */
     position: relative;
+    gap: 14px;
 }
 
 .hot-track {
@@ -248,7 +250,7 @@ section h2 {
 .story-card img {
   height: 533px;
   width: 300px;
-  object-fit: contain;     /* QUAN TRỌNG */
+  object-fit: cover;     /* QUAN TRỌNG */
   background: #f2f2f2;     /* nền trung tính */
   border-radius: 12px;
   margin: 0 auto;
@@ -262,7 +264,7 @@ section h2 {
  .update-card img {
   width: 120px;
   height: 213px;
-  object-fit: contain;
+  object-fit: cover;
   background: block;
   border-radius: 8px;
   margin: 0 auto;
@@ -280,4 +282,16 @@ section h2 {
     font-size: 14px;
     text-align: center;
     margin: 8px 0;
+}
+.update-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+.update-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+    width: 100%;
 }
