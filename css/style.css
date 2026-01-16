@@ -126,10 +126,8 @@ section h2 {
   animation: slide 18s linear infinite;
 }
 
-@keyframes slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-  animation: scroll 50s linear infinite;
+.hot-slider-track {
+    animation: scroll 50s linear infinite;
 }
 
 /* GRID */
@@ -282,12 +280,6 @@ section h2 {
     font-size: 14px;
     text-align: center;
     margin: 8px 0;
-}
-.update-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 12px;
-    width: 100%;
 }
 .update-list {
     display: grid;
