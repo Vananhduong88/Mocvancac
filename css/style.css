@@ -105,3 +105,12 @@
   padding-left: 16px;
   color: #444;
 }
+body.dark {
+  background: #121212;
+  color: #eaeaea;
+}
+
+body.dark .site-header {
+  background: #1e1e1e;
+  border-color: #333;
+}
