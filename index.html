@@ -35,8 +35,29 @@
   <main class="container">
     <h1>Đọc chậm, để chữ nghĩa chạm vào cảm xúc</h1>
     <p>Nơi lưu giữ những câu chuyện mộc mạc và chân thành.</p>
+    <input id="search"
+       type="text"
+       placeholder="Tìm truyện..."
+       onkeyup="searchStory()">
   </main>
 
   <script src="js/theme.js"></script>
 </body>
 </html>
+<ul id="storyList">
+  <li>Tên truyện gió</li>
+  <li>Một ngày yên tĩnh</li>
+  <li>Nắng qua hiên</li>
+</ul>
+<script>
+function searchStory() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let items = document.querySelectorAll("#storyList li");
+
+  items.forEach(item => {
+    item.style.display = item.innerText.toLowerCase().includes(input)
+      ? ""
+      : "none";
+  });
+}
+</script>
