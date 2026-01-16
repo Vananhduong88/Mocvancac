@@ -1,199 +1,217 @@
+/* =====================
+   RESET CƠ BẢN
+===================== */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  background: #f4f5f7;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f6f6f6;
   color: #222;
+  line-height: 1.6;
 }
 
-/* CONTAINER */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 16px;
-}
-
-/* HEADER */
-.header {
-  background: #fff;
+/* =====================
+   HEADER
+===================== */
+header {
+  background: #ffffff;
   border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 10;
 }
 
-.header-flex {
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* LOGO – TO HƠN */
+/* LOGO */
 .logo img {
-  height: 60px;
+  height: 55px; /* logo to hơn */
 }
 
-/* MENU */
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 22px;
-}
-
-.menu li {
-  cursor: pointer;
+/* =====================
+   MENU
+===================== */
+.nav {
   position: relative;
-  font-weight: 500;
 }
 
-/* DROPDOWN */
-.dropdown-menu {
-  display: none;
+.menu,
+.menu ul {
+  list-style: none;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.menu-item {
+  position: relative;
+}
+
+/* tiêu đề menu */
+.menu-title {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* SUBMENU */
+.submenu {
   position: absolute;
-  top: 30px;
+  top: 110%;
   left: 0;
   background: #fff;
+  min-width: 180px;
   border: 1px solid #ddd;
-  list-style: none;
-  min-width: 160px;
-  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: none;
+  z-index: 9999;
 }
 
-.dropdown-menu li a {
+/* hiện menu khi hover */
+.menu-item:hover .submenu {
   display: block;
-  padding: 10px 14px;
-  text-decoration: none;
+}
+
+/* LINK TRONG SUBMENU */
+.submenu li a {
+  display: block;
+  padding: 10px 15px;
+  font-size: 14px;
   color: #333;
+  text-decoration: none;
 }
 
-.dropdown-menu li a:hover {
-  background: #f0f0f0;
+.submenu li a:hover {
+  background: #f2f2f2;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
+/* FIX CLICK */
+.submenu,
+.submenu * {
+  pointer-events: auto;
 }
 
-/* HERO */
+/* =====================
+   HERO (TIÊU ĐỀ GIỮA TRANG)
+===================== */
 .hero {
+  background: #f9f9f9;
+  padding: 45px 20px 30px;
   text-align: center;
-  margin: 32px 0;
 }
 
 .hero h1 {
   font-size: 26px;
-  margin-bottom: 6px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
+/* DESCRIPTION */
 .hero p {
   font-size: 14px;
   font-style: italic;
   color: #666;
-  max-width: 600px;
-  margin: auto;
+  margin-bottom: 18px;
 }
 
 /* SEARCH */
-.search {
-  margin-top: 16px;
-  padding: 10px 14px;
+.search-box {
+  max-width: 380px;
+  margin: auto;
+  position: relative;
+}
+
+.search-box input {
   width: 100%;
-  max-width: 360px;
-  border-radius: 6px;
+  padding: 10px 15px 10px 35px;
+  border-radius: 20px;
   border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-/* SECTION */
-section {
-  margin-top: 36px;
+.search-box::before {
+  content: "🔍";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-section h2 {
-  margin-bottom: 14px;
+/* =====================
+   SECTION TRUYỆN
+===================== */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px 20px;
 }
 
-/* SLIDER HOT */
-.slider {
-  display: flex;
-  gap: 16px;
-  overflow: hidden;
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-.slide-track {
-  display: flex;
-  gap: 16px;
-  animation: slide 18s linear infinite;
-}
-
-@keyframes slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* GRID */
-.grid {
+/* GRID TRUYỆN */
+.story-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 16px;
 }
 
-/* HOT */
-.hot-card {
-  width: 260px;
-  height: 160px;
-  background: #e6e6e6;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-/* NEW */
-.new-grid {
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-}
-
-.new-card {
-  height: 100px;
-  background: #ededed;
+/* CARD TRUYỆN */
+.story-card {
+  background: #fff;
   border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
 }
 
-/* DARK MODE */
-.dark {
-  background: #121212;
-  color: #eee;
+.story-card:hover {
+  transform: translateY(-4px);
 }
 
-.dark .header {
-  background: #1e1e1e;
+.story-card img {
+  width: 100%;
+  height: 220px; /* ảnh to hơn */
+  object-fit: cover;
 }
 
-.dark .dropdown-menu {
-  background: #1e1e1e;
-  border-color: #333;
+.story-card .title {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.dark a {
-  color: #eee;
-}
-
-/* MOBILE */
+/* =====================
+   RESPONSIVE
+===================== */
 @media (max-width: 768px) {
-  .logo img {
-    height: 42px;
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .menu {
-    font-size: 14px;
-    gap: 12px;
+    gap: 15px;
   }
 
-  .hot-card {
-    width: 220px;
+  .hero h1 {
+    font-size: 22px;
   }
 }
