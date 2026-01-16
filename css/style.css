@@ -127,4 +127,23 @@ body.dark .mobile-menu{background:#1e1e1e}
     display: none !important;
   }
 }
-
+/* ================= HERO ================= */
+.hero {
+  text-align: center;
+  padding: 40px 0 24px; 
+} 
+.hero h1 {
+  font-size: 28px;
+} 
+.hero p { 
+  font-style: italic;
+  font-size: 15px;
+  margin: 8px 0 16px; 
+  color: #555;
+} 
+.search {
+  width: 100%;
+  max-width: 360px; 
+  padding: 10px; 
+  font-size: 15px;
+}
