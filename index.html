@@ -3,54 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <title>Mộc Văn Các</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-left">
-    <img src="./assets/logo/Logo.png" class="logo-img">
-    <span class="site-name">Mộc Văn Các</span>
+<header class="header">
+  <div class="logo">
+    <img src="Logo.png" alt="Mộc Văn Các">
+    <span>Mộc Văn Các</span>
   </div>
 
-  <nav class="header-nav">
-    <div class="dropdown">
-      <span>Danh mục ▾</span>
-      <ul class="dropdown-menu">
-        <li>Truyện hiện đại</li>
-        <li>Truyện cổ trang</li>
-        <li>Truyện nữ cường</li>
-        <li>Truyện hài hước</li>
-        <li>Truyện chữa lành</li>
-        <li>Truyện gia đình</li>
-      </ul>
-    </div>
+  <nav>
+    <a href="#">Hiện đại</a>
+    <a href="#">Cổ trang</a>
+    <a href="#">Nữ cường</a>
+    <a href="#">Chữa lành</a>
   </nav>
+
+  <button id="darkToggle">🌙</button>
 </header>
 
 <section class="hero">
   <h1>Đọc chậm, để chữ nghĩa chạm vào cảm xúc</h1>
   <p>Nơi lưu giữ những câu chuyện mộc mạc và chân thành.</p>
-  <input class="search-box" placeholder="Tìm truyện theo tên...">
+
+  <input type="text" id="search" placeholder="🔍 Tìm truyện theo tên...">
 </section>
 
-</body>
-</html>
-
-<section class="section">
+<!-- SLIDER HOT -->
+<section class="hot">
   <h2>🔥 Truyện HOT</h2>
-
-  <div class="story-row">
-    <div class="story-card">Tên truyện 1</div>
-    <div class="story-card">Tên truyện 2</div>
-    <div class="story-card">Tên truyện 3</div>
+  <div class="slider">
+    <div class="slide active">Tên truyện 1</div>
+    <div class="slide">Tên truyện 2</div>
+    <div class="slide">Tên truyện 3</div>
   </div>
 </section>
-<section class="section">
-  <h2>🆕 Mới cập nhật</h2>
-  <ul class="update-list">
-    <li>• Tên truyện A</li>
-    <li>• Tên truyện B</li>
-    <li>• Tên truyện C</li>
+
+<!-- DANH SÁCH -->
+<section class="list">
+  <h2>📘 Mới cập nhật</h2>
+  <ul id="storyList">
+    <li>Tên truyện A</li>
+    <li>Tên truyện B</li>
+    <li>Tên truyện C</li>
   </ul>
 </section>
+
+<script src="script.js"></script>
+</body>
+</html>
