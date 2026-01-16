@@ -11,23 +11,27 @@
 <!-- HEADER -->
 <header class="header">
   <div class="container header-flex">
-    
+
     <!-- LOGO -->
     <a href="/" class="logo">
       <img src="assets/images/logo.png" alt="Mộc Văn Các">
     </a>
 
-    <!-- MENU -->
+    <!-- MENU DESKTOP -->
     <nav class="nav">
-  <ul class="menu">
-    <li>
-      <a href="#" id="menuToggle">Danh mục ☰</a>
-    </li>
-    <li><a href="#">Truyện Hot</a></li>
-    <li><a href="#">Mới cập nhật</a></li>
-    <li><a href="#">Nổi bật</a></li>
-  </ul>
-</nav>
+      <ul class="menu">
+        <li><a href="#" id="menuToggle">Danh mục ☰</a></li>
+        <li><a href="#">Truyện Hot</a></li>
+        <li><a href="#">Mới cập nhật</a></li>
+        <li><a href="#">Nổi bật</a></li>
+      </ul>
+    </nav>
+
+    <!-- DARK MODE -->
+    <button id="darkToggle">🌙</button>
+
+  </div>
+</header>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
@@ -46,12 +50,6 @@
   </ul>
 </div>
 
-    <!-- DARK MODE -->
-    <button id="darkToggle">🌙</button>
-
-  </div>
-</header>
-
 <!-- MAIN -->
 <main class="container">
 
@@ -59,250 +57,53 @@
   <section class="hero">
     <h1>Đọc chậm, để chữ nghĩa chạm vào cảm xúc</h1>
     <p>Nơi lưu giữ những câu chuyện mộc mạc và chân thành.</p>
-
     <input class="search" type="text" placeholder="🔍 Tìm truyện theo tên...">
   </section>
 
   <!-- TRUYỆN HOT -->
   <section class="hot-section">
-  <h2 class="section-title hot">🔥 Truyện HOT</h2>
+    <h2 class="section-title">🔥 Truyện HOT</h2>
 
-  <div class="slider">
-    <div class="slide-track">
+    <div class="slider">
+      <div class="slide-track">
+        <!-- Lặp 2 lần để slide mượt -->
+        <div class="story-card"><img src="assets/images/hot1.jpg"><h3>Truyện HOT 1</h3></div>
+        <div class="story-card"><img src="assets/images/hot2.jpg"><h3>Truyện HOT 2</h3></div>
+        <div class="story-card"><img src="assets/images/hot3.jpg"><h3>Truyện HOT 3</h3></div>
+        <div class="story-card"><img src="assets/images/hot4.jpg"><h3>Truyện HOT 4</h3></div>
+        <div class="story-card"><img src="assets/images/hot5.jpg"><h3>Truyện HOT 5</h3></div>
+        <div class="story-card"><img src="assets/images/hot6.jpg"><h3>Truyện HOT 6</h3></div>
 
-      <div class="story-card">
-        <a href="truyen/truyen-hot-1.html" class="story-link">
-          <img src="assets/images/hot1.jpg">
-          <h3 class="story-title">Truyện HOT 1</h3>
-        </a>
+        <div class="story-card"><img src="assets/images/hot1.jpg"><h3>Truyện HOT 1</h3></div>
+        <div class="story-card"><img src="assets/images/hot2.jpg"><h3>Truyện HOT 2</h3></div>
+        <div class="story-card"><img src="assets/images/hot3.jpg"><h3>Truyện HOT 3</h3></div>
+        <div class="story-card"><img src="assets/images/hot4.jpg"><h3>Truyện HOT 4</h3></div>
+        <div class="story-card"><img src="assets/images/hot5.jpg"><h3>Truyện HOT 5</h3></div>
+        <div class="story-card"><img src="assets/images/hot6.jpg"><h3>Truyện HOT 6</h3></div>
       </div>
-
-      <div class="story-card">
-        <a href="truyen/truyen-hot-2.html" class="story-link">
-          <img src="assets/images/hot2.jpg">
-          <h3 class="story-title">Truyện HOT 2</h3>
-        </a>
-      </div>
-
-      <div class="story-card">
-        <a href="truyen/truyen-hot-3.html" class="story-link">
-          <img src="assets/images/hot3.jpg">
-          <h3 class="story-title">Truyện HOT 3</h3>
-        </a>
-      </div>
-
-      <div class="story-card">
-        <a href="truyen/truyen-hot-4.html" class="story-link">
-          <img src="assets/images/hot4.jpg">
-          <h3 class="story-title">Truyện HOT 4</h3>
-        </a>
-      </div>
-
-      <div class="story-card">
-        <a href="truyen/truyen-hot-5.html" class="story-link">
-          <img src="assets/images/hot5.jpg">
-          <h3 class="story-title">Truyện HOT 5</h3>
-        </a>
-      </div>
-
-      <div class="story-card">
-        <a href="truyen/truyen-hot-6.html" class="story-link">
-          <img src="assets/images/hot6.jpg">
-          <h3 class="story-title">Truyện HOT 6</h3>
-        </a>
-      </div>
-      
-      <!-- Lặp lại để chạy mượt -->
-      <div class="story-card">
-        <a href="truyen/truyen-hot-1.html" class="story-link">
-          <img src="assets/images/hot1.jpg">
-          <h3 class="story-title">Truyện HOT 1</h3>
-        </a>
-      </div>
-
-      <div class="story-card">
-        <a href="truyen/truyen-hot-2.html" class="story-link">
-          <img src="assets/images/hot2.jpg">
-          <h3 class="story-title">Truyện HOT 2</h3>
-        </a>
-      </div>
-
-      <div class="story-card">
-        <a href="truyen/truyen-hot-3.html" class="story-link">
-          <img src="assets/images/hot3.jpg">
-          <h3 class="story-title">Truyện HOT 3</h3>
-        </a>
-      </div>
-
-      <div class="story-card">
-        <a href="truyen/truyen-hot-4.html" class="story-link">
-          <img src="assets/images/hot4.jpg">
-          <h3 class="story-title">Truyện HOT 4</h3>
-        </a>
-      </div>
-
-      <div class="story-card">
-        <a href="truyen/truyen-hot-5.html" class="story-link">
-          <img src="assets/images/hot5.jpg">
-          <h3 class="story-title">Truyện HOT 5</h3>
-        </a>
-      </div>
-
-      <div class="story-card">
-        <a href="truyen/truyen-hot-6.html" class="story-link">
-          <img src="assets/images/hot6.jpg">
-          <h3 class="story-title">Truyện HOT 6</h3>
-        </a>
-      </div>
-  </div>
-</section>
-
+    </div>
+  </section>
 
   <!-- MỚI CẬP NHẬT -->
- <section>
-  <h2 class="section-title update">🆕 Mới cập nhật</h2>
-  <div class="grid new-grid">
+  <section>
+    <h2 class="section-title">🆕 Mới cập nhật</h2>
+
     <div class="update-list">
-
-     <div class="update-card">
-        <a href="truyen/truyen-1.html">
-    <img src="assets/images/new1.jpg" class="story-link">
-    <h4 class="story-title">Truyện 1</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-    <div class="update-card">
-        <a href="truyen-2.html">
-    <img src="assets/images/new2.jpg" class="story-link">
-    <h4 class="story-title">Truyện 2</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-
-    <div class="update-card">
-        <a href="truyen-3.html">
-    <img src="assets/images/new3.jpg" class="story-link">
-    <h4 class="story-title">Truyện 3</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-    <div class="update-card">
-        <a href="truyen-4.html">
-    <img src="assets/images/new4.jpg" class="story-link">
-    <h4 class="story-title">Truyện 4</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-    <div class="update-card">
-        <a href="truyen-5.html">
-    <img src="assets/images/new5.jpg" class="story-link">
-    <h4 class="story-title">Truyện 5</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-    <div class="update-card">
-        <a href="truyen-6.html">
-    <img src="assets/images/new6.jpg" class="story-link">
-    <h4 class="story-title">Truyện 6</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-    <div class="update-card">
-        <a href="truyen-7.html">
-    <img src="assets/images/new7.jpg" class="story-link">
-    <h4 class="story-title">Truyện 7</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-    <div class="update-card">
-        <a href="truyen-8.html">
-    <img src="assets/images/new8.jpg" class="story-link">
-    <h4 class="story-title">Truyện 8</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-    <div class="update-card">
-        <a href="truyen-9.html">
-    <img src="assets/images/new9.jpg" class="story-link">
-    <h4 class="story-title">Truyện 9</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-    <div class="update-card">
-        <a href="truyen-10.html">
-    <img src="assets/images/new10.jpg" class="story-link">
-    <h4 class="story-title">Truyện 10</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-      <div class="update-card">
-        <a href="truyen-11.html">
-    <img src="assets/images/new11.jpg" class="story-link">
-    <h4 class="story-title">Truyện 11</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-      <div class="update-card">
-        <a href="truyen-12.html">
-    <img src="assets/images/new12.jpg" class="story-link">
-    <h4 class="story-title">Truyện 12</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-      <div class="update-card">
-        <a href="truyen-13.html">
-    <img src="assets/images/new13.jpg" class="story-link">
-    <h4 class="story-title">Truyện 13</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-      <div class="update-card">
-        <a href="truyen-14.html">
-    <img src="assets/images/new14.jpg" class="story-link">
-    <h4 class="story-title">Truyện 14</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-      <div class="update-card">
-        <a href="truyen-15.html">
-    <img src="assets/images/new15.jpg" class="story-link">
-    <h4 class="story-title">Truyện 15</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-      <div class="update-card">
-        <a href="truyen-16.html">
-    <img src="assets/images/new16.jpg" class="story-link">
-    <h4 class="story-title">Truyện 16</h4>
-    <p class="views">👁 1,234</p>
- </a>
-</div>
-</section>
-
+      <div class="update-card"><img src="assets/images/new1.jpg"><h4>Truyện 1</h4></div>
+      <div class="update-card"><img src="assets/images/new2.jpg"><h4>Truyện 2</h4></div>
+      <div class="update-card"><img src="assets/images/new3.jpg"><h4>Truyện 3</h4></div>
+      <div class="update-card"><img src="assets/images/new4.jpg"><h4>Truyện 4</h4></div>
+      <div class="update-card"><img src="assets/images/new5.jpg"><h4>Truyện 5</h4></div>
+      <div class="update-card"><img src="assets/images/new6.jpg"><h4>Truyện 6</h4></div>
+    </div>
+  </section>
 
 </main>
 
 <footer class="footer">
-  <div>
-    <a href="https://facebook.com" target="_blank"><img src="assets/images/facebook.png"></a>
-    <a href="https://tiktok.com" target="_blank"><img src="assets/images/tiktok.png"></a>
-  </div>
-  <p>📧 contact@mocvancac.vn | ☎ 0123 456 789</p>
+  <p>© 2026 Mộc Văn Các</p>
 </footer>
 
-<script src="assets/js/script.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const dropdown = document.querySelector(".dropdown > a");
-
-  dropdown.addEventListener("click", function (e) {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      this.parentElement.classList.toggle("open");
-    }
-  });
-});
-</script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
