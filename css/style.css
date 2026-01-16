@@ -167,3 +167,33 @@ body.dark .story-list li {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+body.dark {
+  background: #121212;
+  color: #eaeaea;
+}
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+}
+
+.slide {
+  min-width: 160px;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 8px;
+}
+.story-mini {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.story-mini img {
+  width: 40px;
+  height: 60px;
+  object-fit: cover;
+}
