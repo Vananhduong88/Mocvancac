@@ -365,72 +365,56 @@ body.dark .section-title{
 @media (max-width:768px){
   .nav{display:none}
 }
-/* nút mở menu */
-.mobile-menu-toggle{
-  display:inline-block;
-  font-size:16px;
-  font-weight:500;
-  padding:10px 12px;
+/* MENU MOBILE */
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#fff;
 }
 
-/* menu full màn hình */
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 16px;
+}
+
+.menu-btn{
+  font-size:16px;
+  background:none;
+  border:none;
+}
+
 .mobile-menu{
   position:fixed;
   inset:0;
   background:#fff;
-  z-index:9999;
-  transform:translateX(100%);
-  transition:transform .3s ease;
+  z-index:2000;
+
+  transform:translateX(-100%);
+  transition:.3s ease;
 }
 
-/* khi mở */
 .mobile-menu.show{
   transform:translateX(0);
 }
 
-/* header menu */
-.mobile-menu-header{
+.menu-header{
   display:flex;
-  align-items:center;
   justify-content:space-between;
   padding:16px;
-  border-bottom:1px solid #eee;
-  font-size:18px;
   font-weight:600;
+  border-bottom:1px solid #eee;
 }
 
-.mobile-menu-header button{
-  font-size:24px;
-  background:none;
-  border:none;
-  cursor:pointer;
-}
-
-/* danh sách */
-.mobile-menu-list{
-  list-style:none;
+.menu-list{
+  display:flex;
+  flex-direction:column;
   padding:16px;
+  gap:14px;
 }
 
-.mobile-menu-list li a{
-  display:block;
-  padding:14px 0;
+.menu-list a{
   font-size:16px;
-  border-bottom:1px solid #f0f0f0;
 }
-
-/* gạch phân cách */
-.divider{
-  height:1px;
-  background:#eee;
-  margin:16px 0;
-}
-
-/* chỉ dùng cho mobile */
-@media(min-width:769px){
-  .mobile-menu,
-  .mobile-menu-toggle{
-    display:none;
-  }
-}
-
