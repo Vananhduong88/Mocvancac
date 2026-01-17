@@ -401,4 +401,14 @@ body.dark .section-title{
   #mobileMenuBtn{display:block;}
   .nav{display:none;}
 }
+/* ===== FIX IOS LINK BLUE ON LOAD ===== */
+#menuToggle,
+#menuToggle:link,
+#menuToggle:visited,
+#menuToggle:hover,
+#menuToggle:active{
+  color: #000 !important;
+  font-size: 15px;
+  font-weight: 500;
+}
 
