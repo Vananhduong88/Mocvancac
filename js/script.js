@@ -54,3 +54,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+const mobileBtn = document.getElementById("mobileMenuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+if(mobileBtn){
+  mobileBtn.onclick = function(){
+    mobileMenu.classList.add("show");
+  }
+}
+
+if(closeMenu){
+  closeMenu.onclick = function(){
+    mobileMenu.classList.remove("show");
+  }
+}
