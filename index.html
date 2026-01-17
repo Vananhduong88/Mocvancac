@@ -443,5 +443,16 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("mobileMenuToggle");
+
+  toggle.addEventListener("click", function(e){
+    e.preventDefault();
+    this.parentElement.classList.toggle("active");
+  });
+});
+</script>
+  
 </body>
 </html>
