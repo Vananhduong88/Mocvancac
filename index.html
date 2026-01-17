@@ -448,15 +448,20 @@
 
 <script src="js/script.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("mobileMenuToggle");
+const openBtn = document.getElementById("mobileMenuToggle");
+const closeBtn = document.getElementById("closeMobileMenu");
+const menu = document.getElementById("mobileMenu");
 
-  toggle.addEventListener("click", function(e){
-    e.preventDefault();
-    this.parentElement.classList.toggle("active");
-  });
-});
+openBtn.onclick = e => {
+  e.preventDefault();
+  menu.classList.add("show");
+};
+
+closeBtn.onclick = () => {
+  menu.classList.remove("show");
+};
 </script>
+
   
 </body>
 </html>
