@@ -36,12 +36,6 @@ a{text-decoration:none;color:inherit}
   }
 }
 
-.story-card{
-  width:300px;
-  text-align:center;
-  flex-shrink:0
-  position: relative;
-}
 .story-card img{
   width:300px;
   height:533px;
@@ -57,8 +51,6 @@ a{text-decoration:none;color:inherit}
   gap:14px
 }
 .update-card{text-align:center}
-
-.update-card h4{font-size:13px;margin-top:4px}
 
 /* FOOTER */
 .footer{text-align:center;padding:20px;margin-top:40px;background:#fff}
@@ -135,9 +127,6 @@ body.dark .mobile-menu{background:#1e1e1e}
   }
 }
 /* ===== TRUYỆN HOT: TITLE CHÈN ẢNH ===== */
-.story-card {
-  position: relative;
-}
 
 .story-link {
   display: block;
@@ -180,20 +169,6 @@ body.dark .mobile-menu{background:#1e1e1e}
     transition: 0.3s;
   }
 }
-.story-card {
-  width: 300px;
-  text-align: center;
-  flex-shrink: 0;
-  position: relative;
-}
-
-.story-card img {
-  width: 300px;
-  height: 533px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
 
 /* Lớp phủ chữ */
 .story-title {
@@ -237,15 +212,6 @@ body.dark .mobile-menu{background:#1e1e1e}
   text-decoration: none;
   color: #333;
 }
-.update-card a {
-  text-decoration: none;
-  color: #333;
-}
-.update-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 14px;
-}
 
 .update-card {
   text-decoration: none;
@@ -263,9 +229,6 @@ body.dark .mobile-menu{background:#1e1e1e}
   font-size: 14px;
   margin-top: 6px;
   text-align: center;
-}
-
-.update-card h4 {
   color: #222;
   transition: color 0.25s ease;
 }
@@ -403,8 +366,6 @@ body.dark .mobile-menu{background:#1e1e1e}
   opacity: 0.9;
   letter-spacing: 0.3px;
 }
-
-} 
 .search { 
   width: 100%;
   max-width: 360px;
