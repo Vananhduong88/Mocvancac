@@ -450,3 +450,20 @@ body.dark .dropdown-menu li a:hover {
   background: #2a2a2a;
   color: #ff4d4f;
 }
+/* ================= FIX MENU TEXT DARK MODE (FORCE) ================= */
+
+/* Nút Danh mục ☰ (mobile) */
+body.dark #mobileMenuBtn {
+  color: #fff !important;
+}
+
+/* Menu desktop */
+body.dark .nav a,
+body.dark .menu > li > a {
+  color: #fff !important;
+}
+
+/* Icon dark mode */
+body.dark #darkToggle {
+  color: #fff !important;
+}
