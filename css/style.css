@@ -180,7 +180,14 @@ img{display:block;width:100%}
 .rank{
   width:26px;
   font-weight:bold;
-  color:inherit;
+  color:#222; /* cùng màu với tên truyện */
+  transition:color .3s;
+}
+
+/* hover đồng bộ */
+.recommend-item:hover .rank,
+.recommend-item:hover h4{
+  color:#e53935;
 }
 
 /* ================= FOOTER ================= */
