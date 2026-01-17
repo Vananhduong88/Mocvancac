@@ -204,6 +204,21 @@ img{display:block;width:100%}
 .recommend-item:hover .rank{
   color:#e53935;
 }
+@media(max-width:768px){
+  .recommend-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .recommend-item{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+  }
+
+  body.dark .recommend-item{
+    border-color:#333;
+  }
+}
 
 /* DARK MODE */
 body.dark .recommend-item h4,
