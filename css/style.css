@@ -233,12 +233,28 @@ body.dark .recommend-item p{
 /* ================= FOOTER ================= */
 .footer{
   margin-top:60px;
-  padding:20px;
+  padding:20px 16px;
   text-align:center;
   background:#fff;
-  border-top:1px solid #eee
+  border-top:1px solid #eee;
 }
-.footer img{width:28px;margin:0 6px}
+
+.footer a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.footer img{
+  width:28px;
+  margin:0 4px; /* 👈 sát nhau vừa phải */
+}
+@media(max-width:768px){
+  .footer img{
+    width:26px;
+    margin:0 3px;
+  }
+}
 
 /* ===== MENU MOBILE ===== */
 .mobile-menu{
