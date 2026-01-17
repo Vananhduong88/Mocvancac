@@ -214,114 +214,53 @@ body.dark .rank{
 body.dark .recommend-item p{
   color:#aaa;
 }
-@media(max-width:768px){
-  .recommend-grid{
-    grid-template-columns:1fr;
-    gap:16px;
-  }
-
-  .recommend-item{
-    padding:10px 0;
-    border-bottom:1px solid #eee;
-  }
-
-  body.dark .recommend-item{
-    border-color:#333;
-  }
-}
 
 /* ================= FOOTER ================= */
 .footer{
   margin-top:60px;
-  padding:20px 16px;
+  padding:20px;
   text-align:center;
   background:#fff;
-  border-top:1px solid #eee;
+  border-top:1px solid #eee
 }
+.footer img{width:28px;margin:0 6px}
 
-.footer a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.footer img{
-  width:28px;
-  margin:0 4px; /* 👈 sát nhau vừa phải */
-}
-@media(max-width:768px){
-  .footer img{
-    width:26px;
-    margin:0 3px;
-  }
-}
-
-/* ===== MOBILE MENU ===== */
+/* ===== MENU MOBILE ===== */
 .mobile-menu{
   position:fixed;
   inset:0;
   background:#fff;
-  z-index:9999;
-  transform:translateX(-100%);
-  transition:transform .3s ease;
+  padding:20px;
+  z-index:999;
+  display:none;
+  overflow-y:auto;
 }
 
-/* hiện menu */
 .mobile-menu.show{
-  transform:translateX(0);
+  display:block;
 }
 
-/* header mobile */
-.mobile-menu-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:16px;
+.mobile-menu ul{
+  list-style:none;
+  margin-top:40px;
+}
+
+.mobile-menu li a{
+  display:block;
+  padding:12px 0;
+  font-size:16px;
   border-bottom:1px solid #eee;
 }
 
-.mobile-title{
-  font-size:18px;
-  font-weight:600;
-}
-
 .close-menu{
+  position:absolute;
+  top:16px;
+  right:16px;
   font-size:22px;
   background:none;
   border:none;
   cursor:pointer;
 }
-
-/* danh sách */
-.mobile-menu-list{
-  list-style:none;
-  padding:12px 16px;
-}
-
-.mobile-menu-list li a{
-  display:block;
-  padding:14px 0;
-  font-size:16px;
-  border-bottom:1px solid #f0f0f0;
-}
-
-/* desktop ẩn */
-@media(min-width:769px){
-  .mobile-menu{
-    display:none;
-  }
-}
-/* tiêu đề nhóm */
-.menu-section{
-  margin-top:18px;
-  padding:8px 0;
-  font-size:13px;
-  font-weight:600;
-  color:#999;
-  text-transform:uppercase;
-  border-bottom:1px solid #eee;
-}
-
 
 /* ================= DARK MODE ================= */
 body.dark{
@@ -349,4 +288,80 @@ body.dark .update-card:hover .update-title{
 
 body.dark .section-title{
   color:#fff;
+}
+/* ===== MENU DESKTOP ===== */
+.dropdown{
+  position:relative;
+}
+
+.dropdown-menu{
+  position:absolute;
+  top:100%;
+  left:0;
+  width:220px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
+  padding:10px 0;
+  display:none;
+  z-index:200;
+}
+
+.dropdown-menu ul{
+  list-style:none;
+}
+
+.dropdown-menu li a{
+  display:block;
+  padding:10px 16px;
+  font-size:14px;
+}
+
+.dropdown-menu li a:hover{
+  background:#f5f5f5;
+  color:#e53935;
+}
+
+/* hover mới hiện */
+.dropdown:hover .dropdown-menu{
+  display:block;
+}
+/* ===== RESPONSIVE ===== */
+@media (min-width:769px){
+  .mobile-menu{display:none!important}
+}
+
+@media (max-width:768px){
+  .nav{display:none}
+}
+/* ================= MOBILE MENU FIX ================= */
+#mobileMenu{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:#fff;
+  z-index:9999;
+
+  transform:translateX(-100%);
+  transition:transform .3s ease;
+}
+
+/* hiện menu */
+#mobileMenu.show{
+  transform:translateX(0);
+}
+
+/* dark mode */
+body.dark #mobileMenu{
+  background:#111;
+  color:#fff;
+}
+
+/* desktop ẩn menu mobile */
+@media(min-width:769px){
+  #mobileMenu{
+    display:none;
+  }
 }
