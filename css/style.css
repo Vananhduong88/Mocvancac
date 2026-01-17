@@ -423,4 +423,20 @@ a#menuToggle{
   color: #000 !important;
   font-size: 15px !important;
 }
+/* ===== FIX IOS / MOBILE LINK COLOR BUG ===== */
+
+/* NÚT DANH MỤC TRÊN HEADER */
+a#menuToggle{
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important; /* 👈 MẤU CHỐT */
+}
+
+/* LINK TRONG MOBILE MENU */
+.mobile-menu a{
+  font-size: 15px !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important; /* 👈 MẤU CHỐT */
+}
 
