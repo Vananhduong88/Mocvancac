@@ -408,3 +408,23 @@ body.dark .section-title{
   color: #000;          /* 👈 đổi sang đen */
 }
 
+/* ================= FIX MENU MOBILE ONLY ================= */
+
+/* Header mobile menu: chữ "Danh mục ☰" */
+.mobile-menu .menu-header span{
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #000 !important;
+}
+
+/* Link trong mobile menu */
+.mobile-menu a{
+  font-size: 15px !important;
+  color: #000 !important;
+}
+
+/* Nút mở menu trên header (mobile) */
+#menuToggle{
+  font-size: 15px !important;
+  color: #000 !important;
+}
