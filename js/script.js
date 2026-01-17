@@ -32,19 +32,25 @@ if (track) {
 }
 
 /* ================= MOBILE MENU ================= */
-const menuToggle = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mobileMenu");
-const closeMenu = document.getElementById("closeMenu");
+document.addEventListener("DOMContentLoaded", () => {
 
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener("click", (e) => {
-    e.preventDefault(); // 👈 QUAN TRỌNG
-    mobileMenu.classList.add("show");
-  });
-}
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
 
-if (closeMenu && mobileMenu) {
-  closeMenu.addEventListener("click", () => {
-    mobileMenu.classList.remove("show");
-  });
-}
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      mobileMenu.classList.add("show");
+      document.body.style.overflow = "hidden";
+    });
+  }
+
+  if (closeMenu && mobileMenu) {
+    closeMenu.addEventListener("click", () => {
+      mobileMenu.classList.remove("show");
+      document.body.style.overflow = "";
+    });
+  }
+
+});
