@@ -1,34 +1,27 @@
-/* ================= PAGE TITLE ================= */
-.page-title{
-  font-size:22px;
-  font-weight:600;
-  margin:20px 0 16px;
-  color:#222;
-}
-
-/* Mobile */
-@media(max-width:768px){
-  .page-title{
-    font-size:18px;
-    margin:16px 0 12px;
-  }
-}
 /* ================= PAGE HIỆN ĐẠI ================= */
 .page-hiendai{
-  margin-top:30px;
+  margin-top:20px;
+}
+
+/* ===== TITLE ===== */
+.page-head h1{
+  font-size:22px;
+  font-weight:600;
+  margin-bottom:16px;
+  color:#222;
 }
 
 /* ================= SLIDER ================= */
 .hiendai-slider{
   overflow:hidden;
-  margin-bottom:40px;
+  margin-bottom:30px;
 }
 
-.hiendai-slider .slide-track{
+.slide-track{
   display:flex;
-  gap:16px;
+  gap:14px;
   width:max-content;
-  animation: scroll 35s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 .hiendai-slider:hover .slide-track{
@@ -40,47 +33,44 @@
   to{transform:translateX(-50%)}
 }
 
-.hot-card{
+.slide-item{
   width:250px;
   height:444px;
   position:relative;
   flex-shrink:0;
+  border-radius:10px;
   overflow:hidden;
-  border-radius:12px;
 }
 
-.hot-card img{
+.slide-item img{
   width:100%;
   height:100%;
   object-fit:cover;
   transition:.4s ease;
 }
 
-.hot-overlay{
+.slide-title{
   position:absolute;
-  inset:0;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:12px;
+  font-size:16px;
+  font-weight:600;
+  color:#fff;
   background:linear-gradient(
     to top,
     rgba(0,0,0,.8),
     rgba(0,0,0,.3),
     transparent
   );
-  display:flex;
-  align-items:flex-end;
-  padding:14px;
 }
 
-.hot-title{
-  color:#fff;
-  font-size:16px;
-  font-weight:600;
-}
-
-.hot-card:hover img{
+.slide-item:hover img{
   transform:scale(1.08);
 }
 
-.hot-card:hover .hot-title{
+.slide-item:hover .slide-title{
   color:#e53935;
 }
 
@@ -88,39 +78,38 @@
 .hiendai-list{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px 30px;
+  gap:18px 30px;
 }
 
-.list-item{
+.story-item{
   display:flex;
   align-items:center;
   gap:10px;
 }
 
-.list-item img{
+.story-item img{
   width:60px;
   height:84px;
   object-fit:cover;
   border-radius:6px;
 }
 
-.rank{
+.stt{
   width:24px;
-  font-weight:bold;
+  font-weight:600;
   color:#222;
 }
 
-.info a{
-  display:block;
+.story-info a{
   font-size:14px;
   color:#000;
 }
 
-.info a:hover{
+.story-info a:hover{
   color:#e53935;
 }
 
-.info p{
+.story-info p{
   font-size:12px;
   color:#777;
 }
@@ -129,5 +118,10 @@
 @media(max-width:768px){
   .hiendai-list{
     grid-template-columns:1fr;
+  }
+
+  .slide-item{
+    width:180px;
+    height:320px;
   }
 }
