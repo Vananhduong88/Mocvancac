@@ -23,16 +23,23 @@ a{text-decoration:none;color:inherit}
 
 /* HOT SLIDE */
 .slider{overflow:hidden}
-.slide-track{
-  display:flex;
-  gap:14px;
-  width:max-content;
-  animation:scroll 50s linear infinite
+.slide-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+  will-change: transform;
 }
-@keyframes scroll{
-  from{transform:translateX(0)}
-  to{transform:translateX(-50%)}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
+
 .story-card{width:300px;text-align:center;flex-shrink:0}
 .story-card img{
   width:300px;height:533px;
@@ -207,6 +214,11 @@ body.dark .mobile-menu{background:#1e1e1e}
   color: #222;
   text-decoration: none;
   transition: color 0.25s ease;
+}
+/* ÉP MÀU TRẮNG RIÊNG TRUYỆN HOT */
+.story-card .story-title,
+.story-overlay .story-title {
+  color: #fff !important;
 }
 
 .story-card:hover h3 a,
