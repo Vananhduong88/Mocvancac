@@ -401,30 +401,26 @@ body.dark .section-title{
   #mobileMenuBtn{display:block;}
   .nav{display:none;}
 }
-/* ===== MOBILE MENU HEADER ===== */
-.mobile-menu .menu-header span{
-  font-size: 16px;      /* 👈 nhỏ lại (có thể thử 15px) */
-  font-weight: 500;
-  color: #000;          /* 👈 đổi sang đen */
-}
 
-/* ================= FIX MENU MOBILE ONLY ================= */
+/* ================= FIX MOBILE MENU – FORCE ================= */
 
-/* Header mobile menu: chữ "Danh mục ☰" */
-.mobile-menu .menu-header span{
+/* NÚT "Danh mục ☰" TRÊN HEADER (thẻ a) */
+a#menuToggle{
   font-size: 15px !important;
+  color: #000 !important;
   font-weight: 500 !important;
-  color: #000 !important;
 }
 
-/* Link trong mobile menu */
-.mobile-menu a{
+/* HEADER CỦA MOBILE MENU (span) */
+.mobile-menu .menu-header span{
   font-size: 15px !important;
   color: #000 !important;
+  font-weight: 500 !important;
 }
 
-/* Nút mở menu trên header (mobile) */
-#menuToggle{
-  font-size: 15px !important;
+/* LINK TRONG MOBILE MENU */
+.mobile-menu .menu-list a{
   color: #000 !important;
+  font-size: 15px !important;
 }
+
