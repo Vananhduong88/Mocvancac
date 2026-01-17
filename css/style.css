@@ -332,20 +332,19 @@ body.dark .section-title{
 
 .mobile-menu{
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-
+  inset: 0;
   background: #fff;
-  z-index: 99999;
+  z-index: 9999;
 
   transform: translateX(-100%);
   transition: transform .3s ease;
+
+  pointer-events: none;   /* 👈 QUAN TRỌNG */
 }
 
 .mobile-menu.show{
   transform: translateX(0);
+  pointer-events: auto;   /* 👈 CHO PHÉP CLICK */
 }
 
 .menu-header{
