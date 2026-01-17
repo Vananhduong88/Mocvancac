@@ -193,14 +193,43 @@ img{display:block;width:100%}
 }
 .footer img{width:28px;margin:0 6px}
 
-/* ================= MOBILE ================= */
-@media(max-width:768px){
-  .menu{display:none}
-  .hero h1{font-size:22px}
-  .story-card{width:220px}
-  .story-thumb img{width:220px;height:390px}
-  .recommend-grid{grid-template-columns:1fr}
+/* ===== MENU MOBILE ===== */
+.mobile-menu{
+  position:fixed;
+  inset:0;
+  background:#fff;
+  padding:20px;
+  z-index:999;
+  display:none;
+  overflow-y:auto;
 }
+
+.mobile-menu.show{
+  display:block;
+}
+
+.mobile-menu ul{
+  list-style:none;
+  margin-top:40px;
+}
+
+.mobile-menu li a{
+  display:block;
+  padding:12px 0;
+  font-size:16px;
+  border-bottom:1px solid #eee;
+}
+
+.close-menu{
+  position:absolute;
+  top:16px;
+  right:16px;
+  font-size:22px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
 /* ================= DARK MODE ================= */
 body.dark{
   background:#121212;
@@ -227,4 +256,49 @@ body.dark .update-card:hover .update-title{
 
 body.dark .section-title{
   color:#fff;
+}
+/* ===== MENU DESKTOP ===== */
+.dropdown{
+  position:relative;
+}
+
+.dropdown-menu{
+  position:absolute;
+  top:100%;
+  left:0;
+  width:220px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
+  padding:10px 0;
+  display:none;
+  z-index:200;
+}
+
+.dropdown-menu ul{
+  list-style:none;
+}
+
+.dropdown-menu li a{
+  display:block;
+  padding:10px 16px;
+  font-size:14px;
+}
+
+.dropdown-menu li a:hover{
+  background:#f5f5f5;
+  color:#e53935;
+}
+
+/* hover mới hiện */
+.dropdown:hover .dropdown-menu{
+  display:block;
+}
+/* ===== RESPONSIVE ===== */
+@media (min-width:769px){
+  .mobile-menu{display:none!important}
+}
+
+@media (max-width:768px){
+  .nav{display:none}
 }
