@@ -51,37 +51,42 @@
   </div>
 </header>
 
-<!-- MOBILE MENU -->
-<nav class="mobile-nav">
-  <ul class="mobile-menu">
+<!-- ===== MOBILE HEADER ===== -->
 
-    <!-- DANH MỤC -->
-    <li class="mobile-dropdown">
-      <a href="#" id="mobileMenuToggle">
-        Danh mục ☰
-      </a>
+  <a href="#" id="mobileMenuToggle" class="mobile-menu-btn">
+    Danh mục ☰
+  </a>
+</header>
 
-      <ul class="mobile-submenu">
-        <li><a href="#">Hiện đại</a></li>
-        <li><a href="#">Cổ đại</a></li>
-        <li><a href="#">Xuyên không</a></li>
-        <li><a href="#">Trọng sinh</a></li>
-        <li><a href="#">Hài hước</a></li>
-        <li><a href="#">Nữ cường</a></li>
-        <li><a href="#">Hệ thống</a></li>
-        <li><a href="#">Ngược</a></li>
-        <li><a href="#">Sủng</a></li>
-        <li><a href="#">Khác</a></li>
-      </ul>
-    </li>
+<!-- ===== MOBILE MENU FULL SCREEN ===== -->
+<div id="mobileMenu" class="mobile-menu-overlay">
+  <div class="mobile-menu-top">
+    <span>Danh mục</span>
+    <button id="closeMobileMenu">✕</button>
+  </div>
 
-    <!-- LINK KHÁC -->
-    <li><a href="#">Truyện Hot</a></li>
-    <li><a href="#">Mới cập nhật</a></li>
-    <li><a href="#">Nổi bật</a></li>
+  <ul class="mobile-menu-content">
+    <!-- THỂ LOẠI -->
+    <li><a href="#">Hiện đại</a></li>
+    <li><a href="#">Cổ đại</a></li>
+    <li><a href="#">Xuyên không</a></li>
+    <li><a href="#">Trọng sinh</a></li>
+    <li><a href="#">Hài hước</a></li>
+    <li><a href="#">Nữ cường</a></li>
+    <li><a href="#">Hệ thống</a></li>
+    <li><a href="#">Ngược</a></li>
+    <li><a href="#">Sủng</a></li>
+    <li><a href="#">Khác</a></li>
 
+    <li class="menu-divider"></li>
+
+    <!-- ĐIỀU HƯỚNG -->
+    <li><a href="#">🔥 Truyện Hot</a></li>
+    <li><a href="#">🆕 Mới cập nhật</a></li>
+    <li><a href="#">⭐ Nổi bật</a></li>
   </ul>
-</nav>
+</div>
+
 
 
 <!-- MAIN -->
