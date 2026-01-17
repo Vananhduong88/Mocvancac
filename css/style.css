@@ -401,3 +401,24 @@ body.dark .section-title{
     padding:16px;
   }
 }
+/* ===== PHÂN BIỆT DESKTOP & MOBILE ===== */
+
+/* MẶC ĐỊNH: DESKTOP */
+.header:nth-of-type(2){
+  display:none;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+  /* Ẩn header desktop */
+  .header:first-of-type{
+    display:none;
+  }
+
+  /* Hiện header mobile */
+  .header:nth-of-type(2){
+    display:block;
+  }
+
+}
