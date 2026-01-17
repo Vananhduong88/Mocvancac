@@ -7,74 +7,13 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div id="site-header"></div>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="container header-flex">
-
-    <!-- LOGO -->
-    <a href="https://vananhduong88.github.io/Mocvancac/" class="logo" title="Về trang chủ">
-      <img src="assets/images/logo.png" alt="Mộc Văn Các">
-    </a>
-    <!-- NÚT MENU MOBILE -->
-    <button id="mobileMenuBtn" class="mobile-only">Danh mục ☰</button>
-
-    <!-- MENU DESKTOP -->
-    <nav class="nav">
-      <ul class="menu">
-        <li class="dropdown">
-          <a href="#" id="menuToggle">Danh mục ☰</a>
-          <!-- DROPDOWN DESKTOP -->
-          <div class="dropdown-menu">
-            <ul>
-              <li><a href="danh-muc/hien-dai.html">Hiện đại</a></li>
-              <li><a href="#">Cổ đại</a></li>
-              <li><a href="#">Xuyên không</a></li>
-              <li><a href="#">Trọng sinh</a></li>
-              <li><a href="#">Hài hước</a></li>
-              <li><a href="#">Nữ cường</a></li>
-              <li><a href="#">Hệ thống</a></li>
-              <li><a href="#">Ngược</a></li>
-              <li><a href="#">Sủng</a></li>
-              <li><a href="#">Khác</a></li>
-            </ul>
-          </div>
-        </li>
-
-        <li><a href="#">Truyện Hot</a></li>
-        <li><a href="#">Mới cập nhật</a></li>
-        <li><a href="#">Nổi bật</a></li>
-      </ul>
-    </nav>
-
-    <!-- DARK MODE -->
-    <button id="darkToggle">🌙</button>
-
-  </div>
-</header>
-  
-<!-- MENU MOBILE -->
-<div class="mobile-menu" id="mobileMenu">
-  <div class="menu-header">
-    <span>Danh mục ☰</span>
-    <button id="closeMenu">✕</button>
-  </div>
-
-  <nav class="menu-list">
-    <a href="danh-muc/hien-dai.html">Hiện đại</a>
-    <a href="#">Cổ đại</a>
-    <a href="#">Xuyên không</a>
-    <a href="#">Trọng sinh</a>
-    <a href="#">Hài hước</a>
-    <a href="#">Nữ cường</a>
-    <a href="#">Hệ thống</a>
-    <a href="#">Ngược</a>
-    <a href="#">Sủng</a>
-    <a href="#">Khác</a>
-
-    <hr>
-  </nav>
-</div>
+<script>
+fetch("partials/header.html")
+  .then(r => r.text())
+  .then(html => document.getElementById("site-header").innerHTML = html);
+</script>
 
 
 <!-- MAIN -->
@@ -437,25 +376,20 @@
 
 <script src="js/script.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("click", function(e){
 
-  const toggle = document.getElementById("menuToggle");
-  const mobileMenu = document.getElementById("mobileMenu");
+  if(e.target.id === "menuToggle" || e.target.id === "mobileMenuBtn"){
+    e.preventDefault();
+    document.getElementById("mobileMenu")?.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
 
-  if(toggle && mobileMenu){
-    toggle.addEventListener("click", function(e){
-      e.preventDefault();
-      mobileMenu.classList.add("active");
-      document.body.style.overflow = "hidden";
-    });
+  if(e.target.id === "closeMenu"){
+    document.getElementById("mobileMenu")?.classList.remove("active");
+    document.body.style.overflow = "";
   }
 
 });
-
-function closeMenu(){
-  document.getElementById("mobileMenu").classList.remove("active");
-  document.body.style.overflow = "";
-}
 </script>
   
 </body>
