@@ -439,18 +439,26 @@
 
 <script src="js/script.js"></script>
 <script>
-function openMenu(){
-  document.getElementById("mobileMenu").classList.add("active");
-  document.body.style.overflow = "hidden";
-}
+document.addEventListener("DOMContentLoaded", function(){
+
+  const toggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if(toggle && mobileMenu){
+    toggle.addEventListener("click", function(e){
+      e.preventDefault();
+      mobileMenu.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  }
+
+});
 
 function closeMenu(){
   document.getElementById("mobileMenu").classList.remove("active");
   document.body.style.overflow = "";
 }
 </script>
-
-
   
 </body>
 </html>
