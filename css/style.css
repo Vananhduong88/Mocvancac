@@ -50,10 +50,7 @@ a{text-decoration:none;color:inherit}
   gap:14px
 }
 .update-card{text-align:center}
-.update-card img{
-  width:120px;height:213px;
-  object-fit:cover;border-radius:6px
-}
+
 .update-card h4{font-size:13px;margin-top:4px}
 
 /* FOOTER */
@@ -177,14 +174,10 @@ body.dark .mobile-menu{background:#1e1e1e}
   }
 }
 .story-card {
+  width: 300px;
+  text-align: center;
+  flex-shrink: 0;
   position: relative;
-  display: block;
-  width: 160px;
-  height: 220px;
-  border-radius: 12px;
-  overflow: hidden;
-  text-decoration: none;
-  color: #fff;
 }
 
 .story-card img {
@@ -193,6 +186,7 @@ body.dark .mobile-menu{background:#1e1e1e}
   object-fit: cover;
   border-radius: 10px;
 }
+
 
 /* Lớp phủ chữ */
 .story-title {
@@ -254,9 +248,8 @@ body.dark .mobile-menu{background:#1e1e1e}
 .update-card img {
   width: 120px;
   height: 213px;
-  aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .update-card h4 {
@@ -393,11 +386,17 @@ body.dark .mobile-menu{background:#1e1e1e}
 .hero h1 { 
   font-size: 28px;
 } 
-.hero p { 
-  font-style: italic; 
+.hero p {
+  font-style: italic;
   font-size: 15px;
-  margin: 8px 0 16px;
-  color: #555;
+  margin: 10px 0 18px;
+  color: #666;
+  line-height: 1.6;
+  font-weight: 400;
+  opacity: 0.9;
+  letter-spacing: 0.3px;
+}
+
 } 
 .search { 
   width: 100%;
