@@ -256,7 +256,8 @@ body.dark .mobile-menu{background:#1e1e1e}
 }
 
 .update-card img {
-  width: 100%;
+  width: 120px;
+  height: 213px;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 10px;
@@ -267,7 +268,7 @@ body.dark .mobile-menu{background:#1e1e1e}
   margin-top: 6px;
   text-align: center;
 }
-/* ===== MỚI CẬP NHẬT ===== */
+
 .update-card h4 {
   color: #222;
   transition: color 0.25s ease;
