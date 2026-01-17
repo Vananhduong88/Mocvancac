@@ -180,7 +180,7 @@ img{display:block;width:100%}
 .rank{
   width:26px;
   font-weight:bold;
-  color:#e53935
+  color:inherit;
 }
 
 /* ================= FOOTER ================= */
