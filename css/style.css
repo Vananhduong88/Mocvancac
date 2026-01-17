@@ -401,3 +401,10 @@ body.dark .section-title{
   #mobileMenuBtn{display:block;}
   .nav{display:none;}
 }
+/* ===== MOBILE MENU HEADER ===== */
+.mobile-menu .menu-header span{
+  font-size: 16px;      /* 👈 nhỏ lại (có thể thử 15px) */
+  font-weight: 500;
+  color: #000;          /* 👈 đổi sang đen */
+}
+
