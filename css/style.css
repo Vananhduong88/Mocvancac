@@ -239,6 +239,11 @@ body.dark .mobile-menu{background:#1e1e1e}
 .story-card:hover img{
   transform:scale(1.06);
 }
+@media(max-width:768px){
+  .slide-track{
+    animation:scroll 26s linear infinite;
+  }
+}
 
 /* TÊN TRUYỆN (NỔI TRÊN ẢNH) */
 .story-title{
