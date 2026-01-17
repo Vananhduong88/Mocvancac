@@ -302,3 +302,34 @@ body.dark .section-title{
 @media (max-width:768px){
   .nav{display:none}
 }
+/* ================= MOBILE MENU FIX ================= */
+#mobileMenu{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:#fff;
+  z-index:9999;
+
+  transform:translateX(-100%);
+  transition:transform .3s ease;
+}
+
+/* hiện menu */
+#mobileMenu.show{
+  transform:translateX(0);
+}
+
+/* dark mode */
+body.dark #mobileMenu{
+  background:#111;
+  color:#fff;
+}
+
+/* desktop ẩn menu mobile */
+@media(min-width:769px){
+  #mobileMenu{
+    display:none;
+  }
+}
