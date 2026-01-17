@@ -350,19 +350,19 @@ body.dark .update-card:hover .update-title{
 body.dark .section-title{
   color:#fff;
 }
-/* ===== MOBILE MENU ONLY ===== */
+/* ===== MOBILE MENU ===== */
 @media (max-width: 768px){
 
-  /* NAV mobile */
+  /* Nav mobile */
   .nav{
     width:100%;
   }
 
-  /* Menu chính mobile */
+  /* Menu chính */
   .mobile-menu{
     display:flex;
     flex-direction:column;
-    gap:12px;
+    gap:14px;
     padding:12px 16px;
     background:#fff;
   }
@@ -378,22 +378,21 @@ body.dark .section-title{
     font-weight:500;
   }
 
-  /* ===== DROPDOWN MOBILE ===== */
-  .mobile-menu .dropdown{
+  /* ===== DROPDOWN ===== */
+  .dropdown{
     position:relative;
   }
 
-  /* List danh mục (ẩn mặc định) */
+  /* Danh mục con – ẨN MẶC ĐỊNH */
   .mobile-menu-list{
     display:none;
     margin-top:8px;
     border-radius:12px;
     background:#fff;
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
     overflow:hidden;
   }
 
-  /* Danh sách con */
   .mobile-menu-list ul{
     padding:8px 0;
   }
@@ -412,9 +411,9 @@ body.dark .section-title{
     background:#f5f5f5;
   }
 
-  /* ===== KHI MỞ MENU ===== */
+  /* ===== KHI CLICK "Danh mục ☰" ===== */
   .dropdown.active .mobile-menu-list{
     display:block;
   }
-
 }
+
