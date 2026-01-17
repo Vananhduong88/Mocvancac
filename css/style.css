@@ -21,49 +21,86 @@ a{text-decoration:none;color:inherit}
 .section-title{font-size:18px;margin:24px 0 12px}
 @media(max-width:768px){.section-title{font-size:16px}}
 
-/* HOT SLIDE */
-.slider{overflow:hidden}
+/* ===== HOT SLIDE (CHUẨN – KHÔNG NHẢY) ===== */
+.slider{
+  overflow: hidden;
+}
+
 .slide-track{
-  display:flex;
-  width:calc(300px * 16); /* 8 truyện x 2 lần */
-  animation:scroll 40s linear infinite;
+  display: flex;
+  gap: 14px;
+  width: calc(220px * 16);
+  animation: scrollHot 30s linear infinite;
+  will-change: transform;
 }
 
-@keyframes scroll{
-  from{
-    transform:translateX(0);
+@keyframes scrollHot {
+  from {
+    transform: translateX(0);
   }
-  to{
-    transform:translateX(calc(-300px * 8));
+  to {
+    transform: translateX(calc(-220px * 8));
   }
 }
-@media (max-width:768px){
-  .story-card{
-    width:220px;
-  }
 
+/* Desktop */
+@media (min-width: 769px) {
   .slide-track{
-    width:calc(220px * 16);
+    width: calc(300px * 16);
+    animation: scrollHotDesktop 32s linear infinite;
   }
 
-  @keyframes scroll{
-    from{transform:translateX(0)}
-    to{transform:translateX(calc(-220px * 8))}
+  @keyframes scrollHotDesktop {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-300px * 8));
+    }
   }
 }
+
 
 .story-card{
   width:300px;
-  text-align:center;
-  flex-shrink:0
+  flex-shrink:0;
 }
-.story-card img{
-  width:300px;
+
+.story-thumb{
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.story-thumb img{
+  width:300;
   height:533px;
   object-fit:cover;
-  border-radius:10px
+  transition: transform .35s ease;
 }
-.story-card h3{font-size:14px;margin-top:6px}
+
+/* ZOOM ẢNH */
+.story-card:hover img{
+  transform: scale(1.08);
+}
+
+/* OVERLAY CHỮ */
+.story-overlay{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:12px 10px;
+  background: linear-gradient(to top, rgba(0,0,0,.7), transparent);
+}
+
+.story-title{
+  color:#fff;
+  font-size:16px;        /* to hơn */
+  font-weight:600;
+  text-shadow:0 2px 6px rgba(0,0,0,.8);
+}
+
 
 /* UPDATE */
 .update-list{
