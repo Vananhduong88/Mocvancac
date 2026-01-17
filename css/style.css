@@ -401,18 +401,21 @@ body.dark .section-title{
   #mobileMenuBtn{display:block;}
   .nav{display:none;}
 }
-/* ===== FIX IOS BUTTON BLUE TEXT ===== */
+/* ===== RESPONSIVE HEADER ===== */
+.mobile-only{display:none}
+.desktop-only{display:block}
+
+@media (max-width: 768px){
+  .mobile-only{display:inline-block}
+  .desktop-only{display:none}
+}
+
+/* NÚT DANH MỤC MOBILE */
 #mobileMenuBtn{
-  appearance: none;
-  -webkit-appearance: none;
-  background: none;
-  border: none;
-
-  font-size: 15px;
-  font-weight: 500;
-  color: #000;
-
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
+  background:none;
+  border:none;
+  font-size:15px;
+  font-weight:500;
+  color:#000;
+  cursor:pointer;
 }
