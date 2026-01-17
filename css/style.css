@@ -1,96 +1,254 @@
-/* ================= RESET ================= */
 *{
   margin:0;
   padding:0;
-  box-sizing:border-box;
+  box-sizing:border-box
 }
-
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   background:#f5f5f5;
-  color:#222;
+  color:#222
 }
-
 a{
   text-decoration:none;
-  color:inherit;
+  color:inherit
 }
-
 .container{
   max-width:1200px;
-  margin:auto;
-  padding:0 16px;
+  margin:auto;padding:0 16px
 }
 
-/* ================= HEADER ================= */
-.header{
-  background:#fff;
-  border-bottom:1px solid #ddd;
-}
-
-.header-flex{
-  display:flex;
-  align-items:center;
-  gap:24px;
-  height:64px;
-}
-
+/* HEADER */
+.header{background:#fff;border-bottom:1px solid #ddd}
+.header-flex{display:flex;align-items:center;gap:24px;height:64px}
 .logo img{height:42px}
+.nav ul{display:flex;gap:20px;list-style:none}
+#darkToggle{margin-left:auto;border:none;background:none;font-size:18px;cursor:pointer}
 
-.nav ul{
-  display:flex;
-  gap:20px;
-  list-style:none;
+/* HERO */
+.hero{text-align:center;padding:40px 0}
+.search{max-width:360px;width:100%;padding:10px}
+
+/* SECTION TITLE */
+.section-title{font-size:18px;margin:24px 0 12px}
+@media(max-width:768px){.section-title{font-size:16px}}
+
+/* ===== HOT SLIDE (CHUẨN – KHÔNG NHẢY) ===== */
+.slider{
+  overflow: hidden;
 }
 
-#darkToggle{
-  margin-left:auto;
-  border:none;
-  background:none;
-  font-size:18px;
-  cursor:pointer;
+.slide-track{
+  display: flex;
+  gap: 14px;
+  width: calc(220px * 16);
+  animation: scrollHot 30s linear infinite;
+  will-change: transform;
 }
 
-/* ================= HERO ================= */
-.hero{
+@keyframes scrollHot {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-220px * 8));
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .slide-track{
+    width: calc(300px * 16);
+    animation: scrollHotDesktop 32s linear infinite;
+  }
+
+  @keyframes scrollHotDesktop {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-300px * 8));
+    }
+  }
+}
+
+
+.story-card{
+  width:300px;
+  flex-shrink:0;
+}
+
+.story-thumb{
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.story-thumb img{
+  width:300;
+  height:533px;
+  object-fit:cover;
+  transition: transform .35s ease;
+}
+
+/* ZOOM ẢNH */
+.story-card:hover img{
+  transform: scale(1.08);
+}
+
+/* OVERLAY CHỮ */
+.story-overlay{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:12px 10px;
+  background: linear-gradient(to top, rgba(0,0,0,.7), transparent);
+}
+
+.story-title{
+  color:#fff;
+  font-size:16px;        /* to hơn */
+  font-weight:600;
+  text-shadow:0 2px 6px rgba(0,0,0,.8);
+}
+
+
+/* UPDATE */
+.update-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+  gap:14px
+}
+.update-card{text-align:center}
+.update-card img{
+  width:120px;height:213px;
+  object-fit:cover;border-radius:6px
+}
+.update-card h4{font-size:13px;margin-top:4px}
+
+/* FOOTER */
+.footer{
   text-align:center;
-  padding:40px 0 24px;
+  padding:20px;
+  margin-top:40px;
+  background:#fff
 }
 
-.hero h1{font-size:28px}
-
-.hero p{
-  font-style:italic;
-  font-size:15px;
-  margin:8px 0 16px;
-  color:#555;
+/* MOBILE MENU */
+.mobile-menu{
+  position:fixed;inset:0;
+  background:#fff;
+  z-index:9999;
+  display:none;
+  padding:70px 20px
+}
+.mobile-menu.show{display:block}
+.mobile-menu ul{
+  list-style:none;
+  column-count:2;
+  column-gap:20px
+}
+.mobile-menu li{padding:8px 0}
+.close-menu{
+  position:absolute;top:15px;right:20px;
+  font-size:26px;background:none;border:none;cursor:pointer
+}
+@media(min-width:769px){
+  .mobile-menu{display:none!important}
 }
 
-/* SEARCH */
-.search-box{
-  display:flex;
-  justify-content:center;
-  margin:20px auto 30px;
+/* DARK MODE */
+body.dark{background:#121212;color:#ddd}
+body.dark .header,
+body.dark .footer,
+body.dark .mobile-menu{background:#1e1e1e}
+/* ===== DESKTOP DROPDOWN ===== */
+.dropdown {
+  position: relative;
 }
 
-.search{
-  width:100%;
-  max-width:500px;
-  padding:12px 18px;
-  border-radius:30px;
-  border:1px solid #ddd;
-  font-size:15px;
-  outline:none;
-  box-shadow:0 4px 12px rgba(0,0,0,.08);
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #fff;
+  padding: 16px;
+  min-width: 360px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.15);
+  border-radius: 8px;
+  z-index: 1000;
 }
 
-/* ================= SECTION TITLE ================= */
-.section-title{
-  font-size:18px;
-  margin:24px 0 12px;
+/* Hover desktop mới hiện */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột */
+    gap: 8px 24px;
+  }
+
+  .dropdown-menu li {
+    white-space: nowrap;
+  }
 }
 
-/* ================= HOT SLIDE (CHUẨN) ================= */
+/* Mobile: ẩn dropdown desktop */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    display: none !important;
+  }
+}
+/* ================= HERO ================= */
+.hero {
+  text-align: center;
+  padding: 40px 0 24px; 
+} 
+.hero h1 {
+  font-size: 28px;
+} 
+.hero p { 
+  font-style: italic;
+  font-size: 15px;
+  margin: 8px 0 16px; 
+  color: #555;
+} 
+/* SEARCH CENTER */
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 30px;
+  width: 100%;
+}
+
+.search-box .search {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+@media (max-width: 600px) {
+  .search-box .search {
+    max-width: 90%;
+  }
+}
+
+/* ================= TRUYỆN HOT ================= */
+.hot-section{
+  margin-top:32px;
+}
+
 .slider{
   overflow:hidden;
   margin-top:16px;
@@ -99,192 +257,221 @@ a{
 .slide-track{
   display:flex;
   gap:14px;
-  width:calc(220px * 16);
-  animation:hotScrollMobile 24s linear infinite;
-  will-change:transform;
+  width:calc(300px * 16); /* 8 truyện x 2 */
+  animation:scroll 40s linear infinite;
 }
 
-@keyframes hotScrollMobile{
+@keyframes scroll{
   from{transform:translateX(0)}
-  to{transform:translateX(calc(-220px * 8))}
+  to{transform:translateX(calc(-300px * 8))}
 }
 
-/* DESKTOP */
-@media(min-width:769px){
-  .slide-track{
-    width:calc(300px * 16);
-    animation:hotScrollDesktop 28s linear infinite;
-  }
-
-  @keyframes hotScrollDesktop{
-    from{transform:translateX(0)}
-    to{transform:translateX(calc(-300px * 8))}
-  }
-}
-
-/* ================= STORY CARD ================= */
+/* CARD */
 .story-card{
   width:300px;
   flex-shrink:0;
-}
-
-.story-thumb{
   position:relative;
   overflow:hidden;
   border-radius:10px;
 }
 
-.story-thumb img{
+/* ẢNH */
+.story-card img{
   width:100%;
   height:533px;
   object-fit:cover;
-  transition:transform .35s ease;
+  transition:transform .4s ease;
 }
 
 /* ZOOM */
 .story-card:hover img{
-  transform:scale(1.08);
+  transform:scale(1.06);
+}
+@media(max-width:768px){
+  .slide-track{
+    animation:scroll 26s linear infinite;
+  }
 }
 
-/* TITLE OVERLAY */
-.story-overlay{
-  position:absolute;
-  inset:auto 0 0 0;
-  padding:12px 10px;
-  background:linear-gradient(to top, rgba(0,0,0,.75), transparent);
-  z-index:2;
-}
-
+/* TÊN TRUYỆN (NỔI TRÊN ẢNH) */
 .story-title{
-  font-size:17px;
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:10px 8px;
+
+  font-size:17px;      /* TO HƠN */
   font-weight:600;
   color:#fff;
   text-align:center;
-  text-shadow:0 2px 6px rgba(0,0,0,.8);
-  transition:color .25s ease;
+
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.75),
+    rgba(0,0,0,0)
+  );
+
+  z-index:2;
+  transition:color .3s ease;
 }
 
+/* Hover đổi màu chữ */
 .story-card:hover .story-title{
   color:#ff4d4f;
 }
 
-/* MOBILE HOT CARD */
+/* MOBILE */
 @media(max-width:768px){
   .story-card{width:220px}
-  .story-thumb img{height:390px}
-  .story-title{font-size:15px}
+  .story-card img{height:390px}
+
+  .slide-track{
+    width:calc(220px * 16);
+  }
+
+  @keyframes scroll{
+    from{transform:translateX(0)}
+    to{transform:translateX(calc(-220px * 8))}
+  }
+
+  .story-title{
+    font-size:15px;
+  }
 }
 
-/* ================= MỚI CẬP NHẬT ================= */
-.update-list{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
-  gap:14px;
+/* ================= MỚI CẬP NHẬT ================= */ 
+.new-grid { 
+  margin-top: 16px;
+} 
+.update-list { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 14px; 
+}
+.update-card {
+  width: 120px; 
+  text-align: center;
+} 
+.update-card img {
+  width: 120px;
+  height: 213px;
+  object-fit: cover;
+  border-radius: 6px;
+} 
+.update-card h4 { 
+  font-size: 14px;
+  margin: 4px 0; 
+} 
+.views {
+  font-size: 12px; 
+  color: #777;
+}
+/* ===== TRUYỆN NÊN ĐỌC ===== */
+.recommend-section {
+  margin: 40px 0;
 }
 
-.update-card{
-  text-align:center;
-  overflow:hidden;
+.recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
-.update-card img{
-  width:120px;
-  height:213px;
-  object-fit:cover;
-  border-radius:6px;
-  transition:transform .3s ease;
+.recommend-col {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
 }
 
-.update-card:hover img{
-  transform:scale(1.06);
+/* ITEM */
+.recommend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 4px;
+  border-radius: 6px;
+  color: inherit;
 }
 
-.update-card h4{
-  font-size:14px;
-  margin:4px 0;
-  transition:color .25s ease;
+.recommend-item:hover {
+  background: #f3f3f3;
 }
 
-.update-card:hover h4{
-  color:#ff4d4f;
+/* SỐ THỨ TỰ */
+.rank {
+  width: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  flex-shrink: 0;
 }
 
-.views{
-  font-size:12px;
-  color:#777;
+/* ẢNH NHỎ */
+.recommend-item img {
+  width: 42px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
 }
 
-/* ================= RECOMMEND ================= */
-.recommend-section{margin:40px 0}
-
-.recommend-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:28px;
+/* TEXT */
+.recommend-item .info h4 {
+  font-size: 14px;
+  line-height: 1.3;
+  margin: 0;
 }
 
-.recommend-col{
-  background:#fff;
-  border-radius:10px;
-  padding:12px;
-}
-
-.recommend-item{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:6px 4px;
-  border-radius:6px;
-}
-
-.recommend-item:hover{
-  background:#f3f3f3;
-}
-
-.rank{
-  width:24px;
-  text-align:center;
-  font-size:13px;
-  color:#999;
-}
-
-.recommend-item img{
-  width:42px;
-  height:60px;
-  object-fit:cover;
-  border-radius:4px;
-}
-
-.recommend-item h4{
-  font-size:14px;
-  font-weight:600;
-}
-
-.recommend-item p{
-  font-size:12px;
-  color:#777;
+.recommend-item .info p {
+  font-size: 12px;
+  color: #777;
+  margin-top: 2px;
 }
 
 /* MOBILE */
-@media(max-width:768px){
-  .recommend-grid{grid-template-columns:1fr}
+@media (max-width: 768px) {
+  .recommend-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* ================= FOOTER ================= */
-.footer{
-  text-align:center;
-  padding:20px;
-  margin-top:40px;
-  background:#fff;
+.recommend-item h4 a {
+  color: #222;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-/* ================= DARK MODE ================= */
-body.dark{
-  background:#121212;
-  color:#ddd;
+.recommend-item h4 a:hover {
+  color: #ff4d4f;
+  text-decoration: underline;
+}
+/* ===== ZOOM ẢNH KHI HOVER (CHUNG) ===== */
+.story-card,
+.update-card {
+  overflow: hidden; /* không cho ảnh tràn */
 }
 
-body.dark .header,
-body.dark .footer{
-  background:#1e1e1e;
+/* Ảnh mặc định */
+.story-card img,
+.update-card img {
+  transition: transform 0.35s ease;
+}
+
+/* Hover: zoom nhẹ */
+.story-card:hover img,
+.update-card:hover img {
+  transform: scale(1.06);
+}
+/* TIÊU ĐỀ */
+.story-title,
+.update-card h4 {
+  color: #222;
+  transition: color 0.25s ease;
+}
+
+.story-card:hover .story-title,
+.update-card:hover h4 {
+  color: #ff4d4f;
 }
