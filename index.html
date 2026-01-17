@@ -440,13 +440,16 @@
 <script src="js/script.js"></script>
 <script>
 function openMenu(){
-  document.getElementById("mobileMenu").classList.add("show");
+  document.getElementById("mobileMenu").classList.add("active");
+  document.body.style.overflow = "hidden";
 }
 
 function closeMenu(){
-  document.getElementById("mobileMenu").classList.remove("show");
+  document.getElementById("mobileMenu").classList.remove("active");
+  document.body.style.overflow = "";
 }
 </script>
+
 
   
 </body>
