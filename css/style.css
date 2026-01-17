@@ -256,43 +256,6 @@ body.dark .recommend-item p{
   }
 }
 
-/* ===== MENU MOBILE ===== */
-.mobile-menu{
-  position:fixed;
-  inset:0;
-  background:#fff;
-  padding:20px;
-  z-index:999;
-  display:none;
-  overflow-y:auto;
-}
-
-.mobile-menu.show{
-  display:block;
-}
-
-.mobile-menu ul{
-  list-style:none;
-  margin-top:40px;
-}
-
-.mobile-menu li a{
-  display:block;
-  padding:12px 0;
-  font-size:16px;
-  border-bottom:1px solid #eee;
-}
-
-.close-menu{
-  position:absolute;
-  top:16px;
-  right:16px;
-  font-size:22px;
-  background:none;
-  border:none;
-  cursor:pointer;
-}
-
 /* ================= DARK MODE ================= */
 body.dark{
   background:#121212;
@@ -359,67 +322,83 @@ body.dark .section-title{
 }
 /* ===== RESPONSIVE ===== */
 @media (min-width:769px){
-  .mobile-menu{display:none!important}
+  .mobile-menu{display:block!important}
 }
 
 @media (max-width:768px){
   .nav{display:none}
 }
-/* MOBILE ONLY */
-@media (max-width: 768px){
+/* ================= MOBILE MENU ================= */
 
-  .nav{
-    display:none;
-  }
+/* menu mặc định ẩn bên trái */
+.mobile-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 
+  background: #fff;
+  z-index: 9999;
+
+  transform: translateX(-100%);
+  transition: transform .3s ease;
+
+  /* KHÔNG dùng display:none */
+}
+
+/* khi JS add class show */
+.mobile-menu.show{
+  transform: translateX(0);
+}
+
+/* header menu */
+.menu-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+
+  border-bottom: 1px solid #eee;
+}
+
+/* nút đóng */
+.menu-header button{
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* danh sách menu */
+.menu-list{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  padding: 16px;
+}
+
+/* link */
+.menu-list a{
+  font-size: 16px;
+  color: #222;
+}
+
+/* gạch ngăn */
+.menu-list hr{
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 8px 0;
+}
+
+/* chỉ hiển thị trên mobile */
+@media (min-width: 769px){
   .mobile-menu{
-    position:fixed;
-    inset:0;
-    background:#fff;
-    z-index:9999;
-
-    transform:translateX(-100%);
-    transition:.3s ease;
-  }
-
-  .mobile-menu.active{
-    transform:translateX(0);
-  }
-
-  .menu-header{
-    display:flex;
-    justify-content:space-between;
-    padding:16px;
-    border-bottom:1px solid #eee;
-    font-weight:600;
-  }
-
-  .menu-list{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-    padding:16px;
-  }
-}
-/* ===== PHÂN BIỆT DESKTOP & MOBILE ===== */
-
-/* MẶC ĐỊNH: DESKTOP */
-.header:nth-of-type(2){
-  display:none;
-}
-
-/* MOBILE */
-@media (max-width:768px){
-
-  /* Ẩn menu desktop */
-  .nav{
-    display:none;
-  }
-
-  /* Cho phép click menu toggle */
-  #menuToggle{
-    display:inline-block;
-    cursor:pointer;
+    display: none;
   }
 }
 
