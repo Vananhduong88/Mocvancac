@@ -419,28 +419,34 @@ body.dark .section-title{
   color:#000;
   cursor:pointer;
 }
-/* ================= DARK MODE MOBILE MENU ================= */
-body.dark .mobile-menu {
-  background: #121212;
-}
+/* ================= DARK MODE HEADER MENU ================= */
 
-body.dark .menu-header {
-  border-bottom: 1px solid #333;
+/* chữ menu desktop */
+body.dark .nav a,
+body.dark .menu > li > a {
   color: #fff;
 }
 
-body.dark .menu-header button {
+/* chữ "Danh mục ☰" trên mobile */
+body.dark #mobileMenuBtn {
   color: #fff;
 }
 
-body.dark .menu-list a {
+/* icon mặt trời / mặt trăng */
+body.dark #darkToggle {
+  color: #fff;
+}
+
+/* dropdown desktop */
+body.dark .dropdown-menu {
+  background: #1e1e1e;
+}
+
+body.dark .dropdown-menu li a {
   color: #eee;
 }
 
-body.dark .menu-list a:hover {
+body.dark .dropdown-menu li a:hover {
+  background: #2a2a2a;
   color: #ff4d4f;
-}
-
-body.dark .menu-list hr {
-  border-top: 1px solid #333;
 }
