@@ -1,127 +1,75 @@
-/* ================= PAGE HIỆN ĐẠI ================= */
-.page-hiendai{
-  margin-top:20px;
+/* ===== DANH MỤC TRUYỆN ===== */
+.page-header {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
 }
 
-/* ===== TITLE ===== */
-.page-head h1{
-  font-size:22px;
-  font-weight:600;
-  margin-bottom:16px;
-  color:#222;
+.page-header h1 {
+  font-size: 22px;
+  margin-bottom: 6px;
 }
 
-/* ================= SLIDER ================= */
-.hiendai-slider{
-  overflow:hidden;
-  margin-bottom:30px;
+.page-header p {
+  font-size: 14px;
+  color: #666;
 }
 
-.slide-track{
-  display:flex;
-  gap:14px;
-  width:max-content;
-  animation: scroll 40s linear infinite;
+/* GRID TRUYỆN */
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
 }
 
-.hiendai-slider:hover .slide-track{
-  animation-play-state: paused;
+/* CARD TRUYỆN */
+.story-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  transition: transform .2s;
 }
 
-@keyframes scroll{
-  from{transform:translateX(0)}
-  to{transform:translateX(-50%)}
+.story-card:hover {
+  transform: translateY(-4px);
 }
 
-.slide-item{
-  width:250px;
-  height:444px;
-  position:relative;
-  flex-shrink:0;
-  border-radius:10px;
-  overflow:hidden;
+.story-card img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
 }
 
-.slide-item img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.4s ease;
+.story-card h3 {
+  font-size: 15px;
+  margin: 8px;
+  line-height: 1.3;
 }
 
-.slide-title{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  padding:12px;
-  font-size:16px;
-  font-weight:600;
-  color:#fff;
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,.8),
-    rgba(0,0,0,.3),
-    transparent
-  );
+.story-card .author {
+  font-size: 12px;
+  color: #777;
+  margin: 0 8px 8px;
 }
 
-.slide-item:hover img{
-  transform:scale(1.08);
+/* TRẠNG THÁI */
+.status {
+  display: inline-block;
+  margin: 0 8px 10px;
+  padding: 2px 8px;
+  font-size: 11px;
+  border-radius: 12px;
 }
 
-.slide-item:hover .slide-title{
-  color:#e53935;
+.status.full {
+  background: #e6f7e6;
+  color: #2e7d32;
 }
 
-/* ================= LIST TRUYỆN ================= */
-.hiendai-list{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px 30px;
-}
-
-.story-item{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.story-item img{
-  width:60px;
-  height:84px;
-  object-fit:cover;
-  border-radius:6px;
-}
-
-.stt{
-  width:24px;
-  font-weight:600;
-  color:#222;
-}
-
-.story-info a{
-  font-size:14px;
-  color:#000;
-}
-
-.story-info a:hover{
-  color:#e53935;
-}
-
-.story-info p{
-  font-size:12px;
-  color:#777;
-}
-
-/* ================= MOBILE ================= */
-@media(max-width:768px){
-  .hiendai-list{
-    grid-template-columns:1fr;
-  }
-
-  .slide-item{
-    width:180px;
-    height:320px;
-  }
+.status.ongoing {
+  background: #fff3e0;
+  color: #ef6c00;
 }
