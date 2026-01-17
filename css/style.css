@@ -157,37 +157,55 @@ img{display:block;width:100%}
 .recommend-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:24px
+  gap:24px;
 }
+
 .recommend-item{
   display:flex;
   align-items:center;
   gap:10px;
-  padding:6px 0
+  padding:6px 0;
+  cursor:pointer;
 }
+
 .recommend-item img{
   width:50px;
   height:70px;
   object-fit:cover;
-  border-radius:6px
+  border-radius:6px;
 }
+
 .recommend-item h4{
   font-size:14px;
-  transition:color .3s
+  transition:color .25s ease;
 }
-.recommend-item:hover h4{color:#e53935}
-.recommend-item p{font-size:12px;color:#777}
+
+.recommend-item p{
+  font-size:12px;
+  color:#777;
+}
+
 .rank{
   width:26px;
   font-weight:bold;
-  color:#222; /* cùng màu với tên truyện */
-  transition:color .3s;
+  color:#222;
+  transition:color .25s ease;
 }
 
 /* hover đồng bộ */
-.recommend-item:hover .rank,
-.recommend-item:hover h4{
+.recommend-item:hover h4,
+.recommend-item:hover .rank{
   color:#e53935;
+}
+
+/* DARK MODE */
+body.dark .recommend-item h4,
+body.dark .rank{
+  color:#eee;
+}
+
+body.dark .recommend-item p{
+  color:#aaa;
 }
 
 /* ================= FOOTER ================= */
