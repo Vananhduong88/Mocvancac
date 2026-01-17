@@ -231,13 +231,13 @@ body.dark .recommend-item p{
   inset:0;
   background:#fff;
   padding:20px;
-  z-index:999;
-  display:none;
+  z-index:9999;
   overflow-y:auto;
 }
 
 .mobile-menu.show{
   display:block;
+  transform:translateX(0);
 }
 
 .mobile-menu ul{
