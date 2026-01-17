@@ -51,39 +51,44 @@
   </div>
 </header>
   
-<!-- NÚT MỞ MENU MOBILE -->
-<a href="#" id="mobileMenuToggle" class="mobile-menu-toggle">Danh mục ☰</a>
+<!-- MENU MOBILE -->
+<header class="header">
+  <div class="header-inner">
+    <button class="menu-btn" onclick="openMenu()">Danh mục ☰</button>
 
-<!-- MENU MOBILE FULL MÀN HÌNH -->
-<div id="mobileMenu" class="mobile-menu">
+    <img src="logo.png" class="logo">
 
-  <div class="mobile-menu-header">
-    <span>Danh mục</span>
-    <button id="closeMobileMenu">✕</button>
+    <button class="mode-btn">🌙</button>
   </div>
 
-  <ul class="mobile-menu-list">
-    <!-- THỂ LOẠI -->
-    <li><a href="#">Hiện đại</a></li>
-    <li><a href="#">Cổ đại</a></li>
-    <li><a href="#">Xuyên không</a></li>
-    <li><a href="#">Trọng sinh</a></li>
-    <li><a href="#">Hài hước</a></li>
-    <li><a href="#">Nữ cường</a></li>
-    <li><a href="#">Hệ thống</a></li>
-    <li><a href="#">Ngược</a></li>
-    <li><a href="#">Sủng</a></li>
-    <li><a href="#">Khác</a></li>
+  <!-- MENU FULLSCREEN -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="menu-header">
+      <span>Danh mục</span>
+      <button onclick="closeMenu()">✕</button>
+    </div>
 
-    <li class="divider"></li>
+    <nav class="menu-list">
+      <a href="#">Hiện đại</a>
+      <a href="#">Cổ đại</a>
+      <a href="#">Xuyên không</a>
+      <a href="#">Trọng sinh</a>
+      <a href="#">Hài hước</a>
+      <a href="#">Nữ cường</a>
+      <a href="#">Hệ thống</a>
+      <a href="#">Ngược</a>
+      <a href="#">Sủng</a>
+      <a href="#">Khác</a>
 
-    <!-- ĐIỀU HƯỚNG -->
-    <li><a href="#">Truyện Hot</a></li>
-    <li><a href="#">Mới cập nhật</a></li>
-    <li><a href="#">Nổi bật</a></li>
-  </ul>
+      <hr>
 
-</div>
+      <a href="#">🔥 Truyện hot</a>
+      <a href="#">🆕 Mới cập nhật</a>
+      <a href="#">⭐ Nổi bật</a>
+    </nav>
+  </div>
+</header>
+
 
 
 <!-- MAIN -->
@@ -446,18 +451,13 @@
 
 <script src="js/script.js"></script>
 <script>
-const openBtn = document.getElementById("mobileMenuToggle");
-const closeBtn = document.getElementById("closeMobileMenu");
-const menu = document.getElementById("mobileMenu");
+function openMenu(){
+  document.getElementById("mobileMenu").classList.add("show");
+}
 
-openBtn.onclick = e => {
-  e.preventDefault();
-  menu.classList.add("show");
-};
-
-closeBtn.onclick = () => {
-  menu.classList.remove("show");
-};
+function closeMenu(){
+  document.getElementById("mobileMenu").classList.remove("show");
+}
 </script>
 
   
