@@ -365,23 +365,31 @@ body.dark .section-title{
 @media (max-width:768px){
   .nav{display:none}
 }
-/* ===== MOBILE MENU OVERLAY ===== */
-.mobile-menu-overlay{
+/* nút mở menu */
+.mobile-menu-toggle{
+  display:inline-block;
+  font-size:16px;
+  font-weight:500;
+  padding:10px 12px;
+}
+
+/* menu full màn hình */
+.mobile-menu{
   position:fixed;
   inset:0;
   background:#fff;
   z-index:9999;
   transform:translateX(100%);
-  transition:transform .35s ease;
+  transition:transform .3s ease;
 }
 
 /* khi mở */
-.mobile-menu-overlay.show{
+.mobile-menu.show{
   transform:translateX(0);
 }
 
-/* top bar */
-.mobile-menu-top{
+/* header menu */
+.mobile-menu-header{
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -391,20 +399,20 @@ body.dark .section-title{
   font-weight:600;
 }
 
-.mobile-menu-top button{
+.mobile-menu-header button{
   font-size:24px;
   background:none;
   border:none;
   cursor:pointer;
 }
 
-/* nội dung menu */
-.mobile-menu-content{
+/* danh sách */
+.mobile-menu-list{
   list-style:none;
   padding:16px;
 }
 
-.mobile-menu-content li a{
+.mobile-menu-list li a{
   display:block;
   padding:14px 0;
   font-size:16px;
@@ -412,18 +420,17 @@ body.dark .section-title{
 }
 
 /* gạch phân cách */
-.menu-divider{
+.divider{
   height:1px;
   background:#eee;
-  margin:14px 0;
+  margin:16px 0;
 }
 
-/* ===== CHỈ HIỆN TRÊN MOBILE ===== */
+/* chỉ dùng cho mobile */
 @media(min-width:769px){
-  .mobile-header,
-  .mobile-menu-overlay{
+  .mobile-menu,
+  .mobile-menu-toggle{
     display:none;
   }
 }
-
 
