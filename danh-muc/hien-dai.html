@@ -2,68 +2,108 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Truyện Hiện Đại | Mộc Văn Các</title>
-  <link rel="stylesheet" href="../style.css">
+  <title>Truyện hiện đại</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS CHUNG -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- CSS RIÊNG HIỆN ĐẠI -->
+  <link rel="stylesheet" href="assets/css/hiendai.css">
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="header">
-  <!-- bạn copy nguyên header trang chủ sang -->
+  <div class="container header-flex">
+    <a href="index.html" class="logo" title="Về trang chủ">
+      <img src="assets/images/logo.png" alt="Mộc Văn Các">
+    </a>
+  </div>
 </header>
 
-<main class="container">
-  
-  <!-- SLIDE TRUYỆN HOT -->
-  <section class="slider">
+<!-- ================= MAIN ================= -->
+<main class="page-hiendai container">
+
+  <!-- ===== TITLE ===== -->
+  <h1 class="page-title">Truyện hiện đại</h1>
+
+  <!-- ================= SLIDE TRUYỆN HOT ================= -->
+  <section class="hiendai-slider">
     <div class="slide-track">
 
-      <!-- 1 truyện -->
-      <a href="#" class="story-card">
-        <div class="story-thumb">
-          <img src="../assets/images/truyen1.jpg" alt="">
-          <div class="story-overlay">
-            <div class="story-title">Tên truyện 1</div>
-          </div>
+      <a href="#" class="hot-card">
+        <img src="assets/images/truyen1.jpg" alt="">
+        <div class="hot-overlay">
+          <span class="hot-title">Tổng Tài Bá Đạo</span>
         </div>
       </a>
 
-      <!-- copy thêm đủ 5 truyện -->
-      
+      <a href="#" class="hot-card">
+        <img src="assets/images/truyen2.jpg" alt="">
+        <div class="hot-overlay">
+          <span class="hot-title">Hôn Nhân Hợp Đồng</span>
+        </div>
+      </a>
+
+      <a href="#" class="hot-card">
+        <img src="assets/images/truyen3.jpg" alt="">
+        <div class="hot-overlay">
+          <span class="hot-title">Người Vợ Thay Thế</span>
+        </div>
+      </a>
+
+      <a href="#" class="hot-card">
+        <img src="assets/images/truyen4.jpg" alt="">
+        <div class="hot-overlay">
+          <span class="hot-title">Yêu Nhầm Tổng Tài</span>
+        </div>
+      </a>
+
+      <a href="#" class="hot-card">
+        <img src="assets/images/truyen5.jpg" alt="">
+        <div class="hot-overlay">
+          <span class="hot-title">Cô Vợ Trẻ Con</span>
+        </div>
+      </a>
+
     </div>
   </section>
 
-  <!-- DANH SÁCH TRUYỆN -->
-  <section class="recommend-grid">
+  <!-- ================= LIST TRUYỆN ================= -->
+  <section class="hiendai-list">
 
-    <div class="recommend-item">
+    <div class="list-item">
       <span class="rank">1</span>
-      <img src="../assets/images/truyen2.jpg">
-      <div>
-        <h4>Tên truyện A</h4>
-        <p>100k lượt xem</p>
+      <img src="assets/images/truyen1.jpg" alt="">
+      <div class="info">
+        <a href="#">Tổng Tài Bá Đạo</a>
+        <p>👁 120,000</p>
       </div>
     </div>
 
-    <div class="recommend-item">
+    <div class="list-item">
       <span class="rank">2</span>
-      <img src="../assets/images/truyen3.jpg">
-      <div>
-        <h4>Tên truyện B</h4>
-        <p>80k lượt xem</p>
+      <img src="assets/images/truyen2.jpg" alt="">
+      <div class="info">
+        <a href="#">Hôn Nhân Hợp Đồng</a>
+        <p>👁 98,000</p>
       </div>
     </div>
 
-    <!-- copy thêm bao nhiêu truyện tùy bạn -->
+    <div class="list-item">
+      <span class="rank">3</span>
+      <img src="assets/images/truyen3.jpg" alt="">
+      <div class="info">
+        <a href="#">Người Vợ Thay Thế</a>
+        <p>👁 87,500</p>
+      </div>
+    </div>
+
+    <!-- 👉 Copy block list-item này tới đủ 30 truyện -->
 
   </section>
 
 </main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <!-- copy footer trang chủ -->
-</footer>
 
 </body>
 </html>
