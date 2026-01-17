@@ -419,31 +419,28 @@ body.dark .section-title{
   color:#000;
   cursor:pointer;
 }
-/* ================= DARK MODE HEADER FIX ================= */
-body.dark .header,
-body.dark .header a,
-body.dark .header button {
+/* ================= DARK MODE MOBILE MENU ================= */
+body.dark .mobile-menu {
+  background: #121212;
+}
+
+body.dark .menu-header {
+  border-bottom: 1px solid #333;
   color: #fff;
 }
 
-body.dark #mobileMenuBtn {
+body.dark .menu-header button {
   color: #fff;
 }
 
-body.dark .nav a {
-  color: #fff;
-}
-
-/* hover desktop menu */
-body.dark .dropdown-menu {
-  background: #1e1e1e;
-}
-
-body.dark .dropdown-menu li a {
+body.dark .menu-list a {
   color: #eee;
 }
 
-body.dark .dropdown-menu li a:hover {
-  background: #2a2a2a;
+body.dark .menu-list a:hover {
   color: #ff4d4f;
+}
+
+body.dark .menu-list hr {
+  border-top: 1px solid #333;
 }
