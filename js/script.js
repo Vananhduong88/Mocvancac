@@ -1,71 +1,74 @@
+/* =================================================
+   SCRIPT.JS – MỘC VĂN CÁC
+   Tương thích header/footer dùng chung (fetch)
+================================================= */
+
 /* ================= DARK MODE ================= */
-const toggle = document.getElementById("darkToggle");
-
-if (toggle) {
-  toggle.addEventListener("click", () => {
+document.addEventListener("click", function (e) {
+  if (e.target && e.target.id === "darkToggle") {
     document.body.classList.toggle("dark");
-    toggle.textContent =
+
+    // đổi icon
+    e.target.textContent =
       document.body.classList.contains("dark") ? "☀️" : "🌙";
-  });
-}
 
-/* ================= SLIDER PAUSE ================= */
-const track = document.querySelector(".slide-track");
+    // lưu trạng thái
+    localStorage.setItem(
+      "theme",
+      document.body.classList.contains("dark") ? "dark" : "light"
+    );
+  }
+});
 
-if (track) {
-  track.addEventListener("mouseenter", () => {
-    track.style.animationPlayState = "paused";
-  });
+/* Khôi phục dark mode khi reload */
+document.addEventListener("DOMContentLoaded", function () {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
 
-  track.addEventListener("mouseleave", () => {
-    track.style.animationPlayState = "running";
-  });
-
-  // Mobile touch
-  track.addEventListener("touchstart", () => {
-    track.style.animationPlayState = "paused";
-  });
-
-  track.addEventListener("touchend", () => {
-    track.style.animationPlayState = "running";
-  });
-}
+    // header load sau → đợi DOM gắn xong
+    setTimeout(function () {
+      const toggle = document.getElementById("darkToggle");
+      if (toggle) toggle.textContent = "☀️";
+    }, 100);
+  }
+});
 
 /* ================= MOBILE MENU ================= */
-document.addEventListener("DOMContentLoaded", () => {
-
-  const menuToggle = document.getElementById("menuToggle");
+document.addEventListener("click", function (e) {
   const mobileMenu = document.getElementById("mobileMenu");
-  const closeMenu = document.getElementById("closeMenu");
+  if (!mobileMenu) return;
 
-  if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener("click", (e) => {
-      e.preventDefault();
-      mobileMenu.classList.add("show");
-      document.body.style.overflow = "hidden";
-    });
-  }
-
-  if (closeMenu && mobileMenu) {
-    closeMenu.addEventListener("click", () => {
-      mobileMenu.classList.remove("show");
-      document.body.style.overflow = "";
-    });
-  }
-
-});
-const mobileBtn = document.getElementById("mobileMenuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-const closeMenu = document.getElementById("closeMenu");
-
-if(mobileBtn){
-  mobileBtn.onclick = function(){
+  // mở menu
+  if (e.target.id === "mobileMenuBtn") {
     mobileMenu.classList.add("show");
+    document.body.style.overflow = "hidden";
   }
-}
 
-if(closeMenu){
-  closeMenu.onclick = function(){
+  // đóng menu
+  if (e.target.id === "closeMenu") {
     mobileMenu.classList.remove("show");
+    document.body.style.overflow = "";
   }
-}
+});
+
+/* ================= SLIDER PAUSE ================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.querySelector(".slide-track");
+  if (!track) return;
+
+  function pause() {
+    track.style.animationPlayState = "paused";
+  }
+
+  function play() {
+    track.style.animationPlayState = "running";
+  }
+
+  track.addEventListener("mouseenter", pause);
+  track.addEventListener("mouseleave", play);
+
+  // mobile touch
+  track.addEventListener("touchstart", pause);
+  track.addEventListener("touchend", play);
+});
