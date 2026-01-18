@@ -128,42 +128,43 @@
   font-size: 14px;
 }
 
-/* ===== RECOMMEND ===== */
-.category-recommend {
-  background: #fff;
-  padding: 12px;
-  border-radius: 6px;
-}
-
-.category-recommend h3 {
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-.category-recommend-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
+/* ===== CATEGORY RECOMMEND LINK (FIX) ===== */
 .category-recommend-item {
   display: flex;
-  gap: 8px;
   align-items: center;
+  gap: 8px;
+
   font-size: 13px;
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
 }
 
+/* ẢNH */
 .category-recommend-item img {
   width: 45px;
   height: 65px;
   object-fit: cover;
   border-radius: 3px;
+  flex-shrink: 0;
 }
 
+/* TÊN */
 .category-recommend-item span {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: color 0.25s ease;
+}
+
+/* HOVER */
+.category-recommend-item:hover span {
+  color: #c0392b;
+}
+
+/* ĐÃ CLICK */
+.category-recommend-item:visited span {
+  color: #c0392b;
 }
 
 /* ===== PAGINATION ===== */
