@@ -1,4 +1,5 @@
-/* ========== CATEGORY PAGE (SAFE) ========== */
+/* ========== CATEGORY PAGE (SAFE – KHÔNG ẢNH HƯỞNG TRANG CHỦ) ========== */
+
 .category-page {
   max-width: 1200px;
   margin: auto;
@@ -18,8 +19,7 @@
   gap: 10px;
   flex-wrap: wrap;
 }
-.category-filters select,
-.category-filters input {
+.category-filters select {
   padding: 6px 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -38,36 +38,45 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
+
 .category-story-item {
   background: #fff;
   border-radius: 6px;
   overflow: hidden;
 }
+
+/* THUMB */
 .category-story-thumb {
-  position: relative;
   display: block;
 }
 .category-story-thumb img {
   width: 100%;
   aspect-ratio: 200 / 444;
   object-fit: cover;
+  display: block;
 }
-.category-story-title {
-  position: absolute;
-  inset: 0;
+
+/* TITLE + VIEW */
+.category-info {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  padding: 10px;
-  background: rgba(0,0,0,.35);
-  color: #fff;
-  font-size: 14px;
-  text-align: center;
-}
-.category-meta {
-  font-size: 13px;
-  color: #666;
   padding: 6px 8px;
+  font-size: 13px;
+}
+
+.category-story-title {
+  font-weight: 500;
+  max-width: 75%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.category-meta {
+  font-size: 12px;
+  color: #777;
+  white-space: nowrap;
 }
 
 /* SIDEBAR */
@@ -99,9 +108,9 @@
 }
 .category-recommend-item {
   display: flex;
+  align-items: center;
   gap: 8px;
   font-size: 13px;
-  align-items: center;
 }
 .category-recommend-item img {
   width: 45px;
@@ -129,45 +138,12 @@
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-  .category-layout { grid-template-columns: 1fr; }
+  .category-layout {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 768px) {
-  .category-story-list { grid-template-columns: repeat(2,1fr); }
-}
-/* ITEM */
-.category-story-item {
-  background: #fff;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-/* ẢNH */
-.category-story-thumb img {
-  width: 100%;
-  display: block;
-}
-
-/* DÒNG TÊN + VIEW */
-.category-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 8px;
-  font-size: 13px;
-}
-
-/* TÊN TRUYỆN */
-.category-story-title {
-  font-weight: 500;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 75%;
-}
-
-/* VIEW */
-.category-meta {
-  font-size: 12px;
-  color: #777;
-  white-space: nowrap;
+  .category-story-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
