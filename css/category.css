@@ -1,267 +1,209 @@
 /* ===============================
-   CATEGORY PAGE – SAFE & CLEAN
+   CATEGORY PAGE – CLEAN & SAFE
    Không ảnh hưởng trang chủ
 ================================ */
 
-.category-page{
-  padding:16px;
+/* ===== KHUNG TRANG ===== */
+.category-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 /* ===== HEADER + FILTER ===== */
-.category-header{
-  margin-bottom:24px;
+.category-header {
+  margin-bottom: 24px;
 }
 
-.category-title{
-  font-size:22px;
-  font-weight:700;
-  margin-bottom:14px;
+.category-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 14px;
 }
 
-.category-filters{
-  display:flex;
-  gap:12px;
-  margin-bottom:10px;
+.category-filters {
+  display: flex;
+  gap: 12px;
 }
 
-.category-filters select{
-  padding:6px 10px;
-  border:1px solid #ddd;
-  border-radius:6px;
-  background:#fff;
-  cursor:pointer;
+.category-filters select {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
 }
 
-/* ===== LAYOUT ===== */
-.category-layout{
-  display:flex;
-  gap:24px;
+/* ===== LAYOUT CHÍNH ===== */
+.category-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 24px;
+  align-items: start;
 }
 
-/* ===== STORY LIST ===== */
-.category-story-list{
-  flex:1;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
+/* ===== DANH SÁCH TRUYỆN ===== */
+.category-story-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }
 
-.category-story-item{
-  background:#fff;
-  border-radius:8px;
-  overflow:hidden;
+.category-story-item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.category-story-link{
-  display:block;
+.category-story-link {
+  display: block;
 }
 
-.category-story-thumb img{
-  width:100%;
-  display:block;
-  transition:transform .3s ease;
+.category-story-thumb img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.category-story-link:hover img{
-  transform:scale(1.05);
+.category-story-link:hover img {
+  transform: scale(1.05);
 }
 
-.category-info{
-  padding:8px;
+.category-info {
+  padding: 8px;
 }
 
-.category-story-title{
-  display:block;
-  font-size:14px;
-  font-weight:600;
-  color:#222;
-  margin-bottom:4px;
+.category-story-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
 }
 
-.category-story-link:hover .category-story-title{
-  color:#d60000;
+.category-story-link:hover .category-story-title {
+  color: #d60000;
 }
 
-.category-meta{
-  font-size:12px;
-  color:#777;
+.category-meta {
+  font-size: 12px;
+  color: #777;
 }
 
 /* ===== SIDEBAR ===== */
-.category-sidebar{
-  width:260px;
+.category-sidebar {
+  width: 100%;
 }
 
-.category-search-side{
-  width:100%;
-  padding:8px 10px;
-  border:1px solid #ddd;
-  border-radius:6px;
-  margin-bottom:20px;
+.category-search-side {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
 }
 
-/* ===== RECOMMEND ===== */
-.category-recommend h3{
-  font-size:16px;
-  margin-bottom:14px; /* tăng khoảng cách */
+/* ===== TRUYỆN NÊN ĐỌC ===== */
+.category-recommend h3 {
+  font-size: 16px;
+  margin-bottom: 14px;
 }
 
-.category-recommend-list{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
+.category-recommend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.category-recommend-item{
-  display:flex;
-  gap:8px;
-  align-items:center;
-  color:#000;
+.category-recommend-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #000;
 }
 
-.category-recommend-item img{
-  width:45px;
-  height:65px;
-  object-fit:cover;
-  border-radius:4px;
+.category-recommend-item img {
+  width: 45px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
-.category-recommend-item span{
-  font-size:14px;
-  line-height:1.4;
+.category-recommend-item span {
+  font-size: 14px;
+  line-height: 1.4;
 }
 
-.category-recommend-item:hover span,
-.category-recommend-item:active span{
-  color:#d60000;
+.category-recommend-item:hover span {
+  color: #d60000;
 }
 
-/* ===== PAGINATION ===== */
-.category-pagination{
-  margin:24px 0;
-  text-align:center;
+/* ===== PHÂN TRANG ===== */
+.category-pagination {
+  margin: 24px 0;
+  text-align: center;
 }
 
-.category-pagination a{
-  display:inline-block;
-  padding:6px 10px;
-  margin:0 4px;
-  border:1px solid #ddd;
-  border-radius:4px;
-  cursor:pointer;
+.category-pagination a {
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 0 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.category-pagination a.active{
-  background:#d60000;
-  color:#fff;
-  border-color:#d60000;
+.category-pagination a.active {
+  background: #d60000;
+  color: #fff;
+  border-color: #d60000;
 }
 
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-
-  .category-layout{
-    flex-direction:column;
-  }
-
-  .category-story-list{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  /* phân trang ngay dưới danh sách truyện */
-  .category-pagination{
-    order:2;
-  }
-
-  .category-sidebar{
-    order:3;
-    width:100%;
-    margin-top:16px;
-  }
-}
-
-/* ===== DARK MODE ===== */
-/* dùng chung class darkmode với trang chủ */
-.darkmode .category-page{
-  background:#121212;
-}
-
-.darkmode .category-title,
-.darkmode .category-story-title,
-.darkmode .category-meta,
-.darkmode .category-recommend-item span,
-.darkmode .category-recommend h3{
-  color:#fff;
-}
-
-.darkmode .category-story-item,
-.darkmode .category-search-side,
-.darkmode .category-filters select{
-  background:#1e1e1e;
-  border-color:#333;
-  color:#fff;
-}
-
-.darkmode .category-pagination a{
-  border-color:#444;
-  color:#fff;
-}
-/* FIX DARK MODE CLICK - CHỈ TRANG DANH MỤC */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-}
-
-#darkToggle {
-  position: relative;
-  z-index: 10000;
-  pointer-events: auto;
-}
-/* ================= FIX LAYOUT TRANG DANH MỤC ================= */
-.category-page,
-.category-page main,
-.category-page .category-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-  box-sizing: border-box;
-}
-/* GRID TRUYỆN */
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-  .category-grid {
+  .category-story-list {
     grid-template-columns: repeat(3, 1fr);
   }
-}
 
-@media (max-width: 768px) {
-  .category-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.category-layout {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 24px;
-}
-
-@media (max-width: 1024px) {
   .category-layout {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .category-story-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== DARK MODE ===== */
+.dark .category-page {
+  background: #121212;
+}
+
+.dark .category-title,
+.dark .category-story-title,
+.dark .category-meta,
+.dark .category-recommend h3,
+.dark .category-recommend-item span {
+  color: #fff;
+}
+
+.dark .category-story-item,
+.dark .category-search-side,
+.dark .category-filters select {
+  background: #1e1e1e;
+  border-color: #333;
+  color: #fff;
+}
+
+.dark .category-pagination a {
+  border-color: #444;
+  color: #fff;
+}
+
+/* ===== BẢO HIỂM CHỐNG TRÀN ===== */
 html, body {
   overflow-x: hidden;
 }
-
