@@ -512,3 +512,30 @@ body.darkmode .mobile-menu a {
 body.darkmode .menu-header {
   border-bottom: 1px solid #333;
 }
+/* ================= FIX DARK MODE – MOBILE MENU (TRANG CHỦ) ================= */
+
+/* nền menu mobile khi dark (body.dark) */
+body.dark .mobile-menu {
+  background: #121212;
+}
+
+/* chữ menu */
+body.dark .menu-list a,
+body.dark .menu-header span {
+  color: #eee;
+}
+
+/* header menu */
+body.dark .menu-header {
+  border-bottom: 1px solid #333;
+}
+
+/* nút đóng */
+body.dark .menu-header button {
+  color: #fff;
+}
+
+/* đường kẻ */
+body.dark .menu-list hr {
+  border-top: 1px solid #333;
+}
