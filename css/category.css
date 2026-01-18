@@ -1,6 +1,7 @@
 /* ===================================================
-   CATEGORY PAGE – SAFE CSS (KHÔNG ẢNH HƯỞNG TRANG CHỦ)
-   Áp dụng cho: Hiện đại / Cổ đại / Xuyên không / ...
+   CATEGORY PAGE – CLEAN & SAFE CSS
+   Dùng chung cho: Hiện đại / Cổ đại / Xuyên không / ...
+   KHÔNG ảnh hưởng trang chủ
 =================================================== */
 
 /* ===== PAGE ===== */
@@ -49,26 +50,35 @@
   gap: 18px;
 }
 
-/* ITEM */
+/* ===== STORY ITEM ===== */
 .category-story-item {
   background: #fff;
   border-radius: 6px;
   overflow: hidden;
 }
 
-/* THUMB */
+/* ===== LINK ===== */
+.category-story-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== THUMB ===== */
 .category-story-thumb {
   display: block;
+  overflow: hidden;
 }
 
 .category-story-thumb img {
   width: 100%;
-  aspect-ratio: 200 / 444;   /* CHUẨN KÍCH THƯỚC */
+  aspect-ratio: 200 / 444;
   object-fit: cover;
   display: block;
+  transition: transform 0.35s ease;
 }
 
-/* INFO (TÊN + VIEW) */
+/* ===== INFO (TÊN + VIEW) ===== */
 .category-info {
   display: flex;
   justify-content: space-between;
@@ -77,13 +87,14 @@
   font-size: 13px;
 }
 
-/* TITLE */
+/* TÊN TRUYỆN */
 .category-story-title {
   font-weight: 500;
+  max-width: 75%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 75%;
+  transition: color 0.25s ease;
 }
 
 /* VIEW */
@@ -91,6 +102,15 @@
   font-size: 12px;
   color: #777;
   white-space: nowrap;
+}
+
+/* ===== HOVER EFFECT ===== */
+.category-story-link:hover img {
+  transform: scale(1.06);
+}
+
+.category-story-link:hover .category-story-title {
+  color: #c0392b;
 }
 
 /* ===== SIDEBAR ===== */
@@ -158,8 +178,8 @@
   padding: 6px 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  cursor: pointer;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .category-pagination a.active {
@@ -183,57 +203,4 @@
   .category-story-list {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-/* ===== STORY LINK ===== */
-.category-story-link {
-  display: block;
-  color: inherit;
-}
-
-/* ẢNH */
-.category-story-thumb {
-  overflow: hidden;
-}
-
-.category-story-thumb img {
-  width: 100%;
-  aspect-ratio: 200 / 444;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.35s ease;
-}
-
-/* DÒNG TÊN + VIEW */
-.category-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 8px;
-  font-size: 13px;
-}
-
-/* TÊN TRUYỆN */
-.category-story-title {
-  font-weight: 500;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 75%;
-  transition: color 0.25s ease;
-}
-
-/* VIEW */
-.category-meta {
-  font-size: 12px;
-  color: #777;
-  white-space: nowrap;
-}
-
-/* ===== HOVER EFFECT ===== */
-.category-story-link:hover img {
-  transform: scale(1.06);
-}
-
-.category-story-link:hover .category-story-title {
-  color: #c0392b;
 }
