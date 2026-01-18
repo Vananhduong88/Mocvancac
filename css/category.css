@@ -1,241 +1,208 @@
-/* ===================================================
-   CATEGORY PAGE – FINAL SAFE CSS
-   - Không ảnh hưởng trang chủ
-   - Giữ HTML nguyên trạng
-=================================================== */
+/* ===============================
+   CATEGORY PAGE – SAFE & CLEAN
+   Không ảnh hưởng trang chủ
+================================ */
 
-/* ================= PAGE ================= */
 .category-page{
-  max-width:1200px;
-  margin:auto;
   padding:16px;
 }
 
-/* ================= HEADER ================= */
+/* ===== HEADER + FILTER ===== */
 .category-header{
-  margin-bottom:16px;
+  margin-bottom:24px;
 }
 
 .category-title{
   font-size:22px;
-  font-weight:600;
-  margin-bottom:10px;
+  font-weight:700;
+  margin-bottom:14px;
 }
 
 .category-filters{
   display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:6px;
+  gap:12px;
+  margin-bottom:10px;
 }
 
 .category-filters select{
   padding:6px 10px;
   border:1px solid #ddd;
-  border-radius:4px;
+  border-radius:6px;
   background:#fff;
-  font-size:14px;
+  cursor:pointer;
 }
 
-/* ================= LAYOUT DESKTOP ================= */
+/* ===== LAYOUT ===== */
 .category-layout{
-  display:grid;
-  grid-template-columns:1fr 260px;
-  gap:20px;
+  display:flex;
+  gap:24px;
 }
 
-/* ================= STORY LIST ================= */
+/* ===== STORY LIST ===== */
 .category-story-list{
+  flex:1;
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:18px;
+  gap:16px;
 }
 
-/* ================= STORY ITEM ================= */
 .category-story-item{
   background:#fff;
-  border-radius:6px;
+  border-radius:8px;
   overflow:hidden;
 }
 
 .category-story-link{
   display:block;
-  text-decoration:none;
-  color:#222;
-}
-
-/* THUMB */
-.category-story-thumb{
-  overflow:hidden;
 }
 
 .category-story-thumb img{
   width:100%;
-  aspect-ratio:200/444;
-  object-fit:cover;
   display:block;
-  transition:transform .35s ease;
+  transition:transform .3s ease;
 }
 
-/* INFO */
+.category-story-link:hover img{
+  transform:scale(1.05);
+}
+
 .category-info{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:6px 8px;
-  font-size:13px;
+  padding:8px;
 }
 
-/* TITLE */
 .category-story-title{
-  max-width:75%;
-  font-weight:500;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+  display:block;
+  font-size:14px;
+  font-weight:600;
   color:#222;
-  transition:color .25s ease;
+  margin-bottom:4px;
 }
 
-/* META */
+.category-story-link:hover .category-story-title{
+  color:#d60000;
+}
+
 .category-meta{
   font-size:12px;
   color:#777;
-  white-space:nowrap;
 }
 
-/* HOVER */
-.category-story-link:hover img{
-  transform:scale(1.06);
-}
-.category-story-link:hover .category-story-title{
-  color:#c0392b;
-}
-
-/* ================= SIDEBAR ================= */
+/* ===== SIDEBAR ===== */
 .category-sidebar{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
+  width:260px;
 }
 
-/* SEARCH */
 .category-search-side{
-  padding:8px 12px;
+  width:100%;
+  padding:8px 10px;
   border:1px solid #ddd;
-  border-radius:20px;
-  font-size:14px;
-}
-
-/* ================= RECOMMEND ================= */
-.category-recommend{
-  background:#fff;
-  padding:12px;
   border-radius:6px;
+  margin-bottom:20px;
 }
 
-/* ⚠️ KHÔNG đổi cỡ chữ title */
+/* ===== RECOMMEND ===== */
 .category-recommend h3{
-  margin-bottom:14px;   /* TĂNG KHOẢNG CÁCH */
+  font-size:16px;
+  margin-bottom:14px; /* tăng khoảng cách */
 }
 
-/* LIST */
 .category-recommend-list{
   display:flex;
   flex-direction:column;
-  gap:12px;            /* giãn item */
+  gap:10px;
 }
 
-/* ITEM LINK */
 .category-recommend-item{
   display:flex;
-  align-items:center;
   gap:8px;
-  text-decoration:none;
-  font-size:13px;
+  align-items:center;
+  color:#000;
 }
 
-/* IMAGE */
 .category-recommend-item img{
   width:45px;
   height:65px;
   object-fit:cover;
-  border-radius:3px;
+  border-radius:4px;
 }
 
-/* TITLE – LOGIC MÀU */
 .category-recommend-item span{
-  color:#222;                 /* mặc định đen */
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  transition:color .25s ease;
+  font-size:14px;
+  line-height:1.4;
 }
 
-/* hover → đỏ */
-.category-recommend-item:hover span{
-  color:#c0392b;
+.category-recommend-item:hover span,
+.category-recommend-item:active span{
+  color:#d60000;
 }
 
-/* visited vẫn đen (tránh tự đỏ do href="#") */
-.category-recommend-item:visited span{
-  color:#222;
-}
-
-/* ================= PAGINATION ================= */
+/* ===== PAGINATION ===== */
 .category-pagination{
-  display:flex;
-  justify-content:center;
-  gap:8px;
-  margin:30px 0;
+  margin:24px 0;
+  text-align:center;
 }
 
 .category-pagination a{
+  display:inline-block;
   padding:6px 10px;
+  margin:0 4px;
   border:1px solid #ddd;
   border-radius:4px;
-  font-size:14px;
   cursor:pointer;
 }
 
 .category-pagination a.active{
-  background:#c0392b;
+  background:#d60000;
   color:#fff;
-  border-color:#c0392b;
+  border-color:#d60000;
 }
 
-/* ===================================================
-   RESPONSIVE
-=================================================== */
+/* ===== MOBILE ===== */
+@media(max-width:768px){
 
-/* TABLET */
-@media (max-width:1024px){
   .category-layout{
-    grid-template-columns:1fr;
+    flex-direction:column;
   }
-}
 
-/* MOBILE */
-@media (max-width:768px){
-
-  /* list 2 cột */
   .category-story-list{
     grid-template-columns:repeat(2,1fr);
   }
 
-  /* xếp cột */
-  .category-layout{
-    display:flex;
-    flex-direction:column;
-  }
-
-  /* pagination nằm dưới list */
+  /* phân trang ngay dưới danh sách truyện */
   .category-pagination{
-    margin:16px 0;
+    order:2;
   }
 
-  /* recommend dưới pagination */
   .category-sidebar{
-    margin-top:8px;
+    order:3;
+    width:100%;
+    margin-top:16px;
   }
+}
+
+/* ===== DARK MODE ===== */
+/* dùng chung class darkmode với trang chủ */
+.darkmode .category-page{
+  background:#121212;
+}
+
+.darkmode .category-title,
+.darkmode .category-story-title,
+.darkmode .category-meta,
+.darkmode .category-recommend-item span,
+.darkmode .category-recommend h3{
+  color:#fff;
+}
+
+.darkmode .category-story-item,
+.darkmode .category-search-side,
+.darkmode .category-filters select{
+  background:#1e1e1e;
+  border-color:#333;
+  color:#fff;
+}
+
+.darkmode .category-pagination a{
+  border-color:#444;
+  color:#fff;
 }
