@@ -308,3 +308,7 @@ body .header {
   position: relative;
   z-index: 1;
 }
+/* ================= FIX MOBILE BTN – CATEGORY DARKMODE ================= */
+body.darkmode #mobileMenuBtn {
+  color: #fff !important;
+}
