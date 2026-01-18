@@ -134,3 +134,40 @@
 @media (max-width: 768px) {
   .category-story-list { grid-template-columns: repeat(2,1fr); }
 }
+/* ITEM */
+.category-story-item {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* ẢNH */
+.category-story-thumb img {
+  width: 100%;
+  display: block;
+}
+
+/* DÒNG TÊN + VIEW */
+.category-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+/* TÊN TRUYỆN */
+.category-story-title {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 75%;
+}
+
+/* VIEW */
+.category-meta {
+  font-size: 12px;
+  color: #777;
+  white-space: nowrap;
+}
