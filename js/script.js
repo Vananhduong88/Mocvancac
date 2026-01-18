@@ -39,14 +39,19 @@ document.addEventListener("click", function (e) {
   const mobileMenu = document.getElementById("mobileMenu");
   if (!mobileMenu) return;
 
+  const openBtn = e.target.closest("#mobileMenuBtn");
+  const closeBtn = e.target.closest("#closeMenu");
+
   // mở menu
-  if (e.target.id === "mobileMenuBtn") {
+  if (openBtn) {
+    e.preventDefault();
     mobileMenu.classList.add("show");
     document.body.style.overflow = "hidden";
   }
 
   // đóng menu
-  if (e.target.id === "closeMenu") {
+  if (closeBtn) {
+    e.preventDefault();
     mobileMenu.classList.remove("show");
     document.body.style.overflow = "";
   }
