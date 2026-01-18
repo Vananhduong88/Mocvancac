@@ -281,3 +281,8 @@ body.darkmode .category-pagination a.active {
   background: #333;
   color: #fff;
 }
+/* Hover / Active vẫn đỏ trong dark mode */
+body.darkmode .category-recommend-item:hover span,
+body.darkmode .category-recommend-item:active span {
+  color: #ff4d4d;
+}
