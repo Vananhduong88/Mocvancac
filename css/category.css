@@ -1,18 +1,21 @@
 /* ===================================================
-   CATEGORY PAGE – FINAL CSS
+   CATEGORY PAGE – FINAL SAFE CSS
+   - Không ảnh hưởng trang chủ
    - Giữ HTML nguyên trạng
-   - Tên truyện: đen → click mới đỏ
-   - Mobile: recommend xuống dưới list
 =================================================== */
 
-/* ===== PAGE ===== */
+/* ================= PAGE ================= */
 .category-page{
   max-width:1200px;
   margin:auto;
   padding:16px;
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER ================= */
+.category-header{
+  margin-bottom:16px;
+}
+
 .category-title{
   font-size:22px;
   font-weight:600;
@@ -23,23 +26,32 @@
   display:flex;
   gap:10px;
   flex-wrap:wrap;
+  margin-top:6px;
 }
 
-/* ===== LAYOUT DESKTOP ===== */
+.category-filters select{
+  padding:6px 10px;
+  border:1px solid #ddd;
+  border-radius:4px;
+  background:#fff;
+  font-size:14px;
+}
+
+/* ================= LAYOUT DESKTOP ================= */
 .category-layout{
   display:grid;
   grid-template-columns:1fr 260px;
   gap:20px;
 }
 
-/* ===== STORY LIST ===== */
+/* ================= STORY LIST ================= */
 .category-story-list{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:18px;
 }
 
-/* ===== STORY ITEM ===== */
+/* ================= STORY ITEM ================= */
 .category-story-item{
   background:#fff;
   border-radius:6px;
@@ -53,10 +65,15 @@
 }
 
 /* THUMB */
+.category-story-thumb{
+  overflow:hidden;
+}
+
 .category-story-thumb img{
   width:100%;
   aspect-ratio:200/444;
   object-fit:cover;
+  display:block;
   transition:transform .35s ease;
 }
 
@@ -71,8 +88,8 @@
 
 /* TITLE */
 .category-story-title{
-  font-weight:500;
   max-width:75%;
+  font-weight:500;
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
@@ -80,10 +97,11 @@
   transition:color .25s ease;
 }
 
-/* VIEW */
+/* META */
 .category-meta{
   font-size:12px;
   color:#777;
+  white-space:nowrap;
 }
 
 /* HOVER */
@@ -94,7 +112,7 @@
   color:#c0392b;
 }
 
-/* ===== SIDEBAR ===== */
+/* ================= SIDEBAR ================= */
 .category-sidebar{
   display:flex;
   flex-direction:column;
@@ -106,33 +124,35 @@
   padding:8px 12px;
   border:1px solid #ddd;
   border-radius:20px;
+  font-size:14px;
 }
 
-/* ===== RECOMMEND ===== */
+/* ================= RECOMMEND ================= */
 .category-recommend{
   background:#fff;
   padding:12px;
   border-radius:6px;
 }
 
+/* ⚠️ KHÔNG đổi cỡ chữ title */
 .category-recommend h3{
-  font-size:15px;
-  margin-bottom:10px;
+  margin-bottom:14px;   /* TĂNG KHOẢNG CÁCH */
 }
 
+/* LIST */
 .category-recommend-list{
   display:flex;
   flex-direction:column;
-  gap:10px;
+  gap:12px;            /* giãn item */
 }
 
-/* LINK ITEM */
+/* ITEM LINK */
 .category-recommend-item{
   display:flex;
-  gap:8px;
   align-items:center;
-  font-size:13px;
+  gap:8px;
   text-decoration:none;
+  font-size:13px;
 }
 
 /* IMAGE */
@@ -143,26 +163,26 @@
   border-radius:3px;
 }
 
-/* ===== TÊN TRUYỆN – LOGIC MÀU ===== */
+/* TITLE – LOGIC MÀU */
 .category-recommend-item span{
-  color:#222;                 /* MẶC ĐỊNH ĐEN */
+  color:#222;                 /* mặc định đen */
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
   transition:color .25s ease;
 }
 
-/* hover chỉ đổi nhẹ */
+/* hover → đỏ */
 .category-recommend-item:hover span{
-  color:#555;
-}
-
-/* ĐÃ CLICK (visited) → ĐỎ */
-.category-recommend-item:visited span{
   color:#c0392b;
 }
 
-/* ===== PAGINATION ===== */
+/* visited vẫn đen (tránh tự đỏ do href="#") */
+.category-recommend-item:visited span{
+  color:#222;
+}
+
+/* ================= PAGINATION ================= */
 .category-pagination{
   display:flex;
   justify-content:center;
@@ -175,6 +195,7 @@
   border:1px solid #ddd;
   border-radius:4px;
   font-size:14px;
+  cursor:pointer;
 }
 
 .category-pagination a.active{
@@ -202,47 +223,19 @@
     grid-template-columns:repeat(2,1fr);
   }
 
-  /* ĐẢO THỨ TỰ: LIST TRƯỚC – RECOMMEND SAU */
+  /* xếp cột */
   .category-layout{
     display:flex;
     flex-direction:column;
   }
 
-  .category-story-list{
-    order:1;
-  }
-
-  .category-sidebar{
-    order:2;
-  }
-
-  .category-recommend{
-    margin-top:16px;
-  }
-}
-/* ===================================================
-   MOBILE: pagination nằm dưới list, trên recommend
-=================================================== */
-@media (max-width:768px){
-
-  .category-layout{
-    display:flex;
-    flex-direction:column;
-  }
-
-  /* 1. Danh sách truyện */
-  .category-story-list{
-    order:1;
-  }
-
-  /* 2. Phân trang */
+  /* pagination nằm dưới list */
   .category-pagination{
-    order:2;
-    margin:20px 0;
+    margin:16px 0;
   }
 
-  /* 3. Truyện nên đọc */
+  /* recommend dưới pagination */
   .category-sidebar{
-    order:3;
+    margin-top:8px;
   }
 }
