@@ -5,17 +5,26 @@
 
 // CLICK DARK MODE (header load bằng fetch vẫn OK)
 document.addEventListener("click", function (e) {
+
+  /* ⛔️ KHÔNG can thiệp menu mobile */
+  if (
+    e.target.closest("#mobileMenuBtn") ||
+    e.target.closest("#closeMenu")
+  ) {
+    return;
+  }
+
   const toggle = e.target.closest("#darkToggle");
   if (!toggle) return;
 
+  e.stopPropagation(); // 🔴 RẤT QUAN TRỌNG – FIX MOBILE
+
   document.body.classList.toggle("darkmode");
 
-  // đổi icon
   toggle.textContent = document.body.classList.contains("darkmode")
     ? "☀️"
     : "🌙";
 
-  // lưu trạng thái
   localStorage.setItem(
     "theme",
     document.body.classList.contains("darkmode") ? "dark" : "light"
