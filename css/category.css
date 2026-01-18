@@ -1,0 +1,136 @@
+/* ========== CATEGORY PAGE (SAFE) ========== */
+.category-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px;
+}
+
+/* HEADER */
+.category-header {
+  margin-bottom: 16px;
+}
+.category-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.category-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.category-filters select,
+.category-filters input {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* LAYOUT */
+.category-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 20px;
+}
+
+/* STORY LIST */
+.category-story-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.category-story-item {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.category-story-thumb {
+  position: relative;
+  display: block;
+}
+.category-story-thumb img {
+  width: 100%;
+  aspect-ratio: 200 / 444;
+  object-fit: cover;
+}
+.category-story-title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: rgba(0,0,0,.35);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+.category-meta {
+  font-size: 13px;
+  color: #666;
+  padding: 6px 8px;
+}
+
+/* SIDEBAR */
+.category-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.category-search-side {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+/* RECOMMEND */
+.category-recommend {
+  background: #fff;
+  padding: 12px;
+  border-radius: 6px;
+}
+.category-recommend h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.category-recommend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.category-recommend-item {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  align-items: center;
+}
+.category-recommend-item img {
+  width: 45px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* PAGINATION */
+.category-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 30px 0;
+}
+.category-pagination a {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.category-pagination a.active {
+  background: #c0392b;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .category-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .category-story-list { grid-template-columns: repeat(2,1fr); }
+}
