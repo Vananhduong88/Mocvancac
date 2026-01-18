@@ -467,3 +467,48 @@ body.dark .menu > li > a {
 body.dark #darkToggle {
   color: #fff !important;
 }
+/* ===============================
+   DARK MODE – HEADER (GLOBAL)
+================================ */
+
+body.darkmode .header {
+  background: #121212;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+body.darkmode .header a,
+body.darkmode .header span,
+body.darkmode .header li {
+  color: #eee;
+}
+
+body.darkmode .header img {
+  filter: brightness(0.9);
+}
+
+/* Menu desktop */
+body.darkmode .dropdown-menu {
+  background: #1e1e1e;
+  border: 1px solid #333;
+}
+
+body.darkmode .dropdown-menu a {
+  color: #ddd;
+}
+
+body.darkmode .dropdown-menu a:hover {
+  color: #ff4d4d;
+}
+
+/* Menu mobile */
+body.darkmode .mobile-menu {
+  background: #121212;
+}
+
+body.darkmode .mobile-menu a {
+  color: #eee;
+}
+
+body.darkmode .menu-header {
+  border-bottom: 1px solid #333;
+}
