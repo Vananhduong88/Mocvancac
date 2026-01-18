@@ -204,3 +204,29 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* ===== CATEGORY RECOMMEND LINK ===== */
+.category-recommend-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  color: #222;
+  text-decoration: none;
+}
+
+.category-recommend-item span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.25s ease;
+}
+
+/* Hover / Click đổi màu */
+.category-recommend-item:hover span {
+  color: #c0392b;
+}
+
+/* Khi đã click (visited) */
+.category-recommend-item:visited span {
+  color: #c0392b;
+}
