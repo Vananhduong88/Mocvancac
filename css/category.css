@@ -51,7 +51,7 @@
 }
 .category-story-thumb img {
   width: 100%;
-  aspect-ratio: 200 / 444;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   display: block;
 }
@@ -146,4 +146,11 @@
   .category-story-list {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+/* ẢNH TRUYỆN DANH MỤC – CHUẨN 200x444 */
+.category-story-thumb img {
+  width: 100%;
+  aspect-ratio: 200 / 444;
+  object-fit: cover;
+  display: block;
 }
