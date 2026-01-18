@@ -6,229 +6,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/hiendai.css">
+  <link rel="stylesheet" href="../css/category.css">
 </head>
 <body>
 
 <!-- HEADER -->
 <div id="header"></div>
 
-<main class="container hiendai-container">
+<main class="category-page">
 
-  <!-- TIÊU ĐỀ + BỘ LỌC -->
-  <section class="hiendai-header">
-    <h1 class="hiendai-title">📚 HIỆN ĐẠI</h1>
+  <!-- TIÊU ĐỀ + LỌC -->
+  <section class="category-header">
+    <h1 class="category-title">📚 HIỆN ĐẠI</h1>
 
-    <div class="hiendai-filters">
-      <select class="hiendai-select">
+    <div class="category-filters">
+      <select>
         <option>Mới nhất</option>
         <option>Xem nhiều</option>
         <option>Đánh giá cao</option>
       </select>
 
-      <select class="hiendai-select">
+      <select>
         <option>Tất cả</option>
         <option>Hoàn thành</option>
         <option>Đang tiến hành</option>
       </select>
 
-      <input class="hiendai-search" type="text" placeholder="Tìm truyện...">
+      <input type="text" placeholder="Tìm truyện...">
     </div>
   </section>
 
-  <!-- LIST TRUYỆN -->
-<section class="hiendai-story-list">
+  <!-- NỘI DUNG -->
+  <div class="category-layout">
 
-  <!-- 1 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="hiendai-story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Sau Khi Ly Hôn">
-      <span class="hiendai-story-title">Sau Khi Ly Hôn</span>
-    </a>
-    <div class="hiendai-meta">👁 65.4K</div>
-  </article>
+    <!-- DANH SÁCH TRUYỆN -->
+    <section class="category-story-list">
 
-  <!-- 2 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="hiendai-story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Làm Chi Full Tổng Tài Lạnh Lùng">
-      <span class="hiendai-story-title">Làm Chi Full Tổng Tài Lạnh Lùng</span>
-    </a>
-    <div class="hiendai-meta">📌 Truyện nên đọc</div>
-  </article>
+      <!-- 20 TRUYỆN / TRANG -->
+      <!-- COPY ITEM -->
+      <article class="category-story-item">
+        <a href="#" class="category-story-thumb">
+          <img src="../assets/images/demo-200x444.jpg" alt="">
+          <span class="category-story-title">Sau Khi Ly Hôn</span>
+        </a>
+        <div class="category-meta">👁 65.4K</div>
+      </article>
 
-  <!-- 3 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="hiendai-story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Hôn Nhân Hợp Đồng">
-      <span class="hiendai-story-title">Hôn Nhân Hợp Đồng</span>
-    </a>
-    <div class="hiendai-meta">👁 48.2K</div>
-  </article>
+      <!-- copy thêm cho đủ 20 -->
+    </section>
 
-  <!-- 4 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="hiendai-story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Em Là Duy Nhất">
-      <span class="hiendai-story-title">Em Là Duy Nhất</span>
-    </a>
-    <div class="hiendai-meta">👁 39.1K</div>
-  </article>
+    <!-- SIDEBAR -->
+    <aside class="category-sidebar">
 
-   <!-- 5 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="hiendai-story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Vợ À Đừng Trốn">
-      <span class="story-title">Vợ À Đừng Trốn</span>
-    </a>
-    <div class="meta">👁 52.7K</div>
-  </article>
+      <!-- TÌM KIẾM (LẶP LẠI CHO RÕ UX) -->
+      <input class="category-search-side" type="text" placeholder="Tìm truyện...">
 
-  <!-- 6 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="hiendai-story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Tổng Tài Không Dễ Chọc">
-      <span class="story-title">Tổng Tài Không Dễ Chọc</span>
-    </a>
-    <div class="meta">👁 41.3K</div>
-  </article>
+      <!-- TRUYỆN NÊN ĐỌC (RIÊNG CHO DANH MỤC) -->
+      <section class="category-recommend">
+        <h3>📌 Truyện nên đọc</h3>
 
-  <!-- 7 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="hiendai-story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Cô Vợ Nhỏ Của Boss">
-      <span class="story-title">Cô Vợ Nhỏ Của Boss</span>
-    </a>
-    <div class="meta">👁 36.9K</div>
-  </article>
+        <div class="category-recommend-list">
+          <a href="#" class="category-recommend-item">
+            <img src="../assets/images/demo-45x65.jpg">
+            <span>Làm Chi Full Tổng Tài</span>
+          </a>
 
-  <!-- 8 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="hiendai-story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Tình Yêu Sau Ly Hôn">
-      <span class="story-title">Tình Yêu Sau Ly Hôn</span>
-    </a>
-    <div class="meta">👁 44.8K</div>
-  </article>
+          <a href="#" class="category-recommend-item">
+            <img src="../assets/images/demo-45x65.jpg">
+            <span>Hôn Nhân Hợp Đồng</span>
+          </a>
 
-  <!-- 9 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="hiendai-story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Gả Nhầm Cho Tổng Tài">
-      <span class="story-title">Gả Nhầm Cho Tổng Tài</span>
-    </a>
-    <div class="meta">👁 58.0K</div>
-  </article>
+          <a href="#" class="category-recommend-item">
+            <img src="../assets/images/demo-45x65.jpg">
+            <span>Vợ À Đừng Trốn</span>
+          </a>
 
-  <!-- 10 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="hiendai-story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Ông Xã Là Trùm Cuối">
-      <span class="story-title">Ông Xã Là Trùm Cuối</span>
-    </a>
-    <div class="meta">👁 62.4K</div>
-  </article>
+          <a href="#" class="category-recommend-item">
+            <img src="../assets/images/demo-45x65.jpg">
+            <span>Cưới Trước Yêu Sau</span>
+          </a>
 
-  <!-- 11 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="hiendai-story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Người Cũ Không Quay Đầu">
-      <span class="story-title">Người Cũ Không Quay Đầu</span>
-    </a>
-    <div class="meta">👁 29.6K</div>
-  </article>
+          <a href="#" class="category-recommend-item">
+            <img src="../assets/images/demo-45x65.jpg">
+            <span>Gia Đình Hào Môn</span>
+          </a>
+        </div>
+      </section>
 
-  <!-- 12 -->
-  <article class="story-item">
-    <a href="#" class="story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Tổng Tài Theo Đuổi Vợ Cũ">
-      <span class="story-title">Tổng Tài Theo Đuổi Vợ Cũ</span>
-    </a>
-    <div class="meta">👁 71.2K</div>
-  </article>
+    </aside>
 
-  <!-- 13 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Cưới Trước Yêu Sau">
-      <span class="story-title">Cưới Trước Yêu Sau</span>
-    </a>
-    <div class="meta">👁 33.5K</div>
-  </article>
-
-  <!-- 14 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Tình Nhân Của Tổng Tài">
-      <span class="story-title">Tình Nhân Của Tổng Tài</span>
-    </a>
-    <div class="meta">👁 46.1K</div>
-  </article>
-
-  <!-- 15 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Ngược Luyến Tổng Tài">
-      <span class="story-title">Ngược Luyến Tổng Tài</span>
-    </a>
-    <div class="meta">👁 54.9K</div>
-  </article>
-
-  <!-- 16 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Bí Mật Của Vợ Trước">
-      <span class="story-title">Bí Mật Của Vợ Trước</span>
-    </a>
-    <div class="meta">👁 31.8K</div>
-  </article>
-
-  <!-- 17 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Chồng Cũ Là Trùm">
-      <span class="story-title">Chồng Cũ Là Trùm</span>
-    </a>
-    <div class="meta">👁 60.3K</div>
-  </article>
-
-  <!-- 18 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Tái Hôn Với Tổng Tài">
-      <span class="story-title">Tái Hôn Với Tổng Tài</span>
-    </a>
-    <div class="meta">👁 42.6K</div>
-  </article>
-
-  <!-- 19 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Nữ Chính Không Dễ Chọc">
-      <span class="story-title">Nữ Chính Không Dễ Chọc</span>
-    </a>
-    <div class="meta">👁 37.4K</div>
-  </article>
-
-  <!-- 20 -->
-  <article class="hiendai-story-item">
-    <a href="#" class="story-thumb">
-      <img src="../assets/images/demo-200x444.jpg" alt="Gia Đình Hào Môn">
-      <span class="story-title">Gia Đình Hào Môn</span>
-    </a>
-    <div class="meta">👁 49.9K</div>
-  </article>
-
-</section>
-
-
-  </section>
+  </div>
 
   <!-- PHÂN TRANG -->
-  <div class="hiendai-pagination">
-    <a href="#">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
+  <div class="category-pagination">
+    <a class="active">1</a>
+    <a>2</a>
+    <a>3</a>
   </div>
 
 </main>
@@ -237,13 +110,8 @@
 <div id="footer"></div>
 
 <script>
-  fetch("../partials/header.html")
-    .then(r => r.text())
-    .then(t => document.getElementById("header").innerHTML = t);
-
-  fetch("../partials/footer.html")
-    .then(r => r.text())
-    .then(t => document.getElementById("footer").innerHTML = t);
+fetch("../partials/header.html").then(r=>r.text()).then(t=>header.innerHTML=t);
+fetch("../partials/footer.html").then(r=>r.text()).then(t=>footer.innerHTML=t);
 </script>
 
 </body>
