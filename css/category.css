@@ -207,3 +207,77 @@
 html, body {
   overflow-x: hidden;
 }
+/* ===============================
+   DARK MODE – CATEGORY PAGE
+   Không ảnh hưởng trang chủ
+================================ */
+
+body.darkmode {
+  background: #121212;
+  color: #e5e5e5;
+}
+
+/* Header & layout */
+body.darkmode .category-page {
+  background: #121212;
+}
+
+body.darkmode .category-header {
+  background: #1b1b1b;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+body.darkmode .category-title {
+  color: #fff;
+}
+
+/* Bộ lọc */
+body.darkmode .category-filters select {
+  background: #1e1e1e;
+  color: #eee;
+  border: 1px solid #333;
+}
+
+/* Danh sách truyện */
+body.darkmode .category-story-item {
+  background: #1a1a1a;
+}
+
+body.darkmode .category-story-title {
+  color: #fff;
+}
+
+body.darkmode .category-meta {
+  color: #aaa;
+}
+
+/* Sidebar */
+body.darkmode .category-sidebar {
+  background: #161616;
+}
+
+body.darkmode .category-search-side {
+  background: #1e1e1e;
+  color: #eee;
+  border: 1px solid #333;
+}
+
+/* Truyện nên đọc */
+body.darkmode .category-recommend h3 {
+  color: #fff;
+}
+
+body.darkmode .category-recommend-item span {
+  color: #ddd;
+}
+
+/* Pagination */
+body.darkmode .category-pagination a {
+  background: #1e1e1e;
+  color: #ccc;
+}
+
+body.darkmode .category-pagination a.active {
+  background: #333;
+  color: #fff;
+}
