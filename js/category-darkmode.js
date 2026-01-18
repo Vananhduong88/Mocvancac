@@ -1,15 +1,33 @@
 /* =================================
-   DARK MODE + FIX MENU MOBILE
-   CHỈ DÙNG CHO TRANG DANH MỤC
-================================= */
+   CATEGORY PAGE – SAFE SCRIPT
+   Không phá darkmode
+   Không ảnh hưởng trang chủ
+================================ */
 
-document.addEventListener("DOMContentLoaded", function () {
-
-  /* ===== DARK MODE ===== */
+function initCategoryHeader() {
+  const menuBtn = document.getElementById("mobileMenuBtn");
+  const closeBtn = document.getElementById("closeMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
   const darkToggle = document.getElementById("darkToggle");
 
+  /* ===== MOBILE MENU ===== */
+  if (menuBtn && mobileMenu) {
+    menuBtn.onclick = function () {
+      mobileMenu.classList.add("show");
+      document.body.style.overflow = "hidden";
+    };
+  }
+
+  if (closeBtn && mobileMenu) {
+    closeBtn.onclick = function () {
+      mobileMenu.classList.remove("show");
+      document.body.style.overflow = "";
+    };
+  }
+
+  /* ===== DARK MODE ===== */
   if (darkToggle) {
-    darkToggle.addEventListener("click", function () {
+    darkToggle.onclick = function () {
       document.body.classList.toggle("darkmode");
 
       darkToggle.textContent = document.body.classList.contains("darkmode")
@@ -20,26 +38,19 @@ document.addEventListener("DOMContentLoaded", function () {
         "theme",
         document.body.classList.contains("darkmode") ? "dark" : "light"
       );
-    });
+    };
   }
+}
 
-  /* ===== MOBILE MENU ===== */
-  const menuBtn = document.getElementById("mobileMenuBtn");
-  const closeBtn = document.getElementById("closeMenu");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", function () {
-      mobileMenu.classList.add("show");
-      document.body.style.overflow = "hidden";
-    });
+/* ⏳ ĐỢI HEADER LOAD XONG */
+const waitHeader = setInterval(() => {
+  if (document.getElementById("mobileMenuBtn")) {
+    initCategoryHeader();
+    clearInterval(waitHeader);
   }
+}, 50);
 
-  if (closeBtn && mobileMenu) {
-    closeBtn.addEventListener("click", function () {
-      mobileMenu.classList.remove("show");
-      document.body.style.overflow = "";
-    });
-  }
-
-});
+/* ===== RESTORE DARK MODE ===== */
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("darkmode");
+}
