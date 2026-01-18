@@ -286,3 +286,25 @@ body.darkmode .category-recommend-item:hover span,
 body.darkmode .category-recommend-item:active span {
   color: #ff4d4d;
 }
+/* ================= FIX MENU MOBILE – CHỈ TRANG DANH MỤC ================= */
+
+/* đảm bảo header luôn nổi và nhận click */
+body .header {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
+/* nút menu mobile + dark toggle luôn click được */
+#mobileMenuBtn,
+#darkToggle {
+  position: relative;
+  z-index: 10001;
+  pointer-events: auto;
+}
+
+/* content danh mục không được đè header */
+.category-page {
+  position: relative;
+  z-index: 1;
+}
