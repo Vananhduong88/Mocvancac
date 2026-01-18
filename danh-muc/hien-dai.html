@@ -2,140 +2,64 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Hiện Đại | Mộc Văn Các</title>
+  <title>Truyện Hiện Đại | Mộc Văn Các</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS CHUNG -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- CSS RIÊNG HIỆN ĐẠI -->
-  <link rel="stylesheet" href="css/hien-dai.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/hiendai.css">
 </head>
-
 <body>
 
 <!-- HEADER -->
-<div id="site-header"></div>
+<div id="header"></div>
 
 <main class="container">
+  <section class="category-header">
+    <h1>📚 Hiện Đại</h1>
 
-  <!-- TITLE -->
-  <h1 class="category-title">📚 HIỆN ĐẠI</h1>
-
-  <!-- FILTER -->
-  <div class="filter-wrap">
-
-    <div class="filter-left">
-      <select>
-        <option>Hiện đại</option>
-        <option>Ngôn tình</option>
-        <option>Cổ đại</option>
-        <option>Xuyên không</option>
-      </select>
-
+    <div class="filters">
       <select>
         <option>Mới nhất</option>
-        <option>Xem nhiều</option>
-        <option>Đánh giá cao</option>
+        <option>Nhiều lượt xem</option>
       </select>
 
       <select>
         <option>Tất cả</option>
-        <option>Hoàn thành</option>
-        <option>Đang tiến hành</option>
+        <option>Ngôn tình</option>
+        <option>Sủng</option>
+        <option>Ngược</option>
       </select>
-    </div>
 
-    <div class="filter-search">
       <input type="text" placeholder="Tìm truyện...">
     </div>
+  </section>
 
-  </div>
+  <section class="story-list">
+    <article class="story-item">
+      <h3><a href="#">Sau Khi Ly Hôn</a></h3>
+      <div class="meta">👁 65.4K</div>
+    </article>
 
-  <!-- TAG -->
-  <div class="tag-filter">
-    <span class="tag active">Tất cả</span>
-    <span class="tag">Ngôn tình</span>
-    <span class="tag">Sủng</span>
-    <span class="tag">Ngược</span>
-    <span class="tag">Nữ cường</span>
-    <span class="tag">Gia đình</span>
-    <span class="tag">HE</span>
-  </div>
+    <article class="story-item">
+      <h3><a href="#">Làm Chi Full Tổng Tài Lạnh Lùng</a></h3>
+      <div class="meta">Truyện nên đọc</div>
+    </article>
+  </section>
 
-  <div class="content">
-
-    <!-- LIST TRUYỆN -->
-    <section class="story-grid">
-
-      <!-- 20 TRUYỆN / 1 TRANG -->
-      <!-- COPY LẶP ITEM NÀY -->
-      <a href="#" class="story-card">
-        <img src="https://via.placeholder.com/200x355" alt="">
-        <h3>Sau Khi Ly Hôn</h3>
-        <span>👁 65.4K</span>
-      </a>
-
-    </section>
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <h3>📌 Truyện nên đọc</h3>
-
-      <div class="recommend">
-        <a class="recommend-item" href="#">
-          <img src="https://via.placeholder.com/45x65" alt="">
-          <span>Lâm Chi Full</span>
-        </a>
-
-        <a class="recommend-item" href="#">
-          <img src="https://via.placeholder.com/45x65" alt="">
-          <span>Tổng Tài Lạnh Lùng</span>
-        </a>
-
-        <a class="recommend-item" href="#">
-          <img src="https://via.placeholder.com/45x65" alt="">
-          <span>Hôn Nhân Hợp Đồng</span>
-        </a>
-
-        <a class="recommend-item" href="#">
-          <img src="https://via.placeholder.com/45x65" alt="">
-          <span>Em Là Duy Nhất</span>
-        </a>
-
-        <a class="recommend-item" href="#">
-          <img src="https://via.placeholder.com/45x65" alt="">
-          <span>Vợ À Đừng Trốn</span>
-        </a>
-      </div>
-    </aside>
-
-  </div>
-
-  <!-- PAGINATION -->
   <div class="pagination">
-    <a class="active">1</a>
-    <a>2</a>
-    <a>3</a>
-    <a>›</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
   </div>
-
 </main>
 
 <!-- FOOTER -->
-<div id="site-footer"></div>
+<div id="footer"></div>
 
-<!-- LOAD PARTIALS -->
 <script>
-fetch("../partials/header.html")
-  .then(r => r.text())
-  .then(html => document.getElementById("site-header").innerHTML = html);
-
-fetch("../partials/footer.html")
-  .then(r => r.text())
-  .then(html => document.getElementById("site-footer").innerHTML = html);
+  fetch("../partials/header.html").then(r => r.text()).then(t => document.getElementById("header").innerHTML = t);
+  fetch("../partials/footer.html").then(r => r.text()).then(t => document.getElementById("footer").innerHTML = t);
 </script>
-
-<script src="../js/script.js"></script>
 
 </body>
 </html>
