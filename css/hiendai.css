@@ -1,0 +1,116 @@
+/* ================= HIEN DAI PAGE (SCOPED) ================= */
+
+.hiendai-container {
+  padding: 20px 0;
+}
+
+/* HEADER */
+.hiendai-container .hiendai-header {
+  margin-bottom: 20px;
+}
+
+.hiendai-container .hiendai-title {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+/* FILTER */
+.hiendai-container .hiendai-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hiendai-container .hiendai-select,
+.hiendai-container .hiendai-search {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.hiendai-container .hiendai-search {
+  min-width: 200px;
+}
+
+/* STORY GRID */
+.hiendai-container .hiendai-story-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.hiendai-container .hiendai-story-item {
+  text-align: center;
+}
+
+.hiendai-container .hiendai-story-thumb {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.hiendai-container .hiendai-story-thumb img {
+  width: 100%;
+  height: 444px;
+  object-fit: cover;
+  display: block;
+}
+
+.hiendai-container .hiendai-story-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.hiendai-container .hiendai-meta {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #666;
+}
+
+/* PAGINATION */
+.hiendai-container .hiendai-pagination {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.hiendai-container .hiendai-pagination a {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 0 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+  text-decoration: none;
+}
+
+.hiendai-container .hiendai-pagination a:hover {
+  background: #eee;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hiendai-container .hiendai-story-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hiendai-container .hiendai-story-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .hiendai-container .hiendai-story-list {
+    grid-template-columns: 1fr;
+  }
+}
