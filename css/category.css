@@ -206,3 +206,15 @@
   border-color:#444;
   color:#fff;
 }
+/* FIX DARK MODE CLICK - CHỈ TRANG DANH MỤC */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+#darkToggle {
+  position: relative;
+  z-index: 10000;
+  pointer-events: auto;
+}
